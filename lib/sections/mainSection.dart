@@ -257,9 +257,10 @@ class _MainPageState extends State<MainPage> {
         SizedBox(
           height: 30.0,
           child: Switch(
-            value: _themeProv.lightTheme,
+            inactiveTrackColor: Colors.grey,
+            value: !_themeProv.lightTheme,
             onChanged: (value) {
-              _themeProv.lightTheme = value;
+              _themeProv.lightTheme = !value;
             },
             activeColor: kPrimaryColor,
           ),
@@ -295,9 +296,10 @@ class _MainPageState extends State<MainPage> {
                     style: TextStyle(
                         color: theme.lightTheme ? Colors.black : Colors.white)),
                 trailing: Switch(
-                  value: theme.lightTheme,
+                  inactiveTrackColor: Colors.grey,
+                  value: !theme.lightTheme,
                   onChanged: (value) {
-                    theme.lightTheme = value;
+                    theme.lightTheme = !value;
                   },
                   activeColor: kPrimaryColor,
                 ),
