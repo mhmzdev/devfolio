@@ -7,7 +7,7 @@ class ThemeProvider extends ChangeNotifier {
 
   get scroll => scrollController;
 
-  set scroll(int i) {
+  set scroll(i) {
     scrollController.animateTo(
       i == 0 ? 100 : 0,
       duration: Duration(seconds: 1),

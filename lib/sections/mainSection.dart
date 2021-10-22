@@ -129,7 +129,7 @@ class _MainPageState extends State<MainPage> {
                 )
               ],
             )
-          : _appBarTabDesktop(_themeProv),
+          : _appBarTabDesktop(_themeProv) as PreferredSizeWidget?,
       drawer: MediaQuery.of(context).size.width < 760
           ? _appBarMobile(_themeProv)
           : null,
@@ -344,12 +344,12 @@ class _MainPageState extends State<MainPage> {
 }
 
 class SectionsBody extends StatelessWidget {
-  final ScrollController scrollController;
-  final int sectionsLength;
-  final Widget Function(int) sectionWidget;
+  final ScrollController? scrollController;
+  final int? sectionsLength;
+  final Widget Function(int)? sectionWidget;
 
   const SectionsBody({
-    Key key,
+    Key? key,
     this.scrollController,
     this.sectionsLength,
     this.sectionWidget,
@@ -363,7 +363,7 @@ class SectionsBody extends StatelessWidget {
         // physics: !kIsWeb ? ScrollPhysics() : NeverScrollableScrollPhysics(),
         controller: scrollController,
         itemCount: sectionsLength,
-        itemBuilder: (context, index) => sectionWidget(index),
+        itemBuilder: (context, index) => sectionWidget!(index),
       ),
     );
   }

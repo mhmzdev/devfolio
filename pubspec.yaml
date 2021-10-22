@@ -1,10 +1,6 @@
 name: folio
 description: Live portfolio using flutter 2.0.
 
-# The following line prevents the package from being accidentally published to
-# pub.dev using `pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
 # followed by an optional build number separated by a +.
@@ -18,25 +14,25 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
-  google_fonts: ^2.0.0
-  url_launcher: ^6.0.2
-  responsive_builder: ^0.1.2
-  carousel_slider: ^3.0.0
-  animated_text_kit: ^3.1.2
-  font_awesome_flutter: ^9.1.0
-  universal_html: ^2.0.4
-  http: ^0.13.1
-  flutter_html: any
+  cupertino_icons: ^1.0.3
+  google_fonts: ^2.1.0
+  url_launcher: ^6.0.12
+  responsive_builder: ^0.4.1
+  carousel_slider: ^4.0.0
+  animated_text_kit: ^4.2.1
+  font_awesome_flutter: ^9.2.0
+  universal_html: ^2.0.8
+  http: ^0.13.4
+  flutter_html: ^2.1.5
   url_strategy: ^0.2.0
-  provider: ^5.0.0
-  shared_preferences: ^2.0.6
-  flip_card: ^0.5.0
+  provider: ^6.0.1
+  shared_preferences: ^2.0.8
+  flip_card: ^0.6.0
 
   mailto: ^2.0.0
 
@@ -48,7 +44,6 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -74,8 +69,8 @@ flutter:
     - family: Agustina
       fonts:
         - asset: assets/fonts/agustina.otf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
+    #       - asset: fonts/Schyler-Italic.ttf
+    #         style: italic
     - family: Montserrat
       fonts:
         - asset: assets/fonts/montserrat.ttf

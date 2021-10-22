@@ -9,10 +9,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class ServiceDetailsMobile extends StatefulWidget {
-  final String serviceTitle;
-  final String serviceDesc;
+  final String? serviceTitle;
+  final String? serviceDesc;
 
-  const ServiceDetailsMobile({Key key, this.serviceTitle, this.serviceDesc})
+  const ServiceDetailsMobile({Key? key, this.serviceTitle, this.serviceDesc})
       : super(key: key);
 
   @override

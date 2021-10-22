@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class EntranceFader extends StatefulWidget {
-  final Widget child;
+  final Widget? child;
   final Duration delay;
   final Duration duration;
   final Offset offset;
@@ -21,9 +21,9 @@ class EntranceFader extends StatefulWidget {
 
 class EntranceFaderState extends State<EntranceFader>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
-  Animation _dxAnimation;
-  Animation _dyAnimation;
+  late AnimationController _controller;
+  late Animation _dxAnimation;
+  late Animation _dyAnimation;
 
   @override
   void initState() {

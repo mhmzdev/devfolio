@@ -4,10 +4,10 @@ import 'package:folio/sections/serviceDetails/serviceDetailsMobile.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class ServiceDetails extends StatelessWidget {
-  final String dec;
-  final String title;
+  final String? dec;
+  final String? title;
 
-  const ServiceDetails({Key key, this.dec, this.title}) : super(key: key);
+  const ServiceDetails({Key? key, this.dec, this.title}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout(

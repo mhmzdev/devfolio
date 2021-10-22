@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:shared_preferences/shared_preferences.dart';
 
 class ThemePreference {
@@ -11,6 +13,6 @@ class ThemePreference {
 
   Future<bool> getTheme() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.get(THEME_STATUS) ?? false;
+    return prefs.get(THEME_STATUS) as FutureOr<bool>? ?? false;
   }
 }

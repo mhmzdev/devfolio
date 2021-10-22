@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 class Animator extends StatefulWidget {
-  final Widget child;
+  final Widget? child;
   final Duration time;
 
   Animator(this.child, this.time);
@@ -14,9 +14,9 @@ class Animator extends StatefulWidget {
 
 class _AnimatorState extends State<Animator>
     with SingleTickerProviderStateMixin {
-  Timer timer;
-  AnimationController animationController;
-  Animation animation;
+  late Timer timer;
+  late AnimationController animationController;
+  late Animation animation;
 
   @override
   void initState() {
@@ -40,11 +40,11 @@ class _AnimatorState extends State<Animator>
     return AnimatedBuilder(
       animation: animation,
       child: widget.child,
-      builder: (BuildContext context, Widget child) {
+      builder: (BuildContext context, Widget? child) {
         return Opacity(
           opacity: animation.value,
           child: Transform.translate(
-            offset: Offset(0.0, -50 + animation.value * 50),
+            offset: Offset(0.0, -50 + animation.value * 50 as double),
             child: child,
           ),
         );
@@ -53,11 +53,11 @@ class _AnimatorState extends State<Animator>
   }
 }
 
-Timer timer;
+Timer? timer;
 Duration duration = Duration();
 
 wait() {
-  if (timer == null || !timer.isActive) {
+  if (timer == null || !timer!.isActive) {
     timer = Timer(Duration(microseconds: 120), () {
       duration = Duration();
     });
@@ -67,7 +67,7 @@ wait() {
 }
 
 class WidgetAnimator extends StatelessWidget {
-  final Widget child;
+  final Widget? child;
 
   WidgetAnimator({this.child});
 

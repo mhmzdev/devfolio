@@ -5,9 +5,9 @@ import 'package:folio/widget/adaptiveText.dart';
 import 'package:provider/provider.dart';
 
 class ToolTechWidget extends StatelessWidget {
-  final String techName;
+  final String? techName;
 
-  const ToolTechWidget({Key key, this.techName}) : super(key: key);
+  const ToolTechWidget({Key? key, this.techName}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     final _themeProvider = Provider.of<ThemeProvider>(context);

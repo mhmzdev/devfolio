@@ -19,10 +19,10 @@ class GetInTouchDesktop extends StatefulWidget {
 
 class _GetInTouchDesktopState extends State<GetInTouchDesktop> {
   final _msgController = TextEditingController();
-  String _projectType = "Flutter - Mobile Development";
-  String _database = "Firebase";
-  String _estBudget = "\$200";
-  String _projectDuration = "Less than 1 week";
+  String? _projectType = "Flutter - Mobile Development";
+  String? _database = "Firebase";
+  String? _estBudget = "\$200";
+  String? _projectDuration = "Less than 1 week";
 
   List<String> projectType = [
     "Flutter - Mobile Development",
@@ -157,7 +157,7 @@ class _GetInTouchDesktopState extends State<GetInTouchDesktop> {
                                   iconEnabledColor: Colors.black,
                                   value: _projectType,
                                   isExpanded: true,
-                                  onChanged: (value) {
+                                  onChanged: (dynamic value) {
                                     setState(() {
                                       _projectType = value;
                                     });
@@ -209,7 +209,7 @@ class _GetInTouchDesktopState extends State<GetInTouchDesktop> {
                                   iconEnabledColor: Colors.black,
                                   value: _database,
                                   isExpanded: true,
-                                  onChanged: (value) {
+                                  onChanged: (dynamic value) {
                                     setState(() {
                                       _database = value;
                                     });
@@ -261,7 +261,7 @@ class _GetInTouchDesktopState extends State<GetInTouchDesktop> {
                                   iconEnabledColor: Colors.black,
                                   value: _estBudget,
                                   isExpanded: true,
-                                  onChanged: (value) {
+                                  onChanged: (dynamic value) {
                                     setState(() {
                                       _estBudget = value;
                                     });
@@ -338,7 +338,7 @@ class _GetInTouchDesktopState extends State<GetInTouchDesktop> {
                                   iconEnabledColor: Colors.black,
                                   value: _projectDuration,
                                   isExpanded: true,
-                                  onChanged: (value) {
+                                  onChanged: (dynamic value) {
                                     setState(() {
                                       _projectDuration = value;
                                     });

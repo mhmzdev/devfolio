@@ -4,11 +4,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class AboutMeMetaData extends StatelessWidget {
-  final String data;
-  final String information;
-  final Alignment alignment;
+  final String? data;
+  final String? information;
+  final Alignment? alignment;
 
-  const AboutMeMetaData({Key key, this.data, this.information, this.alignment})
+  const AboutMeMetaData({Key? key, this.data, this.information, this.alignment})
       : super(key: key);
   @override
   Widget build(BuildContext context) {

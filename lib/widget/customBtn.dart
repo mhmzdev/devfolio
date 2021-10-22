@@ -9,7 +9,7 @@ class OutlinedCustomBtn extends StatelessWidget {
   final Function onPressed;
 
   const OutlinedCustomBtn(
-      {Key key, @required this.btnText, @required this.onPressed})
+      {Key? key, required this.btnText, required this.onPressed})
       : super(key: key);
 
   @override
@@ -20,7 +20,7 @@ class OutlinedCustomBtn extends StatelessWidget {
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(5.0),
           side: BorderSide(color: kPrimaryColor)),
-      onPressed: onPressed,
+      onPressed: onPressed as void Function()?,
       child: Text(
         btnText,
         style: GoogleFonts.montserrat(
@@ -33,13 +33,13 @@ class OutlinedCustomBtn extends StatelessWidget {
 }
 
 class CustomFilledBtn extends StatelessWidget {
-  final double height;
+  final double? height;
   final double width;
-  final Widget child;
-  final Function onPressed;
-  final Color btnColor;
+  final Widget? child;
+  final Function? onPressed;
+  final Color? btnColor;
   const CustomFilledBtn(
-      {Key key,
+      {Key? key,
       this.height,
       this.btnColor,
       this.width = 200.0,
@@ -54,7 +54,7 @@ class CustomFilledBtn extends StatelessWidget {
       width: width,
       child: MaterialButton(
         color: btnColor,
-        onPressed: onPressed,
+        onPressed: onPressed as void Function()?,
         child: child,
       ),
     );
