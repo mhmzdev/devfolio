@@ -24,8 +24,9 @@ const kSocialLinks = [
 ];
 
 // URL Launcher
-void launchURL(String url) async =>
-    await canLaunch(url) ? await launch(url) : throw 'Could not launch $url';
+void launchURL(String url) async => await launchUrl(Uri.parse(url))
+    ? await launchUrl(Uri.parse(url))
+    : throw 'Could not launch $url';
 
 // Community
 final kCommunityLogo = [
