@@ -1,26 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:folio/constants.dart';
-import 'package:folio/provider/themeProvider.dart';
-import 'package:folio/provider/themeStyles.dart';
-import 'package:folio/sections/getInTouch/getInTouch.dart';
-import 'package:folio/sections/mainSection.dart';
-import 'package:folio/sections/serviceDetails/serviceDetails.dart';
+import 'package:folio/provider/theme_provider.dart';
+import 'package:folio/provider/theme_styles.dart';
+import 'package:folio/sections/main_section.dart';
 import 'package:provider/provider.dart';
 import 'package:url_strategy/url_strategy.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   setPathUrlStrategy();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
-  _MyAppState createState() => _MyAppState();
+  MyAppState createState() => MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
-  ThemeProvider _themeProvider = ThemeProvider();
+class MyAppState extends State<MyApp> {
+  final ThemeProvider _themeProvider = ThemeProvider();
 
   void getCurrentAppTheme() async {
     _themeProvider.lightTheme = await _themeProvider.darkThemePref.getTheme();
@@ -41,12 +40,13 @@ class _MyAppState extends State<MyApp> {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Hamza',
-        theme: ThemeStyles.themeData(_themeProvider.lightTheme, context),
+        theme: ThemeStyles.themeData(
+          _themeProvider.lightTheme,
+          context,
+        ),
         initialRoute: "/",
         routes: {
-          "/": (context) => MainPage(),
-          "/workTogether": (context) => GetInTouch(),
-          "/details": (context) => ServiceDetails()
+          "/": (context) => const MainPage(),
         },
       ),
     );
