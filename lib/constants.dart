@@ -20,24 +20,26 @@ const kSocialLinks = [
   "https://twitter.com/mhmzdev",
   "https://linkedin.com/in/mhmzdev",
   "https://github.com/mhmzdev",
-  "https://mhamzadev.medium.com"
+  "https://mhmzdev.medium.com"
 ];
 
 // URL Launcher
-void launchURL(String _url) async =>
-    await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
+void launchURL(String url) async =>
+    await canLaunch(url) ? await launch(url) : throw 'Could not launch $url';
 
 // Community
 final kCommunityLogo = [
   'assets/cui.png',
   'assets/flutterIsl.png',
-  'assets/dsc.png'
+  'assets/dsc.png',
+  'assets/st.png'
 ];
 
 final kCommunityLinks = [
   "https://www.comsats.edu.pk/",
   "https://web.facebook.com/FlutterIslamabadPakistan/",
-  "https://dsc.community.dev/comsats-university-islamabad/"
+  "https://dsc.community.dev/comsats-university-islamabad/",
+  "https://sastaticket.pk/"
 ];
 
 // Tools & Tech
@@ -62,20 +64,12 @@ final kServicesIcons = [
 ];
 
 final kServicesTitles = [
-  "Full App Development",
+  "Mobile App Development",
   "UI/UX Designing",
   "Rapid Prototyping",
   "Technical Blog Writing",
   "Open Source - GitHub",
 ];
-
-// final kServicesDescriptions = [
-//   "For now, I can only develop Android Apps using Flutter, that's because I don't own a MacBook right now so can't test or debug apps for iOS. Hopefully this missing piece will be filled soon :)",
-//   "Although I'm mainly a flutter developer but I do care about the UI/UX for my client. Hence, I also do UI designing for applications. So, feel free to ask me for getting you UI/UX for your apps",
-//   "Having a startup idea? Or maybe just want a prototype for your clients? With Flutter I can get you basic version of your app in no time and you are good to go for your project in future.",
-//   "I have been writing technical blogs on Medium for over a year now. So, I can get you technical blogs with awesome header images with interesting topics.\nMy Medium profile @mhamzadev",
-//   "Working as open source contributor on GitHub with 200+ stars and numerous forks on various projects liked and shared by other developers.\nMy GitHub Profile @mhmzdev",
-// ];
 
 final kServicesDescriptions = [
   "Android app development via Flutter\n- Splash Screen\n- Firebase Auth/Cloud\n- REST APIs\n- Maps integration and more...!",
@@ -83,14 +77,6 @@ final kServicesDescriptions = [
   "Rapid Prototype via Flutter\n- Working MVP\n- Quick & Working prototype",
   "Technical Blog writing\n- Medium blogs\n- Soothing header images\n- SEO friendly\n- Researched topics and more..!",
   "Open source GitHub Projects\n- Awesome README.md\n- Well documented\n- Header images and more...!",
-];
-
-final kServicesLinks = [
-  "https://www.fiverr.com/hamza6shakeel/be-your-mobile-app-developer-via-flutter",
-  "https://www.fiverr.com/hamza6shakeel/get-you-modern-ui-design-using-adobe-xd",
-  "https://www.fiverr.com/hamza6shakeel/be-your-mobile-app-developer-via-flutter",
-  "https://mhamzadev.medium.com",
-  "https://github.com/mhmzdev"
 ];
 
 // projects

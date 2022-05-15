@@ -1,0 +1,154 @@
+{
+    "name": "Muhammad Hamza",
+    "email": "hamza@mhmz.dev",
+    "subtitle": [
+        "Flutter Developer",
+        "Technical Writer",
+        "UI/UX Designer"
+    ],
+    "socail_links": [
+        {
+            "platform": "facebook",
+            "url": "https://facebook.com/mhmzdev"
+        },
+        {
+            "platform": "instagram",
+            "url": "https://instagram.com/mhmzdev"
+        },
+        {
+            "platform": "twitter",
+            "url": "https://twitter.com/mhmzdev"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://linkedin.com/in/mhmzdev"
+        },
+        {
+            "platform": "github",
+            "url": "https://github.com/mhmzdev"
+        },
+        {
+            "platform": "medium",
+            "url": "https://mhamzadev.medium.com/"
+        }
+    ],
+    "about_me_headline": "I'm Muhammad Hamza, a Flutter developer, Technical Writer and UI/UX Designer.",
+    "about_me_details": "I'm a Final Year Computer Science student enrolled in COMSATS University, Islamabad. I have been developing mobile apps for over 1.5 years now. I have worked in teams for various startups and helped them in launching their prototypes and got valuable learning experience. I'm an active Google Developer Student Clubs (DSC) lead and also CEO/Founder Flutter Islamabad, Pakistan.",
+    "technologies": [
+        "Flutter",
+        "Dart",
+        "Python",
+        "Java",
+        "C++",
+        "HTML",
+        "CSS",
+        "Bootstrap"
+    ],
+    "what_i_do": [
+        {
+            "service_icon": "assets/services/app.png",
+            "service_name": "Mobile App Development",
+            "service_description": "Android app development via Flutter\n- Splash Screen\n- Firebase Auth/Cloud\n- REST APIs\n- Maps integration and more...!"
+        },
+        {
+            "service_icon": "assets/services/ui.png",
+            "service_name": "UI/UX Designing",
+            "service_description": "Modern UI/UX Designing\n- Adobe XD\n- Mobile & Web designs\n- Interactive UI designs\n- Responsiveness\n- Promo Videos and more..!"
+        },
+        {
+            "service_icon": "assets/services/rapid.png",
+            "service_name": "Rapid Prototyping",
+            "service_description": "Rapid Prototype via Flutter\n- Working MVP\n- Quick & Working prototype"
+        },
+        {
+            "service_icon": "assets/services/blog.png",
+            "service_name": "Technical Blog Writing",
+            "service_description": "Technical Blog writing\n- Medium blogs\n- Soothing header images\n- SEO friendly\n- Researched topics and more..!"
+        },
+        {
+            "service_icon": "assets/services/open.png",
+            "service_name": "Open Source - GitHub",
+            "service_description": "Open source GitHub Projects\n- Awesome README.md\n- Well documented\n- Header images and more...!"
+        }
+    ],
+    "hire_me": {
+        "whatsapp": "923460159889",
+        "upwork": "https://www.upwork.com/freelancers/~0197b0f6aaeba9675f"
+    },
+    "projects": [
+        {
+            "banner": "assets/projects/medkitB.png",
+            "icon": "assets/projects/medkit.png",
+            "title": "MedKit",
+            "description": "A Phramacy app developed using Flutter powered with Firebase as database with Doctor and Patient panels."
+        },
+        {
+            "banner": "assets/projects/quranB.png",
+            "icon": "assets/projects/quran.png",
+            "title": "The Holy Qur'an",
+            "description": "Application of Holy book of Muslims, Al-Qur'an. Developed using Flutter. Powered with live RestAPI given in README.md"
+        },
+        {
+            "banner": "assets/projects/hereiamB.png",
+            "icon": "assets/projects/hereiam.png",
+            "title": "Here I Am",
+            "description": "Here I am is an Alert app that Sends alert SMS holding your location (Address and Google Maps) to your loved ones."
+        },
+        {
+            "banner": "assets/projects/covidB.png",
+            "icon": "assets/projects/covid.png",
+            "title": "COIVD 19 - Tracker",
+            "description": "A live trakcer for COVID19 stats across the Globe and my Home country Pakistan. It uses APIs so the data is live."
+        },
+        {
+            "banner": "",
+            "icon": "assets/projects/messenger.png",
+            "title": "Messenger Chat Head UI",
+            "description": "Tried to clone the famous Chat Heads by Facebook Messenger using Flutter. Its basically in-app not exactly like the original chat head."
+        },
+        {
+            "banner": "",
+            "icon": "assets/projects/flutter.png",
+            "title": "flutter.dev - Flutter Web",
+            "description": "Flutter Official Site clone using Flutter Web. Try the live site here. For the time being its not responsive fully so there might be responsiveness issues."
+        },
+        {
+            "banner": "",
+            "icon": "assets/projects/earbender.png",
+            "title": "Earbender",
+            "description": "A concept of Music App developed using Flutter. Having functionality of playing Audio."
+        },
+        {
+            "banner": "",
+            "icon": "assets/projects/java.png",
+            "title": "File Transfer Protocol",
+            "description": "A simple GUI based Java application that sends file from Client to Server but not the other way around."
+        },
+        {
+            "banner": "",
+            "icon": "assets/projects/android.png",
+            "title": "My Order",
+            "description": "A concept app for self-services at various restaurants now a days. More like a Restaurant Ordering System."
+        },
+        {
+            "banner": "",
+            "icon": "assets/services/open.png",
+            "title": "Hidev",
+            "description": "Its my end semester project. The whole design I developed here is an inspiration from my favortie Flutter Developer Marcin Szałek and his blog Fidev."
+        }
+    ],
+    "contact": [
+        {
+            "param": "address",
+            "value": "Islamabad, Pakistan"
+        },
+        {
+            "param": "phone",
+            "value": "+92 346 0159889"
+        },
+        {
+            "param": "email",
+            "value": "hamza@mhmz.dev"
+        }
+    ]
+}
