@@ -26,7 +26,7 @@ flutter run -d chrome
 
 ## 🔗 Useful links
 
-🌐 Web App: http://mhmzdev.github.io/folio
+🌐 Web App: http://mhmz.dev
 
 📱 Android App: https://drive.google.com/drive/folders/1qEjMnDPrWOHVOKnKVM3Vbl0RpDE2C9L9?usp=sharing
 
