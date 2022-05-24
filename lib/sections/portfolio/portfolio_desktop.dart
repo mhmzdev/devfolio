@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:folio/animations/bottom_animation.dart';
-import 'package:folio/widget/custom_button.dart';
 import 'package:folio/widget/custom_text_heading.dart';
 import 'package:folio/widget/project_card.dart';
 import 'package:folio/constants.dart';
@@ -54,47 +53,26 @@ class _PortfolioDesktopState extends State<PortfolioDesktop> {
                   ),
                 );
               },
-              itemCount: 4,
+              itemCount: 5,
             ),
           ),
           SizedBox(
             height: height * 0.02,
           ),
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              IconButton(
-                onPressed: () {
-                  scrollValue -= width * 0.5;
-                  scrollController.animateTo(
-                    scrollValue,
-                    duration: const Duration(milliseconds: 300),
-                    curve: Curves.ease,
-                  );
-                },
-                icon: const Icon(Icons.arrow_back),
-              ),
-              const SizedBox(width: 8.0),
-              OutlinedCustomBtn(
-                btnText: "See More",
-                onPressed: () {
-                  launchURL("https://github.com/mhmzdev");
-                },
-              ),
-              const SizedBox(width: 8.0),
-              IconButton(
-                onPressed: () {
-                  scrollValue += width * 0.5;
-                  scrollController.animateTo(
-                    scrollValue,
-                    duration: const Duration(milliseconds: 300),
-                    curve: Curves.ease,
-                  );
-                },
-                icon: const Icon(Icons.arrow_forward),
-              ),
-            ],
-          )
+          Slider(
+            value: scrollValue,
+            min: 0,
+            onChanged: (value) {
+              setState(() {
+                scrollValue = value;
+                scrollController.animateTo(
+                  value * width,
+                  duration: const Duration(milliseconds: 300),
+                  curve: Curves.ease,
+                );
+              });
+            },
+          ),
         ],
       ),
     );

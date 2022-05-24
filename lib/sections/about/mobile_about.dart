@@ -171,15 +171,20 @@ class AboutMobile extends StatelessWidget {
               ],
             ),
           ),
-          Row(
-            children: [
-              for (int i = 0; i < kCommunityLogo.length; i++)
-                CommunityIconBtn(
-                  icon: kCommunityLogo[i],
-                  link: kCommunityLinks[i],
-                  height: _communityLogoHeight[i],
-                ),
-            ],
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+                children: kCommunityLogo
+                    .asMap()
+                    .entries
+                    .map(
+                      (e) => CommunityIconBtn(
+                        icon: kCommunityLogo[e.key],
+                        link: kCommunityLinks[e.key],
+                        height: _communityLogoHeight[e.key],
+                      ),
+                    )
+                    .toList()),
           ),
         ],
       ),

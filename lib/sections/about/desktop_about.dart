@@ -99,12 +99,11 @@ class AboutDesktop extends StatelessWidget {
                             color: kPrimaryColor, fontSize: height * 0.018),
                       ),
                       Row(
-                        children: [
-                          for (int i = 0; i < kTools.length; i++)
-                            ToolTechWidget(
-                              techName: kTools[i],
-                            ),
-                        ],
+                        children: kTools
+                            .map((e) => ToolTechWidget(
+                                  techName: e,
+                                ))
+                            .toList(),
                       ),
                       SizedBox(
                         height: height * 0.02,
@@ -162,12 +161,15 @@ class AboutDesktop extends StatelessWidget {
                               ),
                             ),
                           ),
-                          for (int i = 0; i < kCommunityLogo.length; i++)
-                            CommunityIconBtn(
-                              icon: kCommunityLogo[i],
-                              link: kCommunityLinks[i],
-                              height: _communityLogoHeight[i],
-                            ),
+                          ...kCommunityLogo.asMap().entries.map(
+                                (e) => Expanded(
+                                  child: CommunityIconBtn(
+                                    icon: kCommunityLogo[e.key],
+                                    link: kCommunityLinks[e.key],
+                                    height: _communityLogoHeight[e.key],
+                                  ),
+                                ),
+                              )
                         ],
                       ),
                     ],
