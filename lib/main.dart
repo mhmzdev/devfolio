@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:folio/provider/theme_provider.dart';
-import 'package:folio/provider/theme_styles.dart';
-import 'package:folio/sections/main_section.dart';
+import 'package:folio/provider/app_provider.dart';
+import 'package:folio/provider/drawer_provider.dart';
+import 'package:folio/provider/scroll_provider.dart';
+import 'package:folio/sections/main/main_section.dart';
 import 'package:provider/provider.dart';
 import 'package:url_strategy/url_strategy.dart';
+import 'package:folio/configs/core_theme.dart' as theme;
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,36 +21,55 @@ class MyApp extends StatefulWidget {
 }
 
 class MyAppState extends State<MyApp> {
-  final ThemeProvider _themeProvider = ThemeProvider();
+  @override
+  Widget build(BuildContext context) {
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => AppProvider()),
+        ChangeNotifierProvider(create: (_) => DrawerProvider()),
+        ChangeNotifierProvider(create: (_) => ScrollProvider()),
+      ],
+      child: Consumer<AppProvider>(
+        builder: (context, value, _) => MaterialChild(
+          provider: value,
+        ),
+      ),
+    );
+  }
+}
 
-  void getCurrentAppTheme() async {
-    _themeProvider.lightTheme = await _themeProvider.darkThemePref.getTheme();
+class MaterialChild extends StatefulWidget {
+  final AppProvider provider;
+  const MaterialChild({Key? key, required this.provider}) : super(key: key);
+
+  @override
+  State<MaterialChild> createState() => _MaterialChildState();
+}
+
+class _MaterialChildState extends State<MaterialChild> {
+  void initAppTheme() {
+    final appProviders = AppProvider.state(context);
+    appProviders.init();
   }
 
   @override
   void initState() {
-    getCurrentAppTheme();
+    initAppTheme();
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (context) => ThemeProvider()),
-      ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Hamza',
-        theme: ThemeStyles.themeData(
-          _themeProvider.lightTheme,
-          context,
-        ),
-        initialRoute: "/",
-        routes: {
-          "/": (context) => const MainPage(),
-        },
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Hamza',
+      theme: theme.themeLight,
+      darkTheme: theme.themeDark,
+      themeMode: widget.provider.themeMode,
+      initialRoute: "/",
+      routes: {
+        "/": (context) => const MainPage(),
+      },
     );
   }
 }

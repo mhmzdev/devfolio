@@ -1,34 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:folio/configs/configs.dart';
 import 'package:folio/constants.dart';
-import 'package:folio/provider/theme_provider.dart';
-import 'package:folio/widget/adaptive_text.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:folio/provider/app_provider.dart';
+
 import 'package:provider/provider.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class ProjectCard extends StatefulWidget {
-  final String? projectIcon;
-  final IconData? projectIconData;
-  final String? projectTitle;
-  final String? projectDescription;
+  final String? banner;
   final String? projectLink;
-  final double? cardWidth;
-  final double? cardHeight;
-  final String? backImage;
-  final Widget? bottomWidget;
+  final String? projectIcon;
+  final String projectTitle;
+  final String projectDescription;
+  final IconData? projectIconData;
 
-  const ProjectCard(
-      {Key? key,
-      this.backImage,
-      this.bottomWidget,
-      this.projectIcon,
-      this.projectTitle,
-      this.projectDescription,
-      this.projectLink,
-      this.projectIconData,
-      this.cardWidth,
-      this.cardHeight})
-      : super(key: key);
+  const ProjectCard({
+    Key? key,
+    this.banner,
+    this.projectIcon,
+    this.projectLink,
+    this.projectIconData,
+    required this.projectTitle,
+    required this.projectDescription,
+  }) : super(key: key);
   @override
   ProjectCardState createState() => ProjectCardState();
 }
@@ -38,16 +31,20 @@ class ProjectCardState extends State<ProjectCard> {
 
   @override
   Widget build(BuildContext context) {
-    final themeProvider = Provider.of<ThemeProvider>(context);
-    double height = MediaQuery.of(context).size.height;
+    final appProvider = Provider.of<AppProvider>(context);
+
     double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+
     return InkWell(
       hoverColor: Colors.transparent,
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
-      onTap: () => launch(
-        widget.projectLink!,
-      ),
+      onTap: widget.projectLink == null
+          ? () {}
+          : () => launchURL(
+                widget.projectLink!,
+              ),
       onHover: (isHovering) {
         if (isHovering) {
           setState(() {
@@ -60,12 +57,13 @@ class ProjectCardState extends State<ProjectCard> {
         }
       },
       child: Container(
-        width: widget.cardWidth,
-        height: widget.cardHeight,
-        padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
+        margin: Space.h,
+        padding: Space.all(),
+        width: AppDimensions.normalize(150),
+        height: AppDimensions.normalize(90),
         decoration: BoxDecoration(
+          color: appProvider.isDark ? Colors.grey[900] : Colors.white,
           borderRadius: BorderRadius.circular(10),
-          color: themeProvider.lightTheme ? Colors.white : Colors.grey[900],
           boxShadow: isHover
               ? [
                   BoxShadow(
@@ -105,16 +103,9 @@ class ProjectCardState extends State<ProjectCard> {
                                 width: width * 0.01,
                               ),
                               Text(
-                                widget.projectTitle!,
+                                widget.projectTitle,
+                                style: AppText.b2b,
                                 textAlign: TextAlign.center,
-                                style: GoogleFonts.montserrat(
-                                  fontSize: height * 0.015,
-                                  letterSpacing: 1.5,
-                                  fontWeight: FontWeight.w400,
-                                  color: themeProvider.lightTheme
-                                      ? Colors.black
-                                      : Colors.white,
-                                ),
                               ),
                             ],
                           )
@@ -132,38 +123,22 @@ class ProjectCardState extends State<ProjectCard> {
                       )
                     : const SizedBox(),
                 (width > 1135 || width < 950)
-                    ? AdaptiveText(
-                        widget.projectTitle!,
+                    ? Text(
+                        widget.projectTitle,
+                        style: AppText.b2b,
                         textAlign: TextAlign.center,
-                        style: GoogleFonts.montserrat(
-                          fontSize: height * 0.02,
-                          letterSpacing: 1.5,
-                          fontWeight: FontWeight.w400,
-                          color: themeProvider.lightTheme
-                              ? Colors.white
-                              : Colors.grey[900],
-                        ),
                       )
                     : Container(),
                 SizedBox(
                   height: height * 0.01,
                 ),
-                AdaptiveText(
-                  widget.projectDescription!,
+                Text(
+                  widget.projectDescription,
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.montserrat(
-                      fontSize: height * 0.015,
-                      letterSpacing: 2.0,
-                      color: themeProvider.lightTheme
-                          ? Colors.black
-                          : Colors.white,
-                      fontWeight: FontWeight.w300,
-                      height: width >= 600 ? 2.0 : 1.2),
                 ),
                 SizedBox(
                   height: height * 0.01,
                 ),
-                widget.bottomWidget ?? Container(),
               ],
             ),
             AnimatedOpacity(
@@ -171,9 +146,9 @@ class ProjectCardState extends State<ProjectCard> {
               opacity: isHover ? 0.0 : 1.0,
               child: FittedBox(
                 fit: BoxFit.fill,
-                child: widget.backImage != null
+                child: widget.banner != null
                     ? Image.asset(
-                        widget.backImage!,
+                        widget.banner!,
                       )
                     : Container(),
               ),

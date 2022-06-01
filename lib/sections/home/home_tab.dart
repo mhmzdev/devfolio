@@ -1,36 +1,48 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:folio/animations/entrance_fader.dart';
+import 'package:folio/configs/configs.dart';
 import 'package:folio/constants.dart';
-import 'package:folio/provider/theme_provider.dart';
-import 'package:folio/widget/social_icon.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
+import 'package:folio/utils/utils.dart';
+
+import 'package:folio/widget/social_links.dart';
 
 class HomeTab extends StatelessWidget {
   const HomeTab({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final themeProvider = Provider.of<ThemeProvider>(context);
-    double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
+    Size size = MediaQuery.of(context).size;
 
     return SizedBox(
-      height: height,
-      width: width,
+      height: size.height * 1.02,
       child: Stack(
         children: [
           Positioned(
-            bottom: width < 740 ? height * 0.1 : height * 0.15,
-            right: width < 740 ? -width * 0.2 : -width * 0.1,
+            bottom: 0,
+            right: 0,
             child: Opacity(
               opacity: 0.9,
-              child: Image.asset('assets/1.png', height: height * 0.75),
+              child: EntranceFader(
+                offset: const Offset(0, 0),
+                delay: const Duration(seconds: 1),
+                duration: const Duration(milliseconds: 800),
+                child: Image.asset(
+                  StaticUtils.blackWhitePhoto,
+                  height: size.width < 1200
+                      ? size.height * 0.75
+                      : size.height * 0.85,
+                ),
+              ),
             ),
           ),
           Container(
             margin: EdgeInsets.fromLTRB(
-                width * 0.1, width < 740 ? height * 0.15 : height * 0.2, 0, 0),
+              AppDimensions.normalize(30),
+              AppDimensions.normalize(50),
+              0,
+              0,
+            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -38,81 +50,71 @@ class HomeTab extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
-                      "WELCOME TO MY PORTFOLIO! ",
-                      style: GoogleFonts.montserrat(
-                        fontSize: height * 0.03,
-                        fontWeight: FontWeight.w300,
-                        color: themeProvider.lightTheme
-                            ? Colors.black
-                            : Colors.white,
+                      'WELCOME TO MY PORTFOLIO! ',
+                      style: AppText.b2!.copyWith(
+                        fontFamily: 'Montserrat',
                       ),
                     ),
-                    Image.asset(
-                      "assets/hi.gif",
-                      height: height * 0.05,
+                    EntranceFader(
+                      offset: const Offset(0, 0),
+                      delay: const Duration(seconds: 2),
+                      duration: const Duration(milliseconds: 800),
+                      child: Image.asset(
+                        StaticUtils.hi,
+                        height: AppDimensions.normalize(12),
+                      ),
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: height * 0.04,
-                ),
+                Space.y1!,
                 Text(
                   "Muhammad",
-                  style: GoogleFonts.montserrat(
-                      fontSize: height * 0.07,
-                      fontWeight: FontWeight.w100,
-                      color: themeProvider.lightTheme
-                          ? Colors.black
-                          : Colors.white,
-                      letterSpacing: 1.5),
+                  style: AppText.h1!.copyWith(
+                    fontFamily: 'Montserrat',
+                    fontWeight: FontWeight.w100,
+                  ),
                 ),
                 Text(
                   "Hamza",
-                  style: GoogleFonts.montserrat(
-                    fontSize: height * 0.07,
-                    fontWeight: FontWeight.w500,
-                    color:
-                        themeProvider.lightTheme ? Colors.black : Colors.white,
+                  style: AppText.h1b!.copyWith(
+                    height: 1,
                   ),
                 ),
-                Row(
-                  children: [
-                    const Icon(
-                      Icons.play_arrow_rounded,
-                      color: kPrimaryColor,
-                    ),
-                    TyperAnimatedTextKit(
+                EntranceFader(
+                  offset: const Offset(-10, 0),
+                  delay: const Duration(seconds: 1),
+                  duration: const Duration(milliseconds: 800),
+                  child: Row(
+                    children: [
+                      const Icon(
+                        Icons.play_arrow_rounded,
+                        color: kPrimaryColor,
+                      ),
+                      AnimatedTextKit(
+                        animatedTexts: [
+                          TyperAnimatedText(
+                            ' Flutter Developer',
+                            speed: const Duration(milliseconds: 50),
+                            textStyle: AppText.b1,
+                          ),
+                          TyperAnimatedText(
+                            ' UI/UX Enthusiast',
+                            speed: const Duration(milliseconds: 50),
+                            textStyle: AppText.b1,
+                          ),
+                          TyperAnimatedText(
+                            ' A friend :)',
+                            speed: const Duration(milliseconds: 50),
+                            textStyle: AppText.b1,
+                          ),
+                        ],
                         isRepeatingAnimation: true,
-                        speed: const Duration(milliseconds: 50),
-                        textStyle: GoogleFonts.montserrat(
-                          fontSize: height * 0.03,
-                          fontWeight: FontWeight.w200,
-                          color: themeProvider.lightTheme
-                              ? Colors.black
-                              : Colors.white,
-                        ),
-                        text: const [
-                          " Flutter Developer",
-                          " Technical Writer",
-                          " UI/UX Enthusiast"
-                        ]),
-                  ],
+                      ),
+                    ],
+                  ),
                 ),
-                SizedBox(
-                  height: height * 0.045,
-                ),
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    for (int i = 0; i < kSocialIcons.length; i++)
-                      SocialMediaIconBtn(
-                        icon: kSocialIcons[i],
-                        socialLink: kSocialLinks[i],
-                        height: height * 0.035,
-                        horizontalPadding: width * 0.01,
-                      )
-                  ],
-                )
+                Space.y2!,
+                const SocialLinks(),
               ],
             ),
           ),

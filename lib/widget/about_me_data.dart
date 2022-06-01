@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:folio/provider/theme_provider.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:folio/configs/app_typography.dart';
+import 'package:folio/provider/app_provider.dart';
 import 'package:provider/provider.dart';
 
 class AboutMeData extends StatelessWidget {
@@ -16,8 +16,7 @@ class AboutMeData extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final themeProvider = Provider.of<ThemeProvider>(context);
-    double height = MediaQuery.of(context).size.height;
+    final appProvider = Provider.of<AppProvider>(context);
 
     return Align(
       alignment: alignment ?? Alignment.center,
@@ -26,19 +25,14 @@ class AboutMeData extends StatelessWidget {
           children: [
             TextSpan(
               text: "$data: ",
-              style: GoogleFonts.montserrat(
-                fontWeight: FontWeight.w600,
-                fontSize: height * 0.018,
-                color: themeProvider.lightTheme ? Colors.black : Colors.white,
+              style: AppText.l1b!.copyWith(
+                color: appProvider.isDark ? Colors.white : Colors.black,
               ),
             ),
             TextSpan(
               text: " $information\n",
-              style: GoogleFonts.montserrat(
-                fontWeight: FontWeight.w300,
-                fontSize: height * 0.018,
-                letterSpacing: 1.0,
-                color: themeProvider.lightTheme ? Colors.black : Colors.white,
+              style: AppText.l1!.copyWith(
+                color: appProvider.isDark ? Colors.white : Colors.black,
               ),
             ),
           ],

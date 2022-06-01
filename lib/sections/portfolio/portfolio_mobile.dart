@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:folio/constants.dart';
-import 'package:folio/widget/custom_button.dart';
+import 'package:folio/configs/configs.dart';
+import 'package:folio/utils/project_utils.dart';
 import 'package:folio/widget/custom_text_heading.dart';
 import 'package:folio/widget/project_card.dart';
 
@@ -11,41 +11,47 @@ class PortfolioMobileTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
     return Column(
       children: [
-        const CustomSectionHeading(text: "\nPortfolio"),
+        const CustomSectionHeading(
+          text: "\nPortfolio",
+        ),
         const CustomSectionSubHeading(
-            text: "Here are few samples of my previous work :)\n\n"),
+          text: "Here are few samples of my previous work :)\n\n",
+        ),
         CarouselSlider.builder(
-          itemCount: 10,
+          itemCount: ProjectUtils.titles.length,
           itemBuilder: (BuildContext context, int itemIndex, int i) => Padding(
             padding: const EdgeInsets.symmetric(vertical: 15.0),
             child: ProjectCard(
-              cardWidth: width < 650 ? width * 0.8 : width * 0.4,
-              projectIcon: kProjectsIcons[i],
-              projectTitle: kProjectsTitles[i],
-              projectDescription: kProjectsDescriptions[i],
-              projectLink: kProjectsLinks[i],
+              projectIcon: ProjectUtils.icons[i],
+              projectLink: ProjectUtils.links[i],
+              projectTitle: ProjectUtils.titles[i],
+              projectDescription: ProjectUtils.description[i],
             ),
           ),
           options: CarouselOptions(
-              height: height * 0.4,
-              autoPlay: true,
-              autoPlayInterval: const Duration(seconds: 5),
-              enlargeCenterPage: true,
-              autoPlayCurve: Curves.fastOutSlowIn,
-              autoPlayAnimationDuration: const Duration(milliseconds: 800),
-              enableInfiniteScroll: false),
+            height: height * 0.4,
+            autoPlay: true,
+            autoPlayInterval: const Duration(seconds: 5),
+            enlargeCenterPage: true,
+            autoPlayCurve: Curves.fastOutSlowIn,
+            autoPlayAnimationDuration: const Duration(milliseconds: 800),
+            enableInfiniteScroll: false,
+          ),
         ),
+        Space.y!,
         SizedBox(
-          height: height * 0.03,
-        ),
-        OutlinedCustomBtn(
-            btnText: "See More",
-            onPressed: () {
-              launchURL("https://github.com/mhmzdev");
-            })
+          height: AppDimensions.normalize(14),
+          width: AppDimensions.normalize(50),
+          child: OutlinedButton(
+            onPressed: () {},
+            child: Text(
+              'See More',
+              style: AppText.l1b,
+            ),
+          ),
+        )
       ],
     );
   }

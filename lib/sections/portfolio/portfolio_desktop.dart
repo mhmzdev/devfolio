@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:folio/animations/bottom_animation.dart';
+import 'package:folio/configs/configs.dart';
+import 'package:folio/utils/project_utils.dart';
 import 'package:folio/widget/custom_text_heading.dart';
 import 'package:folio/widget/project_card.dart';
-import 'package:folio/constants.dart';
 
 class PortfolioDesktop extends StatefulWidget {
   const PortfolioDesktop({Key? key}) : super(key: key);
@@ -12,67 +12,48 @@ class PortfolioDesktop extends StatefulWidget {
 }
 
 class _PortfolioDesktopState extends State<PortfolioDesktop> {
-  ScrollController scrollController = ScrollController();
-  double scrollValue = 0;
-
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
-
     return Container(
-      padding: EdgeInsets.symmetric(
-          horizontal: width * 0.02, vertical: height * 0.02),
+      padding: Space.h!,
       child: Column(
         children: [
-          const CustomSectionHeading(text: "\nPortfolio"),
+          const CustomSectionHeading(
+            text: "\nPortfolio",
+          ),
           const CustomSectionSubHeading(
-              text: "Here are few samples of my previous work :)\n\n"),
-          SizedBox(
-            height: width > 1200 ? height * 0.45 : width * 0.21,
-            child: ListView.separated(
-              controller: scrollController,
-              padding: const EdgeInsets.symmetric(vertical: 20.0),
-              scrollDirection: Axis.horizontal,
-              separatorBuilder: (context, index) {
-                return VerticalDivider(
-                  color: Colors.transparent,
-                  width: width * 0.015,
-                );
-              },
-              itemBuilder: (context, index) {
-                return WidgetAnimator(
-                  child: ProjectCard(
-                    cardWidth: width < 1200 ? width * 0.3 : width * 0.35,
-                    cardHeight: width < 1200 ? height * 0.32 : height * 0.1,
-                    backImage: kProjectsBanner[index],
-                    projectIcon: kProjectsIcons[index],
-                    projectTitle: kProjectsTitles[index],
-                    projectDescription: kProjectsDescriptions[index],
-                    projectLink: kProjectsLinks[index],
+            text: "Here are few samples of my previous work :)\n\n",
+          ),
+          Wrap(
+            alignment: WrapAlignment.center,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            runSpacing: AppDimensions.normalize(10),
+            children: ProjectUtils.banners
+                .asMap()
+                .entries
+                .map(
+                  (e) => ProjectCard(
+                    banner: e.value,
+                    projectIcon: ProjectUtils.icons[e.key],
+                    projectLink: ProjectUtils.links[e.key],
+                    projectTitle: ProjectUtils.titles[e.key],
+                    projectDescription: ProjectUtils.description[e.key],
                   ),
-                );
-              },
-              itemCount: 5,
-            ),
+                )
+                .toList(),
           ),
+          Space.y2!,
           SizedBox(
-            height: height * 0.02,
-          ),
-          Slider(
-            value: scrollValue,
-            min: 0,
-            onChanged: (value) {
-              setState(() {
-                scrollValue = value;
-                scrollController.animateTo(
-                  value * width,
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.ease,
-                );
-              });
-            },
-          ),
+            height: AppDimensions.normalize(14),
+            width: AppDimensions.normalize(50),
+            child: OutlinedButton(
+              onPressed: () {},
+              child: Text(
+                'See More',
+                style: AppText.l1b,
+              ),
+            ),
+          )
         ],
       ),
     );

@@ -1,35 +1,40 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:folio/configs/configs.dart';
 import 'package:folio/constants.dart';
-import 'package:folio/provider/theme_provider.dart';
-import 'package:folio/widget/social_icon.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
+
+import 'package:folio/utils/utils.dart';
+import 'package:folio/widget/social_links.dart';
 
 class HomeMobile extends StatelessWidget {
   const HomeMobile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final themeProvider = Provider.of<ThemeProvider>(context);
-    double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
+    Size size = MediaQuery.of(context).size;
 
     return SizedBox(
-      height: height,
-      width: width,
+      height: size.height * 1.02,
       child: Stack(
         children: [
           Positioned(
             bottom: 0.0,
-            right: -width * 0.25,
+            right: -AppDimensions.normalize(25),
             child: Opacity(
               opacity: 0.9,
-              child: Image.asset('assets/1.png', height: height * 0.65),
+              child: Image.asset(
+                StaticUtils.blackWhitePhoto,
+                height: AppDimensions.normalize(150),
+              ),
             ),
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(width * 0.07, height * 0.12, 0, 0),
+            margin: EdgeInsets.fromLTRB(
+              AppDimensions.normalize(10),
+              AppDimensions.normalize(40),
+              0,
+              0,
+            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -38,79 +43,61 @@ class HomeMobile extends StatelessWidget {
                   children: [
                     Text(
                       "HEY THERE! ",
-                      style: GoogleFonts.montserrat(
-                          fontSize: height * 0.025,
-                          color: themeProvider.lightTheme
-                              ? Colors.black
-                              : Colors.white,
-                          fontWeight: FontWeight.w200),
+                      style: AppText.l1!.copyWith(
+                        fontFamily: 'Montserrat',
+                      ),
                     ),
                     Image.asset(
-                      "assets/hi.gif",
-                      height: height * 0.03,
+                      StaticUtils.hi,
+                      height: AppDimensions.normalize(10),
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: height * 0.01,
-                ),
+                Space.y!,
                 Text(
                   "Muhammad",
-                  style: GoogleFonts.montserrat(
-                      fontSize: height * 0.055,
-                      color: themeProvider.lightTheme
-                          ? Colors.black
-                          : Colors.white,
-                      fontWeight: FontWeight.w100,
-                      letterSpacing: 1.1),
+                  style: AppText.h3!.copyWith(
+                    fontFamily: 'Montserrat',
+                    fontWeight: FontWeight.w100,
+                  ),
                 ),
                 Text(
                   "Hamza",
-                  style: GoogleFonts.montserrat(
-                      color: themeProvider.lightTheme
-                          ? Colors.black
-                          : Colors.white,
-                      fontSize: height * 0.055,
-                      fontWeight: FontWeight.w500),
+                  style: AppText.h3b!.copyWith(
+                    height: 1,
+                  ),
                 ),
+                Space.y!,
                 Row(
                   children: [
                     const Icon(
                       Icons.play_arrow_rounded,
                       color: kPrimaryColor,
                     ),
-                    TyperAnimatedTextKit(
-                      isRepeatingAnimation: true,
-                      speed: const Duration(milliseconds: 50),
-                      textStyle: GoogleFonts.montserrat(
-                          fontSize: height * 0.03,
-                          color: themeProvider.lightTheme
-                              ? Colors.black
-                              : Colors.white,
-                          fontWeight: FontWeight.w200),
-                      text: const [
-                        " Flutter Developer",
-                        " Technical Writer",
-                        " UI/UX Enthusiast"
+                    AnimatedTextKit(
+                      animatedTexts: [
+                        TyperAnimatedText(
+                          ' Flutter Developer',
+                          speed: const Duration(milliseconds: 50),
+                          textStyle: AppText.b1,
+                        ),
+                        TyperAnimatedText(
+                          ' UI/UX Enthusiast',
+                          speed: const Duration(milliseconds: 50),
+                          textStyle: AppText.b1,
+                        ),
+                        TyperAnimatedText(
+                          ' A friend :)',
+                          speed: const Duration(milliseconds: 50),
+                          textStyle: AppText.b1,
+                        ),
                       ],
+                      isRepeatingAnimation: true,
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: height * 0.035,
-                ),
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    for (int i = 0; i < kSocialIcons.length; i++)
-                      SocialMediaIconBtn(
-                        icon: kSocialIcons[i],
-                        socialLink: kSocialLinks[i],
-                        height: height * 0.03,
-                        horizontalPadding: 2.0,
-                      )
-                  ],
-                )
+                Space.y!,
+                const SocialLinks(),
               ],
             ),
           ),

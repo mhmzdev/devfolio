@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:folio/configs/configs.dart';
 import 'package:folio/constants.dart';
 
 class CommunityIconBtn extends StatelessWidget {
@@ -15,8 +16,10 @@ class CommunityIconBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+      padding: Space.h!,
       child: InkWell(
+        hoverColor: Colors.transparent,
+        highlightColor: Colors.transparent,
         child: Image.asset(
           icon,
           height: height,

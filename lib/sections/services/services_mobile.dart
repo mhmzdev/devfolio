@@ -1,44 +1,33 @@
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter/material.dart';
-import 'package:folio/constants.dart';
-import 'package:folio/provider/theme_provider.dart';
-import 'package:folio/sections/services/services_desktop.dart';
-import 'package:folio/widget/custom_text_heading.dart';
-import 'package:folio/widget/service_card.dart';
-import 'package:provider/provider.dart';
+part of 'services.dart';
 
 class ServiceMobile extends StatelessWidget {
   const ServiceMobile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final themeProvider = Provider.of<ThemeProvider>(context);
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Column(
       children: [
-        const CustomSectionHeading(text: "\nWhat I Do"),
+        const CustomSectionHeading(
+          text: '\nWhat I can do?',
+        ),
         const CustomSectionSubHeading(
-            text: "I may not be perfect, but I'm surely of some help :)\n\n"),
+          text: 'I may not be perfect but surely I\'m of some use :)\n\n',
+        ),
+        Space.y!,
         CarouselSlider.builder(
-          itemCount: 5,
+          itemCount: ServicesUtils.servicesTitles.length,
           itemBuilder: (BuildContext context, int itemIndex, int i) => Padding(
             padding: const EdgeInsets.symmetric(vertical: 10.0),
-            child: ServiceCard(
-              cardWidth: width < 650 ? width * 0.8 : width * 0.5,
-              serviceIcon: kServicesIcons[i],
-              serviceTitle: kServicesTitles[i],
-              serviceDescription: kServicesDescriptions[i],
-              cardBack: ServiceCardBackWidget(
-                serviceTitle: kServicesTitles[i],
-                serviceDesc: kServicesDescriptions[i],
-                themeProvider: themeProvider,
-                height: height,
-                width: width,
-              ),
+            child: _ServiceCard(
+              serviceIcon: ServicesUtils.servicesIcons[i],
+              serviceTitle: ServicesUtils.servicesTitles[i],
+              serviceDescription: ServicesUtils.servicesDescription[i],
             ),
           ),
           options: CarouselOptions(
+            viewportFraction: 0.65,
             height: width < 450 ? height * 0.4 : height * 0.4,
             autoPlay: true,
             autoPlayInterval: const Duration(seconds: 5),
