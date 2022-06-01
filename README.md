@@ -1,8 +1,12 @@
-<h1 align="center" style="font-size: 52px;" ><img height=30 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/flutter/flutter.png"> DevFolio - Portfolio for Developers</h1>
+## Let's recreate your Portfolio
 
-Designed live portfolio using Flutter 2.0. Available for **Android** and **Web**. 
+Get started now by cloning :)
 
-<img src="https://user-images.githubusercontent.com/43790152/112185787-5ce1a300-8c22-11eb-80af-271f674f8f24.png">
+<img src="https://user-images.githubusercontent.com/43790152/171403666-468b63d9-52be-4ec6-9cdb-c08c0e9d18f3.png">
+
+<img src="https://user-images.githubusercontent.com/43790152/171403671-4e50f0a8-f73c-40f6-8628-547754afc2ef.png">
+
+<br>
 
 <div align="center">
 
@@ -13,28 +17,19 @@ Designed live portfolio using Flutter 2.0. Available for **Android** and **Web**
 
 </div>
 
-## 💻 How to install?
-Before these steps make sure you have `flutter 2.0`
-
-```
-git clone https://github.com/mhmzdev/DevFolio
-cd DevFolio
-flutter packages get
-flutter config --enable-web
-flutter run -d chrome
-```
+## 🧑‍💻 Devfolio
+Is a multi-platform portfolio for developers available for mobile, windows and web. Includes the following sections:
+- Home
+- About
+- Services
+- Portfolio
+- Contact
 
 ## 🔗 Useful links
 
 🌐 Web App: http://mhmz.dev
 
-📱 Android App: https://drive.google.com/drive/folders/1qEjMnDPrWOHVOKnKVM3Vbl0RpDE2C9L9?usp=sharing
-
 📙 Article: https://mhamzadev.medium.com/folio-responsive-portfolio-using-flutter-2-0-86ae3e6cce4f
-
-## 👀 Looks
-
-<img src="https://user-images.githubusercontent.com/43790152/111952323-c8365280-8b06-11eb-9c65-747b5001340a.PNG"> <img src="https://user-images.githubusercontent.com/43790152/112266079-5a6c6100-8c95-11eb-9b68-2121e37b0851.gif"> <img src="https://user-images.githubusercontent.com/43790152/112265455-57bd3c00-8c94-11eb-870a-13c9157b7e1b.gif"> <img src="https://user-images.githubusercontent.com/43790152/112266085-5ccebb00-8c95-11eb-9a06-67810e894471.gif">
 
 
 ## 🔑 License
