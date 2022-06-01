@@ -24,7 +24,7 @@ class CommunityIconBtn extends StatelessWidget {
           icon,
           height: height,
         ),
-        onTap: () => launchURL(link),
+        onTap: () => openURL(link),
       ),
     );
   }

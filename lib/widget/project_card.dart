@@ -42,7 +42,7 @@ class ProjectCardState extends State<ProjectCard> {
       highlightColor: Colors.transparent,
       onTap: widget.projectLink == null
           ? () {}
-          : () => launchURL(
+          : () => openURL(
                 widget.projectLink!,
               ),
       onHover: (isHovering) {
@@ -67,7 +67,7 @@ class ProjectCardState extends State<ProjectCard> {
           boxShadow: isHover
               ? [
                   BoxShadow(
-                    color: kPrimaryColor.withAlpha(100),
+                    color: AppTheme.c!.primary!.withAlpha(100),
                     blurRadius: 12.0,
                     offset: const Offset(0.0, 0.0),
                   )
@@ -113,7 +113,7 @@ class ProjectCardState extends State<ProjectCard> {
                 widget.projectIconData != null
                     ? Icon(
                         widget.projectIconData,
-                        color: kPrimaryColor,
+                        color: AppTheme.c!.primary!,
                         size: height * 0.1,
                       )
                     : Container(),

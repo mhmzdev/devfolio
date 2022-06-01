@@ -1,7 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:folio/configs/configs.dart';
-import 'package:folio/constants.dart';
 
 import 'package:folio/utils/utils.dart';
 import 'package:folio/widget/social_links.dart';
@@ -43,10 +42,11 @@ class HomeMobile extends StatelessWidget {
                   children: [
                     Text(
                       "HEY THERE! ",
-                      style: AppText.l1!.copyWith(
+                      style: AppText.b2!.copyWith(
                         fontFamily: 'Montserrat',
                       ),
                     ),
+                    Space.x!,
                     Image.asset(
                       StaticUtils.hi,
                       height: AppDimensions.normalize(10),
@@ -70,9 +70,9 @@ class HomeMobile extends StatelessWidget {
                 Space.y!,
                 Row(
                   children: [
-                    const Icon(
+                    Icon(
                       Icons.play_arrow_rounded,
-                      color: kPrimaryColor,
+                      color: AppTheme.c!.primary!,
                     ),
                     AnimatedTextKit(
                       animatedTexts: [
@@ -92,6 +92,7 @@ class HomeMobile extends StatelessWidget {
                           textStyle: AppText.b1,
                         ),
                       ],
+                      repeatForever: true,
                       isRepeatingAnimation: true,
                     ),
                   ],

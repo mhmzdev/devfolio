@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:folio/configs/configs.dart';
+import 'package:folio/constants.dart';
 import 'package:folio/utils/project_utils.dart';
+import 'package:folio/utils/utils.dart';
 import 'package:folio/widget/custom_text_heading.dart';
 import 'package:folio/widget/project_card.dart';
 
@@ -47,7 +49,7 @@ class _PortfolioDesktopState extends State<PortfolioDesktop> {
             height: AppDimensions.normalize(14),
             width: AppDimensions.normalize(50),
             child: OutlinedButton(
-              onPressed: () {},
+              onPressed: () => openURL(StaticUtils.gitHub),
               child: Text(
                 'See More',
                 style: AppText.l1b,

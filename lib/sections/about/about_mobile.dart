@@ -108,7 +108,7 @@ class AboutMobile extends StatelessWidget {
               onPressed: () {
                 kIsWeb
                     ? html.window.open(StaticUtils.resume, "pdf")
-                    : launchURL(StaticUtils.resume);
+                    : openURL(StaticUtils.resume);
               }),
           Space.y!,
           Wrap(

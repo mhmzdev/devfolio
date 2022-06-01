@@ -2,7 +2,6 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:folio/animations/entrance_fader.dart';
 import 'package:folio/configs/configs.dart';
-import 'package:folio/constants.dart';
 
 import 'package:folio/utils/utils.dart';
 import 'package:folio/widget/social_links.dart';
@@ -89,9 +88,9 @@ class HomeDesktop extends StatelessWidget {
                   duration: const Duration(milliseconds: 800),
                   child: Row(
                     children: [
-                      const Icon(
+                      Icon(
                         Icons.play_arrow_rounded,
-                        color: kPrimaryColor,
+                        color: AppTheme.c!.primary!,
                       ),
                       AnimatedTextKit(
                         animatedTexts: [

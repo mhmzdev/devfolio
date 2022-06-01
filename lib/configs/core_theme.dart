@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:folio/constants.dart';
 
 const fontFamily = 'Poppins';
 
 final themeLight = ThemeData(
-  primaryColorLight: kPrimaryColor,
+  primaryColorLight: const Color(0xffC0392B),
   brightness: Brightness.light,
-  primaryColor: kPrimaryColor,
+  primaryColor: const Color(0xffC0392B),
   highlightColor: Colors.black,
   canvasColor: Colors.white,
   fontFamily: fontFamily,
@@ -21,16 +20,16 @@ final themeLight = ThemeData(
 
 final themeDark = ThemeData(
   brightness: Brightness.dark,
-  primaryColorDark: kPrimaryColor,
-  primaryColor: kPrimaryColor,
-  highlightColor: kPrimaryColor,
+  primaryColorDark: const Color(0xffC0392B),
+  primaryColor: const Color(0xffC0392B),
+  highlightColor: const Color(0xffC0392B),
   canvasColor: Colors.white,
   fontFamily: fontFamily,
   splashColor: Colors.transparent,
   backgroundColor: Colors.grey[800],
   scaffoldBackgroundColor: Colors.black,
   colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red).copyWith(
-    secondary: kPrimaryColor,
+    secondary: const Color(0xffC0392B),
     brightness: Brightness.dark,
   ),
 );

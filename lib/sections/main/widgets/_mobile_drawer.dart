@@ -21,9 +21,9 @@ class _MobileDrawer extends StatelessWidget {
               ),
               const Divider(),
               ListTile(
-                leading: const Icon(
+                leading: Icon(
                   Icons.light_mode,
-                  color: kPrimaryColor,
+                  color: AppTheme.c!.primary!,
                 ),
                 title: const Text(
                   "Dark Mode",
@@ -43,9 +43,9 @@ class _MobileDrawer extends StatelessWidget {
                     (e) => Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: MaterialButton(
-                        hoverColor: kPrimaryColor.withAlpha(70),
+                        hoverColor: AppTheme.c!.primary!.withAlpha(70),
                         onPressed: () {
-                          scrollProvider.scroll(e.key);
+                          scrollProvider.scrollMobile(e.key);
                           Navigator.pop(context);
                         },
                         child: ListTile(
@@ -64,11 +64,11 @@ class _MobileDrawer extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: MaterialButton(
-                  hoverColor: kPrimaryColor.withAlpha(150),
+                  hoverColor: AppTheme.c!.primary!.withAlpha(150),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5.0),
-                      side: const BorderSide(color: kPrimaryColor)),
-                  onPressed: () => launchURL(StaticUtils.resume),
+                      side: BorderSide(color: AppTheme.c!.primary!)),
+                  onPressed: () => openURL(StaticUtils.resume),
                   child: const ListTile(
                     leading: Icon(
                       Icons.book,

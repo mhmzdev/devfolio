@@ -29,7 +29,7 @@ class ContactMobileTab extends StatelessWidget {
             ),
           ),
           options: CarouselOptions(
-            height: AppDimensions.normalize(85),
+            height: AppDimensions.normalize(90),
             autoPlay: true,
             autoPlayInterval: const Duration(seconds: 5),
             enlargeCenterPage: true,

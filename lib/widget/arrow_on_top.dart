@@ -1,7 +1,7 @@
 import 'package:folio/animations/entrance_fader.dart';
 import 'package:folio/configs/app_dimensions.dart';
-import 'package:folio/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:folio/configs/app_theme.dart';
 import 'package:folio/provider/app_provider.dart';
 import 'package:folio/provider/scroll_provider.dart';
 import 'package:provider/provider.dart';
@@ -63,7 +63,7 @@ class ArrowOnTopState extends State<ArrowOnTop> {
                   ),
                   child: Icon(
                     Icons.arrow_drop_up_outlined,
-                    color: kPrimaryColor,
+                    color: AppTheme.c!.primary!,
                     size: MediaQuery.of(context).size.height * 0.05,
                   ),
                 ),

@@ -21,22 +21,25 @@ class SocialLinks extends StatelessWidget {
           .entries
           .map(
             (e) => Padding(
-              padding: Space.h!,
+              padding:
+                  Responsive.isMobile(context) ? Space.all(0.2, 0) : Space.h!,
               child: IconButton(
                 highlightColor: Colors.white54,
-                splashRadius: AppDimensions.normalize(10),
+                splashRadius: AppDimensions.normalize(12),
                 icon: Image.network(
                   e.value,
                   color: appProvider.isDark ? Colors.white : Colors.black,
                   height: Responsive.isMobile(context)
-                      ? AppDimensions.normalize(15)
+                      ? AppDimensions.normalize(10)
                       : null,
                 ),
-                iconSize: AppDimensions.normalize(10),
-                onPressed: () => launchURL(
+                iconSize: Responsive.isMobile(context)
+                    ? AppDimensions.normalize(10)
+                    : AppDimensions.normalize(15),
+                onPressed: () => openURL(
                   StaticUtils.socialLinks[e.key],
                 ),
-                hoverColor: kPrimaryColor,
+                hoverColor: AppTheme.c!.primary!,
               ),
             ),
           )
