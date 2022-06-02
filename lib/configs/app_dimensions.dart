@@ -1,5 +1,7 @@
-import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
+
+import 'package:flutter/material.dart';
+
 import 'ui.dart';
 
 class AppDimensions {
@@ -7,6 +9,7 @@ class AppDimensions {
   static double? miniContainerWidth;
 
   static bool? isLandscape;
+
   static double? padding;
   static double ratio = 0;
 
@@ -16,7 +19,6 @@ class AppDimensions {
     ratio = UI.width! / UI.height!;
     double pixelDensity = UI.mediaQuery().devicePixelRatio;
     ratio = (ratio) + ((pixelDensity + ratio) / 2);
-
     if (UI.width! <= 380 && pixelDensity >= 3) {
       ratio *= 0.85;
     }
