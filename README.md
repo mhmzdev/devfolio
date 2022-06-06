@@ -29,6 +29,8 @@ Is a multi-platform portfolio for developers available for mobile, windows and w
 
 🌐 Web App: http://mhmz.dev
 
+📱 Android App: https://play.google.com/store/apps/details?id=com.hmz.folio
+
 📙 Article: https://mhamzadev.medium.com/folio-responsive-portfolio-using-flutter-2-0-86ae3e6cce4f
 
 
