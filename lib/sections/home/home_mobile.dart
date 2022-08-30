@@ -41,7 +41,7 @@ class HomeMobile extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
-                      "HEY THERE! ",
+                      "Hi There!! ",
                       style: AppText.b2!.copyWith(
                         fontFamily: 'Montserrat',
                       ),
@@ -55,14 +55,14 @@ class HomeMobile extends StatelessWidget {
                 ),
                 Space.y!,
                 Text(
-                  "Muhammad",
+                  "Prabha",
                   style: AppText.h3!.copyWith(
                     fontFamily: 'Montserrat',
                     fontWeight: FontWeight.w100,
                   ),
                 ),
                 Text(
-                  "Hamza",
+                  "Chandran",
                   style: AppText.h3b!.copyWith(
                     height: 1,
                   ),
@@ -77,17 +77,17 @@ class HomeMobile extends StatelessWidget {
                     AnimatedTextKit(
                       animatedTexts: [
                         TyperAnimatedText(
-                          ' Flutter Developer',
+                          'Work until',
                           speed: const Duration(milliseconds: 50),
                           textStyle: AppText.b1,
                         ),
                         TyperAnimatedText(
-                          ' UI/UX Enthusiast',
+                          ' You no longer have to',
                           speed: const Duration(milliseconds: 50),
                           textStyle: AppText.b1,
                         ),
                         TyperAnimatedText(
-                          ' A friend :)',
+                          ' introduce Yourself :)',
                           speed: const Duration(milliseconds: 50),
                           textStyle: AppText.b1,
                         ),

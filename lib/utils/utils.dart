@@ -11,7 +11,7 @@ class StaticUtils {
 
   // photos
   static const String mobilePhoto = 'assets/photos/mobile.png';
-  static const String coloredPhoto = 'assets/photos/colored.png';
+  static const String coloredPhoto = 'assets/photos/colored.jpg';
   static const String blackWhitePhoto = 'assets/photos/black-white.png';
 
   // work
@@ -29,27 +29,24 @@ class StaticUtils {
   static const String openSourceBlack = 'assets/services/open_b.png';
 
   static const List<String> socialIconURL = [
-    "https://img.icons8.com/metro/208/ffffff/facebook-new--v2.png",
-    "https://img.icons8.com/ios-glyphs/480/ffffff/instagram-new.png",
-    "https://img.icons8.com/android/480/ffffff/twitter.png",
+
+    "https://img.icons8.com/ios-filled/500/ffffff/behance.png",
     "https://img.icons8.com/metro/308/ffffff/linkedin.png",
     "https://img.icons8.com/material-rounded/384/ffffff/github.png",
-    "https://img.icons8.com/ios-filled/500/ffffff/medium-monogram--v1.png"
+   
   ];
 
   static const List<String> socialLinks = [
-    "https://facebook.com/mhmzdev",
-    "https://instagram.com/mhmzdev",
-    "https://twitter.com/mhmzdev",
-    "https://linkedin.com/in/mhmzdev",
-    "https://github.com/mhmzdev",
-    "https://mhmzdev.medium.com"
+   
+    "https://www.behance.net/prabhac/projects",
+    "https://www.linkedin.com/in/prabha-c-0460661b0",
+    "https://bb-design.github.io/BBDesign "
   ];
 
   static const String resume =
-      'https://drive.google.com/file/d/1bDNNrkQtNVJbXcdwMSx0crQQvAF_nMwV/view?usp=sharing';
+      'https://drive.google.com/file/d/1r2q-FdZUdRaxkehLA5Kl6jqTSGs4o6v0/view?usp=sharing';
 
-  static const String gitHub = 'https://github.com/mhmzdev';
+  static const String gitHub = 'https://bb-design.github.io/BBDesign';
 }
 
 class BodyUtils {

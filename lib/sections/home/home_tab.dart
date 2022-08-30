@@ -67,14 +67,14 @@ class HomeTab extends StatelessWidget {
                 ),
                 Space.y1!,
                 Text(
-                  "Muhammad",
+                  "MPrabha",
                   style: AppText.h1!.copyWith(
                     fontFamily: 'Montserrat',
                     fontWeight: FontWeight.w100,
                   ),
                 ),
                 Text(
-                  "Hamza",
+                  "Chandran",
                   style: AppText.h1b!.copyWith(
                     height: 1,
                   ),
@@ -92,17 +92,17 @@ class HomeTab extends StatelessWidget {
                       AnimatedTextKit(
                         animatedTexts: [
                           TyperAnimatedText(
-                            ' Flutter Developer',
+                            '  Work until',
                             speed: const Duration(milliseconds: 50),
                             textStyle: AppText.b1,
                           ),
                           TyperAnimatedText(
-                            ' UI/UX Enthusiast',
+                            ' You no longer have to',
                             speed: const Duration(milliseconds: 50),
                             textStyle: AppText.b1,
                           ),
                           TyperAnimatedText(
-                            ' A friend :)',
+                            ' introduce Yourself :)',
                             speed: const Duration(milliseconds: 50),
                             textStyle: AppText.b1,
                           ),

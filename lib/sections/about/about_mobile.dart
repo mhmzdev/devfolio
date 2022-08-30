@@ -72,7 +72,7 @@ class AboutMobile extends StatelessWidget {
           ),
           Space.y!,
           Text(
-            'Technologies I have worked with:',
+            'Technical Skills:',
             style: AppText.l1!.copyWith(
               color: AppTheme.c!.primary,
             ),
@@ -96,11 +96,11 @@ class AboutMobile extends StatelessWidget {
           ),
           const AboutMeData(
             data: "Name",
-            information: "Muhammad Hamza",
+            information: "Prabha Chandran",
           ),
           const AboutMeData(
             data: "Email",
-            information: "hamza.6.shakeel@gmail.com",
+            information: "cprabha682@gmail.com",
           ),
           Space.y!,
           OutlinedButton(

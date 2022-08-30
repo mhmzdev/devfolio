@@ -73,7 +73,7 @@ class AboutTab extends StatelessWidget {
           ),
           Space.y!,
           Text(
-            'Technologies I have worked with:',
+            'Technical Skills:',
             style: AppText.l1!.copyWith(
               color: AppTheme.c!.primary,
             ),
@@ -98,11 +98,11 @@ class AboutTab extends StatelessWidget {
                 children: const [
                   AboutMeData(
                     data: "Name",
-                    information: "Muhammad Hamza",
+                    information: "Prabha Chandran",
                   ),
                   AboutMeData(
                     data: "Age",
-                    information: "24",
+                    information: "20",
                   ),
                 ],
               ),
@@ -114,11 +114,11 @@ class AboutTab extends StatelessWidget {
                 children: const [
                   AboutMeData(
                     data: "Email",
-                    information: "hamza.6.shakeel@gmail.com",
+                    information: "cprabha682@gmail.com",
                   ),
                   AboutMeData(
                     data: "From",
-                    information: "Attock, PK",
+                    information: "Tenkasi, TamilNadu",
                   ),
                 ],
               ),

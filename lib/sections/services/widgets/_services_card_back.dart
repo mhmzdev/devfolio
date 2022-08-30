@@ -30,7 +30,7 @@ class _ServiceCardBackWidget extends StatelessWidget {
                 context: context,
                 builder: (contecxt) => AlertDialog(
                       title: Text(
-                        "Hire Me!",
+                        "Drive",
                         style: AppText.b2b,
                       ),
                       actions: [
@@ -46,19 +46,19 @@ class _ServiceCardBackWidget extends StatelessWidget {
                           MaterialButton(
                             height: 40.0,
                             onPressed: () => openURL(
-                              'https://api.whatsapp.com/send?phone=923460159889',
+                              'https://drive.google.com/drive/folders/141VKt5F8FZXXud5PrrXVnZbh8lT5ntY5?usp=sharing',
                             ),
                             color: const Color(0xff34CB62),
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 const Icon(
-                                  FontAwesomeIcons.whatsapp,
+                                  FontAwesomeIcons.googleDrive,
                                   color: Colors.white,
                                 ),
                                 Space.x!,
                                 Text(
-                                  'WhatsApp',
+                                  'Google Drive',
                                   style: AppText.l1!.copyWith(
                                     color: Colors.white,
                                   ),
@@ -66,7 +66,7 @@ class _ServiceCardBackWidget extends StatelessWidget {
                               ],
                             ),
                           ),
-                          Space.y1!,
+                         /* Space.y1!,
                           MaterialButton(
                             height: 40.0,
                             onPressed: () => openURL(
@@ -90,17 +90,18 @@ class _ServiceCardBackWidget extends StatelessWidget {
                                 ),
                               ],
                             ),
-                          ),
+                          ),*/
                         ],
                       ),
                     )),
             child: Text(
-              'HIRE ME!',
+              'Drive',
               style: AppText.b2!.copyWith(
                 color: Colors.white,
               ),
             ),
           ),
+          
         )
       ],
     );
