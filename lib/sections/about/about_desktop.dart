@@ -36,7 +36,7 @@ class AboutDesktop extends StatelessWidget {
               Expanded(
                 child: Image.asset(
                   StaticUtils.coloredPhoto,
-                  height: height * 0.7,
+                  height: height * 0.4,
                 ),
               ),
               Expanded(
@@ -73,7 +73,7 @@ class AboutDesktop extends StatelessWidget {
                       Space.y!,
                       Divider(
                         color: Colors.grey[800],
-                        thickness: AppDimensions.normalize(0.5),
+                        thickness: AppDimensions.normalize(0.1),
                       ),
                       Space.y!,
                       Text(
@@ -93,7 +93,7 @@ class AboutDesktop extends StatelessWidget {
                       Space.y!,
                       Divider(
                         color: Colors.grey[800],
-                        thickness: AppDimensions.normalize(0.5),
+                        thickness: AppDimensions.normalize(0.1),
                       ),
                       Row(
                         children: [
@@ -129,23 +129,7 @@ class AboutDesktop extends StatelessWidget {
                       Space.y1!,
                       Row(
                         children: [
-                          SizedBox(
-                            height: AppDimensions.normalize(13),
-                            width: AppDimensions.normalize(40),
-                            child: OutlinedButton(
-                              onPressed: () =>
-                                  html.window.open(StaticUtils.resume, 'pdf'),
-                              child: const Text(
-                                "Resume",
-                              ),
-                            ),
-                          ),
                           Space.x1!,
-                          Container(
-                            color: Colors.grey[900]!,
-                            width: AppDimensions.normalize(30),
-                            height: AppDimensions.normalize(0.5),
-                          ),
                           ...WorkUtils.logos.asMap().entries.map(
                                 (e) => Expanded(
                                   child: CommunityIconBtn(

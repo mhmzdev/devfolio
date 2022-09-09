@@ -16,9 +16,9 @@ class StaticUtils {
 
   // work
   static const String dsc = 'assets/work/dsc.png';
-  static const String sastaticket = 'assets/work/st.png';
-  static const String university = 'assets/work/cui.png';
-  static const String fullterIsb = 'assets/work/flutterIsl.png';
+  static const String sastaticket = 'assets/work/ieee-cs.png';
+  static const String university = 'assets/work/msku.png';
+  static const String fullterIsb = 'assets/work/wtm-logo.jpeg';
 
   // services
   static const String uiux = 'assets/services/ui.png';

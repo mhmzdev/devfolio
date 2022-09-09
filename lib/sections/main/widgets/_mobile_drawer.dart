@@ -17,7 +17,7 @@ class _MobileDrawer extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Divider(),
-              ListTile(
+              /*  ListTile(
                 leading: Icon(
                   Icons.light_mode,
                   color: AppTheme.c!.primary!,
@@ -34,7 +34,7 @@ class _MobileDrawer extends StatelessWidget {
                   },
                   activeColor: AppTheme.c!.primary,
                 ),
-              ),
+              ), */
               const Divider(),
               ...NavBarUtils.names.asMap().entries.map(
                     (e) => Padding(

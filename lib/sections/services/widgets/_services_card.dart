@@ -50,24 +50,15 @@ class _ServiceCardState extends State<_ServiceCard> {
           height: AppDimensions.normalize(80),
           padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
           decoration: BoxDecoration(
-            color: appProvider.isDark ? Colors.grey[900] : Colors.white,
-            borderRadius: BorderRadius.circular(15),
-            boxShadow: isHover
-                ? [
-                    BoxShadow(
-                      color: AppTheme.c!.primary!.withAlpha(100),
-                      blurRadius: 12.0,
-                      offset: const Offset(0.0, 0.0),
-                    )
-                  ]
-                : [
-                    BoxShadow(
-                      color: Colors.black.withAlpha(100),
-                      blurRadius: 12.0,
-                      offset: const Offset(0.0, 0.0),
-                    )
-                  ],
-          ),
+              color: appProvider.isDark ? Colors.grey[900] : Colors.white,
+              borderRadius: BorderRadius.circular(15),
+              boxShadow: [
+                BoxShadow(
+                  color: AppTheme.c!.primary!.withAlpha(100),
+                  blurRadius: 6.0,
+                  offset: const Offset(0.0, 0.0),
+                )
+              ]),
           child: _ServiceCardBackWidget(
             serviceDesc: widget.serviceDescription,
             serviceTitle: widget.serviceTitle,
@@ -80,21 +71,13 @@ class _ServiceCardState extends State<_ServiceCard> {
           decoration: BoxDecoration(
             color: appProvider.isDark ? Colors.grey[900] : Colors.white,
             borderRadius: BorderRadius.circular(15),
-            boxShadow: isHover
-                ? [
-                    BoxShadow(
-                      color: AppTheme.c!.primary!.withAlpha(100),
-                      blurRadius: 12.0,
-                      offset: const Offset(0.0, 0.0),
-                    )
-                  ]
-                : [
-                    BoxShadow(
-                      color: Colors.black.withAlpha(100),
-                      blurRadius: 12.0,
-                      offset: const Offset(0.0, 0.0),
-                    )
-                  ],
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.2),
+                blurRadius: 6.0,
+                offset: const Offset(0.0, 0.0),
+              )
+            ],
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
