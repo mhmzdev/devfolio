@@ -12,7 +12,6 @@ class _NavbarDesktop extends StatelessWidget {
       color: appProvider.isDark ? Colors.black : Colors.white,
       child: Row(
         children: [
-          const NavBarLogo(),
           Space.xm!,
           ...NavBarUtils.names.asMap().entries.map(
                 (e) => NavBarActionButton(
@@ -88,7 +87,6 @@ class _NavBarTablet extends StatelessWidget {
             ),
           ),
           Space.xm!,
-          const NavBarLogo(),
           Space.x1!,
         ],
       ),

@@ -29,8 +29,6 @@ class StaticUtils {
   static const String openSourceBlack = 'assets/services/open_b.png';
 
   static const List<String> socialIconURL = [
-    "https://img.icons8.com/metro/208/ffffff/facebook-new--v2.png",
-    "https://img.icons8.com/ios-glyphs/480/ffffff/instagram-new.png",
     "https://img.icons8.com/android/480/ffffff/twitter.png",
     "https://img.icons8.com/metro/308/ffffff/linkedin.png",
     "https://img.icons8.com/material-rounded/384/ffffff/github.png",
@@ -38,18 +36,16 @@ class StaticUtils {
   ];
 
   static const List<String> socialLinks = [
-    "https://facebook.com/mhmzdev",
-    "https://instagram.com/mhmzdev",
-    "https://twitter.com/mhmzdev",
-    "https://linkedin.com/in/mhmzdev",
-    "https://github.com/mhmzdev",
-    "https://mhmzdev.medium.com"
+    "https://twitter.com/elifbilgepp",
+    "https://linkedin.com/in/elif-bilge-parlak",
+    "https://github.com/elifbilgep",
+    "https://medium.com/@elf.prlk64"
   ];
 
   static const String resume =
       'https://drive.google.com/file/d/1bDNNrkQtNVJbXcdwMSx0crQQvAF_nMwV/view?usp=sharing';
 
-  static const String gitHub = 'https://github.com/mhmzdev';
+  static const String gitHub = 'https://github.com/elifbilgep';
 }
 
 class BodyUtils {

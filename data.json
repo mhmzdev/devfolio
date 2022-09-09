@@ -1,10 +1,10 @@
 {
-    "name": "Muhammad Hamza",
-    "email": "hamza@mhmz.dev",
+    "name": "Elif Bilge",
+    "email": "parlakelifbilge@gmail.com",
     "subtitles": [
         "Flutter Developer",
-        "Technical Writer",
-        "UI/UX Designer"
+        "Product Designer Enthusiast",
+        "Technical Writer"
     ],
     "blackWhitePhotoURL": "https://drive.google.com/uc?export=view&id=1np1Or8kvpEmH5ghkFN5GJGqU8VAQRUCH",
     "coloredPhotoURL": "https://drive.google.com/uc?export=view&id=1wE4FRqC9bRrzOqS64b48--ykLK1yklTJ",
@@ -34,15 +34,13 @@
             "url": "https://mhamzadev.medium.com/"
         }
     ],
-    "aboutMeHeadline": "I'm Muhammad Hamza, a Flutter developer, Technical Writer and UI/UX Designer.",
-    "aboueMeDetails": "I'm a Final Year Computer Science student enrolled in COMSATS University, Islamabad. I have been developing mobile apps for over 2 years now. I have worked in teams for various startups and helped them in launching their prototypes and got valuable learning experience. I'm a former Google DSC lead and also CEO/Co-Founder Flutter Islamabad, Pakistan.",
+    "aboutMeHeadline": "I'm Elif Bilge, a Flutter Developer, Technical Writer and wanna be Proudct Designer.",
+    "aboueMeDetails": "I'm a Third Year Computer Engineering student enrolled in Mugla Sıtkı Kocman University, Turkey. I have been developing mobile apps for over 2 years now. I have worked in Düşyeri 💜 for a while. I'm a former Google Developer Student Clubs Lead and also developed my first app Self Care Reminder, Turkey.",
     "technologies": [
         "Flutter",
         "Dart",
-        "Python",
-        "Java",
-        "C++",
-        "Flask"
+        "Figma",
+        "Adobe XD"
     ],
     "services": [
         {

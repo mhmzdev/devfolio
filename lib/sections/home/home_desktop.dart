@@ -15,12 +15,11 @@ class HomeDesktop extends StatelessWidget {
 
     return Container(
       height: size.height * 1.025,
-      padding: Space.h,
       child: Stack(
         children: [
           Positioned(
             bottom: 0,
-            right: 0,
+            right: 100,
             child: Opacity(
               opacity: 0.9,
               child: EntranceFader(
@@ -68,7 +67,7 @@ class HomeDesktop extends StatelessWidget {
                 ),
                 Space.y1!,
                 Text(
-                  "Muhammad",
+                  "Elif",
                   style: AppText.h1!.copyWith(
                     fontFamily: 'Montserrat',
                     fontSize: AppDimensions.normalize(25),
@@ -76,7 +75,7 @@ class HomeDesktop extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "Hamza",
+                  "Bilge",
                   style: AppText.h1b!.copyWith(
                     fontSize: AppDimensions.normalize(25),
                     height: 1,
@@ -100,12 +99,12 @@ class HomeDesktop extends StatelessWidget {
                             textStyle: AppText.b1,
                           ),
                           TyperAnimatedText(
-                            ' UI/UX Enthusiast',
+                            ' Product Design Enthusiast',
                             speed: const Duration(milliseconds: 50),
                             textStyle: AppText.b1,
                           ),
                           TyperAnimatedText(
-                            ' A friend :)',
+                            ' Technical Writer :)',
                             speed: const Duration(milliseconds: 50),
                             textStyle: AppText.b1,
                           ),
