@@ -14,10 +14,7 @@ class _ServiceCardBackWidget extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(
-          serviceDesc,
-          style: AppText.l1,
-        ),
+        Text(serviceDesc, style: AppText.l1!.copyWith()),
       ],
     );
   }

@@ -20,12 +20,10 @@ class ServiceDesktopState extends State<ServiceDesktop> {
       child: Column(
         children: [
           const CustomSectionHeading(
-            text: '\nWhat I can do?',
+            text: '\nWhat I am working on?',
           ),
-          const CustomSectionSubHeading(
-            text: 'I may not be perfect but surely I\'m of some use :)\n\n',
-          ),
-          Space.y!,
+          Space.y1!,
+          Space.y1!,
           Wrap(
             spacing: width * 0.05,
             runSpacing: height * 0.05,

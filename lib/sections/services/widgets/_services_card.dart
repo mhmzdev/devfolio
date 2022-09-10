@@ -54,7 +54,7 @@ class _ServiceCardState extends State<_ServiceCard> {
               borderRadius: BorderRadius.circular(15),
               boxShadow: [
                 BoxShadow(
-                  color: AppTheme.c!.primary!.withAlpha(100),
+                  color: Colors.black.withOpacity(0.1),
                   blurRadius: 6.0,
                   offset: const Offset(0.0, 0.0),
                 )
@@ -70,10 +70,10 @@ class _ServiceCardState extends State<_ServiceCard> {
           padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
           decoration: BoxDecoration(
             color: appProvider.isDark ? Colors.grey[900] : Colors.white,
-            borderRadius: BorderRadius.circular(15),
+            borderRadius: BorderRadius.circular(5),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.2),
+                color: Colors.black.withOpacity(0.1),
                 blurRadius: 6.0,
                 offset: const Offset(0.0, 0.0),
               )
@@ -84,17 +84,14 @@ class _ServiceCardState extends State<_ServiceCard> {
             children: [
               Image.asset(
                 widget.serviceIcon,
-                height: AppDimensions.normalize(30),
-                color: widget.serviceIcon.contains(StaticUtils.openSource) &&
-                        !appProvider.isDark
-                    ? Colors.black
-                    : null,
+                height: AppDimensions.normalize(50),
               ),
-              Space.y1!,
+              /* Space.y1!,
               Text(
                 widget.serviceTitle,
                 textAlign: TextAlign.center,
-              ),
+                style: AppText.l1b,
+              ), */
             ],
           ),
         ),

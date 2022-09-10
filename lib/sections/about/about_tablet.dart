@@ -29,11 +29,11 @@ class AboutTab extends StatelessWidget {
               text: '\nAbout Me',
             ),
           ),
-          const Center(
+/*           const Center(
             child: CustomSectionSubHeading(
               text: 'Get to know me :)',
             ),
-          ),
+          ), */
           Space.y1!,
           Image.asset(
             StaticUtils.mobilePhoto,

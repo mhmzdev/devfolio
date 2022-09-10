@@ -62,24 +62,15 @@ class ProjectCardState extends State<ProjectCard> {
         width: AppDimensions.normalize(150),
         height: AppDimensions.normalize(90),
         decoration: BoxDecoration(
-          color: appProvider.isDark ? Colors.grey[900] : Colors.white,
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: isHover
-              ? [
-                  BoxShadow(
-                    color: AppTheme.c!.primary!.withAlpha(100),
-                    blurRadius: 12.0,
-                    offset: const Offset(0.0, 0.0),
-                  )
-                ]
-              : [
-                  BoxShadow(
-                    color: Colors.black.withAlpha(100),
-                    blurRadius: 12.0,
-                    offset: const Offset(0.0, 0.0),
-                  )
-                ],
-        ),
+            color: appProvider.isDark ? Colors.grey[900] : Colors.white,
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.1),
+                blurRadius: 6.0,
+                offset: const Offset(0.0, 0.0),
+              )
+            ]),
         child: Stack(
           fit: StackFit.expand,
           children: [

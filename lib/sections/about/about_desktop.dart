@@ -27,9 +27,6 @@ class AboutDesktop extends StatelessWidget {
           const CustomSectionHeading(
             text: '\nAbout Me',
           ),
-          const CustomSectionSubHeading(
-            text: 'Get to know me :)',
-          ),
           Space.y1!,
           Row(
             children: [
@@ -46,12 +43,6 @@ class AboutDesktop extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        'Who am I?',
-                        style: AppText.b1!.copyWith(
-                          color: AppTheme.c!.primary,
-                        ),
-                      ),
                       Space.y1!,
                       Text(
                         AboutUtils.aboutMeHeadline,

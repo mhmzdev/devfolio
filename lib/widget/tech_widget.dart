@@ -12,9 +12,9 @@ class ToolTechWidget extends StatelessWidget {
     return Row(
       children: [
         Icon(
-          Icons.play_arrow,
+          Icons.circle,
           color: AppTheme.c!.primary,
-          size: AppDimensions.normalize(6),
+          size: AppDimensions.normalize(2),
         ),
         Text(
           " $techName ",
