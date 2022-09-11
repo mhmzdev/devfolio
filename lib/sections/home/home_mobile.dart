@@ -87,7 +87,7 @@ class HomeMobile extends StatelessWidget {
                           textStyle: AppText.b1,
                         ),
                         TyperAnimatedText(
-                          ' A friend :)',
+                          ' Technical Writer',
                           speed: const Duration(milliseconds: 50),
                           textStyle: AppText.b1,
                         ),
