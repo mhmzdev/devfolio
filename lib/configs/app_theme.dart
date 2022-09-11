@@ -4,7 +4,7 @@ import 'app_core_theme.dart';
 
 class AppTheme {
   static final _core = AppCoreTheme(
-    shadowSub: const Color(0xffC0392B).withAlpha(100),
+    shadowSub: Colors.blue.shade300,
     primary: Colors.blue,
     primaryLight: Colors.blue.shade300,
     textSub: const Color(0xff141414),

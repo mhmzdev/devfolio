@@ -34,7 +34,6 @@ lib/provider/github_provider.dart
 /build/
 
 # Web related
-lib/generated_plugin_registrant.dart
 
 # Symbolication related
 app.*.symbols

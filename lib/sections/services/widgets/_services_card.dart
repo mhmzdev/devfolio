@@ -85,6 +85,7 @@ class _ServiceCardState extends State<_ServiceCard> {
               Image.asset(
                 widget.serviceIcon,
                 height: AppDimensions.normalize(50),
+                fit: BoxFit.fill,
               ),
               /* Space.y1!,
               Text(

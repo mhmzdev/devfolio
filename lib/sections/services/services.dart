@@ -6,6 +6,7 @@ import 'package:folio/configs/configs.dart';
 import 'package:folio/constants.dart';
 import 'package:folio/provider/app_provider.dart';
 import 'package:folio/responsive/responsive.dart';
+import 'package:folio/utils/project_utils.dart';
 import 'package:folio/utils/services_utils.dart';
 import 'package:folio/utils/utils.dart';
 import 'package:folio/widget/custom_text_heading.dart';
