@@ -77,7 +77,7 @@ class ProjectCardState extends State<ProjectCard> {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                widget.projectIcon != null
+                /*  widget.projectIcon != null
                     ? (width > 1135 || width < 950)
                         ? Image.asset(
                             widget.projectIcon!,
@@ -100,7 +100,8 @@ class ProjectCardState extends State<ProjectCard> {
                               ),
                             ],
                           )
-                    : Container(),
+                    :  */
+                Container(),
                 widget.projectIconData != null
                     ? Icon(
                         widget.projectIconData,

@@ -43,7 +43,7 @@ class PortfolioMobileTab extends StatelessWidget {
           ),
         ),
         Space.y!,
-        SizedBox(
+        /* SizedBox(
           height: AppDimensions.normalize(14),
           width: AppDimensions.normalize(50),
           child: OutlinedButton(
@@ -53,7 +53,7 @@ class PortfolioMobileTab extends StatelessWidget {
               style: AppText.l1b,
             ),
           ),
-        )
+        ) */
       ],
     );
   }

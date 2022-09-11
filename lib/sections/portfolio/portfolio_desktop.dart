@@ -44,7 +44,7 @@ class _PortfolioDesktopState extends State<PortfolioDesktop> {
                 .toList(),
           ),
           Space.y2!,
-          SizedBox(
+          /*   SizedBox(
             height: AppDimensions.normalize(14),
             width: AppDimensions.normalize(50),
             child: OutlinedButton(
@@ -54,7 +54,7 @@ class _PortfolioDesktopState extends State<PortfolioDesktop> {
                 style: AppText.l1b,
               ),
             ),
-          )
+          ) */
         ],
       ),
     );
