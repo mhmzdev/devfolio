@@ -5,14 +5,12 @@ class WorkUtils {
     StaticUtils.university,
     StaticUtils.fullterIsb,
     StaticUtils.dsc,
-    StaticUtils.sastaticket,
   ];
 
   static const List<String> communityLinks = [
-    "https://www.comsats.edu.pk/",
-    "https://web.facebook.com/FlutterIslamabadPakistan/",
-    "https://dsc.community.dev/comsats-university-islamabad/",
-    "https://sastaticket.pk/"
+    "http://www.bilgisayar.mu.edu.tr/",
+    "https://developers.google.com/womentechmakers",
+    "https://gdsc.community.dev/mugla-sitki-kocman-university/",
   ];
 
   static const List<double> communityLogoHeight = [60.0, 70.0, 30.0, 70.0];
