@@ -34,6 +34,8 @@ dependencies:
   animated_text_kit: ^4.2.1
   font_awesome_flutter: ^10.1.0
 
+  appinio_video_player: any
+
   # state management
   provider: ^6.0.1
 
@@ -61,6 +63,7 @@ flutter:
     - assets/photos/
     - assets/services/
     - assets/projects/
+    - assets/videos/
 
     - data.json
 

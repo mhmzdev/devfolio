@@ -15,6 +15,7 @@ class CustomSectionHeading extends StatelessWidget {
       text,
       style: AppText.h1!.copyWith(
         fontFamily: 'Montserrat',
+        color: Colors.white
       ),
     );
   }

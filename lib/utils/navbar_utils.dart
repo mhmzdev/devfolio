@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../configs/app_colors.dart';
+
 class NavBarUtils {
   static const List<String> names = [
-    'HOME',
+    'HOME' ,
     'ABOUT',
     'SERVICES',
     'PROJECTS',
@@ -16,5 +18,14 @@ class NavBarUtils {
     Icons.build,
     Icons.settings,
     Icons.contact_page,
+  ];
+
+  static const List<Color> colors =
+  [
+    AppColors.blue,
+    AppColors.pink,
+    AppColors.orange,
+    AppColors.yellow,
+    AppColors.blue,
   ];
 }

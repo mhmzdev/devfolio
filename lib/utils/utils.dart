@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:folio/sections/about/about.dart';
 import 'package:folio/sections/contact/contact.dart';
-import 'package:folio/sections/home/home.dart';
+import 'package:folio/sections/home/view/home.dart';
 import 'package:folio/sections/portfolio/portfolio.dart';
 import 'package:folio/sections/services/services.dart';
 import 'package:folio/widget/footer.dart';
