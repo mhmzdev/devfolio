@@ -1,5 +1,3 @@
-
-
 part of '../main_section.dart';
 
 class _NavbarDesktop extends StatelessWidget {
@@ -9,10 +7,8 @@ class _NavbarDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     final appProvider = Provider.of<AppProvider>(context);
 
-
-
     return Container(
-      // padding: Space.all(),
+      height: 150,
       color: appProvider.isDark ? Colors.black : Colors.white,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -21,15 +17,16 @@ class _NavbarDesktop extends StatelessWidget {
           Space.xm!,
 
           const NavBarLogo(),
+          Space.x!,
 
           ...MainModel.titles.asMap().entries.map(
                 (e) => NavBarActionButton(
-              label: e.value.title,
-              color: e.value.color,
-              index: e.key,
-            ),
-          ),
-         
+                  label: e.value.title,
+                  color: e.value.color,
+                  index: e.key,
+                ),
+              ),
+
           // Switch(r: Colors.grey,
           //   value: appProvider.isDark,
           //   onChanged: (value) {
@@ -42,7 +39,6 @@ class _NavbarDesktop extends StatelessWidget {
           // ),
           Space.xm!,
         ],
-
       ),
     );
   }

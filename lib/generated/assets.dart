@@ -5,10 +5,17 @@ class Assets {
   static const String assetsHi = 'assets/hi.gif';
   static const String ideaToAppWebsiteData = 'data.json';
   static const String photosAbousUs = 'assets/photos/abousUs.png';
+  static const String photosArtboard = 'assets/photos/Artboard.png';
+  static const String photosBLACK = 'assets/photos/BLACK.png';
   static const String photosBlackWhite = 'assets/photos/black-white.png';
   static const String photosColored = 'assets/photos/colored.png';
   static const String photosIdeaToApp = 'assets/photos/idea_to_app.png';
+  static const String photosLogoWeb = 'assets/photos/logo_web.png';
   static const String photosMobile = 'assets/photos/mobile.png';
+  static const String photosWebLogoWhite = 'assets/photos/web_logo_white.png';
+  static const String photosWebSiteLogo = 'assets/photos/web_site_logo.png';
+  static const String photosWebWhite = 'assets/photos/web_white.png';
+  static const String photosWhiteLog = 'assets/photos/white_log.png';
   static const String projectsAndroid = 'assets/projects/android.png';
   static const String projectsCovid = 'assets/projects/covid.png';
   static const String projectsCovidB = 'assets/projects/covidB.png';
@@ -36,5 +43,4 @@ class Assets {
   static const String workDsc = 'assets/work/dsc.png';
   static const String workFlutterIsl = 'assets/work/flutterIsl.png';
   static const String workSt = 'assets/work/st.png';
-
 }

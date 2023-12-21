@@ -33,7 +33,8 @@ class VideoPlayerVM extends ChangeNotifier {
         playbackSpeedButtonAvailable: true,
         showDurationPlayed: false,
         showDurationRemaining: false,
-          settingsButtonAvailable : true,
+        settingsButtonAvailable : true,
+
         settingsButton: SizedBox.shrink(),
 
         )

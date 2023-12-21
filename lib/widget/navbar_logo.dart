@@ -7,15 +7,10 @@ class NavBarLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-       Image.asset(
-         Assets.photosIdeaToApp,
-         width: 180,
-         height: 180,
-       )
-      ],
+    return Image.asset(
+      height: 200,
+      width: 300,
+      Assets.photosWebWhite,
     );
   }
 }
