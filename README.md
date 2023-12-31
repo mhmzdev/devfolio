@@ -27,7 +27,7 @@ Is a multi-platform portfolio for developers available for mobile, windows and w
 
 ## 🔗 Useful links
 
-🌐 Web App: http://mhmz.dev
+🌐 Web App: https://mhmzdev.github.io/devfolio
 
 📱 Android App: https://play.google.com/store/apps/details?id=com.hmz.folio
 
