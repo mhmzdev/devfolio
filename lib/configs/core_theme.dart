@@ -26,8 +26,7 @@ final themeDark = ThemeData(
   canvasColor: Colors.white,
   fontFamily: fontFamily,
   splashColor: Colors.transparent,
-  backgroundColor: Colors.grey[800],
-  scaffoldBackgroundColor: Colors.black,
+  scaffoldBackgroundColor: const Color(0xff001B29),
   colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red).copyWith(
     secondary: const Color(0xffC0392B),
     brightness: Brightness.dark,

@@ -11,11 +11,11 @@ class MainModel
 
    static List<MainModel> titles =
    [
-     MainModel(title: 'Home', color: AppColors.blue),
-     MainModel(title: 'ABOUT', color: AppColors.pink),
-     MainModel(title: 'SERVICES', color: AppColors.orange),
-     MainModel(title: 'PROJECTS', color: AppColors.yellow),
-     MainModel(title: 'GET STARTED', color: AppColors.pink),
+     MainModel(title: 'Home', color: ColorManager.blue),
+     MainModel(title: 'ABOUT', color: ColorManager.pink),
+     MainModel(title: 'SERVICES', color: ColorManager.orange),
+     MainModel(title: 'PROJECTS', color: ColorManager.yellow),
+     MainModel(title: 'GET STARTED', color: ColorManager.pink),
    ];
 
 }

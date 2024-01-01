@@ -1,23 +1,38 @@
 part of '../main_section.dart';
 
-class _NavbarDesktop extends StatelessWidget {
+class _NavbarDesktop extends StatefulWidget {
   const _NavbarDesktop({Key? key}) : super(key: key);
 
+  @override
+  State<_NavbarDesktop> createState() => _NavbarDesktopState();
+}
+
+class _NavbarDesktopState extends State<_NavbarDesktop> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Provider.of<ScrollProvider>(context, listen:false).listen();
+  }
   @override
   Widget build(BuildContext context) {
     final appProvider = Provider.of<AppProvider>(context);
 
+    final scrollProvider = Provider.of<ScrollProvider>(context);
+
     return Container(
-      height: 150,
-      color: appProvider.isDark ? Colors.black : Colors.white,
+      // height: 150,
+      color:scrollProvider.isScrolled?  Colors.black: Colors.transparent,
+      padding: const EdgeInsets.symmetric(vertical: 16),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Space.xm!,
+          const Spacer(),
 
           const NavBarLogo(),
-          Space.x!,
+          const Spacer(),
 
           ...MainModel.titles.asMap().entries.map(
                 (e) => NavBarActionButton(
@@ -26,18 +41,9 @@ class _NavbarDesktop extends StatelessWidget {
                   index: e.key,
                 ),
               ),
+          const Spacer(),
 
-          // Switch(r: Colors.grey,
-          //   value: appProvider.isDark,
-          //   onChanged: (value) {
-          //   inactiveTrackColo
-          //     appProvider.setTheme(
-          //       !value ? ThemeMode.light : ThemeMode.dark,
-          //     );
-          //   },
-          //   activeColor: AppTheme.c!.primary!,
-          // ),
-          Space.xm!,
+
         ],
       ),
     );
@@ -64,10 +70,10 @@ class _NavBarTablet extends StatelessWidget {
             },
             icon: const Icon(
               Icons.menu,
+              color: Colors.white,
             ),
           ),
-          Space.xm!,
-          const NavBarLogo(),
+           // const NavBarLogo(),
           Space.x1!,
         ],
       ),

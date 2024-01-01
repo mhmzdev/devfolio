@@ -22,10 +22,10 @@ class NavBarUtils {
 
   static const List<Color> colors =
   [
-    AppColors.blue,
-    AppColors.pink,
-    AppColors.orange,
-    AppColors.yellow,
-    AppColors.blue,
+    ColorManager.blue,
+    ColorManager.pink,
+    ColorManager.orange,
+    ColorManager.yellow,
+    ColorManager.blue,
   ];
 }

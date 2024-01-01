@@ -65,7 +65,7 @@ class _MaterialChildState extends State<MaterialChild> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Hamza',
-      theme: theme.themeLight,
+      theme: theme.themeDark,
       darkTheme: theme.themeDark,
       themeMode: widget.provider.themeMode,
       initialRoute: "/",

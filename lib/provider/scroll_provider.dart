@@ -8,12 +8,13 @@ class ScrollProvider extends ChangeNotifier {
 
   scroll(int index) {
     double offset = index == 1
-        ? 270
+        ? 360
         : index == 2
             ? 255
             : index == 3
                 ? 250
                 : 245;
+
     controller.animateTo(
       AppDimensions.normalize(
         offset * index.toDouble(),
@@ -37,6 +38,30 @@ class ScrollProvider extends ChangeNotifier {
       ),
       duration: const Duration(seconds: 1),
       curve: Curves.easeInOut,
+    );
+  }
+
+  bool isScrolled = false;
+
+  set setIsScrolled (bool isScroll) {
+    isScrolled = isScroll;
+
+    notifyListeners();
+  }
+
+  void listen () {
+    controller.addListener(
+            () {
+          double currentScroll = controller.position.pixels;
+
+          if (currentScroll >= 200) {
+            setIsScrolled = true;
+
+          } else {
+            setIsScrolled = false;
+
+          }
+        }
     );
   }
 }

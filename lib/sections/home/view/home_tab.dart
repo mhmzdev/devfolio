@@ -6,6 +6,8 @@ import 'package:folio/utils/utils.dart';
 
 import 'package:folio/widget/social_links.dart';
 
+import '../../../generated/assets.dart';
+
 class HomeTab extends StatelessWidget {
   const HomeTab({Key? key}) : super(key: key);
 
@@ -17,24 +19,24 @@ class HomeTab extends StatelessWidget {
       height: size.height * 1.02,
       child: Stack(
         children: [
-          Positioned(
-            bottom: 0,
-            right: 0,
-            child: Opacity(
-              opacity: 0.9,
-              child: EntranceFader(
-                offset: const Offset(0, 0),
-                delay: const Duration(seconds: 1),
-                duration: const Duration(milliseconds: 800),
-                child: Image.asset(
-                  StaticUtils.blackWhitePhoto,
-                  height: size.width < 1200
-                      ? size.height * 0.75
-                      : size.height * 0.85,
-                ),
-              ),
-            ),
-          ),
+          // Positioned(
+          //   bottom: 0,
+          //   right: 0,
+          //   child: Opacity(
+          //     opacity: 0.9,
+          //     child: EntranceFader(
+          //       offset: const Offset(0, 0),
+          //       delay: const Duration(seconds: 1),
+          //       duration: const Duration(milliseconds: 800),
+          //       child: Image.asset(
+          //         StaticUtils.blackWhitePhoto,
+          //         height: size.width < 1200
+          //             ? size.height * 0.75
+          //             : size.height * 0.85,
+          //       ),
+          //     ),
+          //   ),
+          // ),
           Container(
             margin: EdgeInsets.fromLTRB(
               AppDimensions.normalize(30),
@@ -45,6 +47,7 @@ class HomeTab extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Image.asset(Assets.photosWebText,width: 400,),
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [

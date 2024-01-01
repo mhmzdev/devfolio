@@ -28,25 +28,25 @@ class AppText {
     const b = FontWeight.bold;
     const baseStyle = TextStyle(fontFamily: fontFamily);
 
-    h1 = baseStyle.copyWith(fontSize: AppDimensions.font(22));
-    h1b = h1!.copyWith(fontWeight: b);
+    h1 = baseStyle.copyWith(fontSize: AppDimensions.font(22),color: Colors.white);
+    h1b = h1!.copyWith(fontWeight: b,color: Colors.white);
 
-    h2 = baseStyle.copyWith(fontSize: AppDimensions.font(18));
-    h2b = h2!.copyWith(fontWeight: b);
+    h2 = baseStyle.copyWith(fontSize: AppDimensions.font(18),color: Colors.white);
+    h2b = h2!.copyWith(fontWeight: b,color: Colors.white);
 
-    h3 = baseStyle.copyWith(fontSize: AppDimensions.font(15));
-    h3b = h3!.copyWith(fontWeight: b);
+    h3 = baseStyle.copyWith(fontSize: AppDimensions.font(15),color: Colors.white);
+    h3b = h3!.copyWith(fontWeight: b,color: Colors.white);
 
-    b1 = baseStyle.copyWith(fontSize: AppDimensions.font(10));
-    b1b = b1!.copyWith(fontWeight: b);
+    b1 = baseStyle.copyWith(fontSize: AppDimensions.font(10),color: Colors.white);
+    b1b = b1!.copyWith(fontWeight: b,color: Colors.white);
 
-    b2 = baseStyle.copyWith(fontSize: AppDimensions.font(8));
-    b2b = b2!.copyWith(fontWeight: b);
+    b2 = baseStyle.copyWith(fontSize: AppDimensions.font(8),color: Colors.white);
+    b2b = b2!.copyWith(fontWeight: b,color: Colors.white);
 
-    l1 = baseStyle.copyWith(fontSize: AppDimensions.font(6));
-    l1b = l1!.copyWith(fontWeight: b);
+    l1 = baseStyle.copyWith(fontSize: AppDimensions.font(6),color: Colors.white);
+    l1b = l1!.copyWith(fontWeight: b,color: Colors.white);
 
-    l2 = baseStyle.copyWith(fontSize: AppDimensions.font(4));
-    l2b = l2!.copyWith(fontWeight: b);
+    l2 = baseStyle.copyWith(fontSize: AppDimensions.font(4),color: Colors.white);
+    l2b = l2!.copyWith(fontWeight: b,color: Colors.white);
   }
 }

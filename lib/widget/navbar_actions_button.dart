@@ -4,6 +4,8 @@ import 'package:folio/configs/configs.dart';
 import 'package:folio/provider/scroll_provider.dart';
 import 'package:provider/provider.dart';
 
+import '../configs/app_colors.dart';
+
 class NavBarActionButton extends StatelessWidget {
   final String label;
   final int index;
@@ -28,16 +30,17 @@ class NavBarActionButton extends StatelessWidget {
         margin:   Space.h!,
 
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(40)
+          borderRadius: BorderRadius.circular(40),
+          gradient: isGetStartedButton ?const LinearGradient(colors: ColorManager.gradientBackground) : null
         ),
         child: MaterialButton(
+
           shape: RoundedRectangleBorder(
-             borderRadius: BorderRadius.circular(10)
+             borderRadius: BorderRadius.circular(40)
           ),
-          splashColor: Colors.white54,
-          highlightColor: Colors.white54,
-          hoverColor: isGetStartedButton ? Colors.transparent :  color,
-          color: isGetStartedButton ? Colors.black : null,
+          splashColor: ColorManager.primaryColor,
+          highlightColor: ColorManager.primaryColor,
+          hoverColor:  ColorManager.grey.withOpacity(0.3),
           onPressed: () {
             scrollProvider.scroll(index);
           },
@@ -46,7 +49,7 @@ class NavBarActionButton extends StatelessWidget {
             child: Text(
               label,
               style: AppText.l1!.copyWith(
-                color: isGetStartedButton ? Colors.white :  Colors.black
+                color:  Colors.white,
               ),
             ),
           ),
@@ -55,3 +58,4 @@ class NavBarActionButton extends StatelessWidget {
     );
   }
 }
+

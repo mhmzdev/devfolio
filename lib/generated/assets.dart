@@ -12,6 +12,12 @@ class Assets {
   static const String photosIdeaToApp = 'assets/photos/idea_to_app.png';
   static const String photosLogoWeb = 'assets/photos/logo_web.png';
   static const String photosMobile = 'assets/photos/mobile.png';
+  static const String photosMobileAppsDevelopment = 'assets/photos/web_text_gredinat.png';
+  static const String photosWebText = 'assets/photos/web_text.png';
+  static const String photosWebTextGrediant = 'assets/photos/web_text_gredinat.png';
+  static const String photosBlur= 'assets/photos/blur.jpg';
+  static const String photosBg= 'assets/photos/bg.png';
+  static const String photosMobileApps = 'assets/photos/mobile_apps.png';
   static const String photosWebLogoWhite = 'assets/photos/web_logo_white.png';
   static const String photosWebSiteLogo = 'assets/photos/web_site_logo.png';
   static const String photosWebWhite = 'assets/photos/web_white.png';

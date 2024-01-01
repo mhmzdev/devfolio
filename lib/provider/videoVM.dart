@@ -10,6 +10,7 @@ class VideoPlayerVM extends ChangeNotifier {
       _customVideoPlayerController;
 
   VideoPlayerController _videoController = VideoPlayerController.asset(
+
       Assets.videosComp1);
 
   VideoPlayerController get videoController => _videoController;
@@ -24,20 +25,26 @@ class VideoPlayerVM extends ChangeNotifier {
       ..initialize()..play()..setLooping(true).then((_) => notifyListeners());
 
     _customVideoPlayerController = CustomVideoPlayerController(
+      customVideoPlayerSettings: const CustomVideoPlayerSettings(
+        controlBarPadding: EdgeInsets.zero,
+
+        controlBarAvailable: false,
+
+      ),
       context: context,
       videoPlayerController: _videoController,
-      customVideoPlayerSettings: const CustomVideoPlayerSettings(
-        alwaysShowThumbnailOnVideoPaused: false,
-        playOnlyOnce: false,
-        controlBarAvailable: false,
-        playbackSpeedButtonAvailable: true,
-        showDurationPlayed: false,
-        showDurationRemaining: false,
-        settingsButtonAvailable : true,
-
-        settingsButton: SizedBox.shrink(),
-
-        )
+      // customVideoPlayerSettings: const CustomVideoPlayerSettings(
+      //   alwaysShowThumbnailOnVideoPaused: false,
+      //   playOnlyOnce: false,
+      //   controlBarAvailable: false,
+      //   playbackSpeedButtonAvailable: true,
+      //   showDurationPlayed: false,
+      //   showDurationRemaining: false,
+      //   settingsButtonAvailable : true,
+      //
+      //   settingsButton: SizedBox.shrink(),
+      //
+      //   )
     );
   }
   // void ff() {

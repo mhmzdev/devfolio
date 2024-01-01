@@ -1,127 +1,131 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:folio/configs/app_colors.dart';
 import 'package:folio/configs/configs.dart';
+import 'package:folio/generated/assets.dart';
+import 'package:provider/provider.dart';
+import '../../../animations/entrance_fader.dart';
+import '../../../provider/scroll_provider.dart';
+import '../../../shared_widgets/custom_video_player.dart';
+import '../../../utils/utils.dart';
 
 class HomeDesktop extends StatelessWidget {
   const HomeDesktop({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final scrollProvider = Provider.of<ScrollProvider>(context);
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      height: size.height * 1.025,
-      padding: Space.h,
-      // child: Stack(
-      //   children: [
-      //     Container(
-      //       margin: EdgeInsets.fromLTRB(
-      //         AppDimensions.normalize(30),
-      //         AppDimensions.normalize(80),
-      //         0,
-      //         0,
-      //       ),
-      //       child: Column(
-      //         crossAxisAlignment: CrossAxisAlignment.start,
-      //         children: [
-      //           Row(
-      //             mainAxisSize: MainAxisSize.min,
-      //             children: [
-      //               Text(
-      //                 'WELCOME TO MY PORTFOLIO! ',
-      //                 style: AppText.b1!.copyWith(
-      //                   fontFamily: 'Montserrat',
-      //                 ),
-      //               ),
-      //               EntranceFader(
-      //                 offset: const Offset(0, 0),
-      //                 delay: const Duration(seconds: 2),
-      //                 duration: const Duration(milliseconds: 800),
-      //                 child: Image.asset(
-      //                   StaticUtils.hi,
-      //                   height: AppDimensions.normalize(12),
-      //                 ),
-      //               ),
-      //             ],
-      //           ),
-      //           Space.y1!,
-      //           Text(
-      //             "Muhammad",
-      //             style: AppText.h1!.copyWith(
-      //               fontFamily: 'Montserrat',
-      //               fontSize: AppDimensions.normalize(25),
-      //               fontWeight: FontWeight.w100,
-      //             ),
-      //           ),
-      //           Text(
-      //             "Hamza",
-      //             style: AppText.h1b!.copyWith(
-      //               fontSize: AppDimensions.normalize(25),
-      //               height: 1,
-      //             ),
-      //           ),
-      //           EntranceFader(
-      //             offset: const Offset(-10, 0),
-      //             delay: const Duration(seconds: 1),
-      //             duration: const Duration(milliseconds: 800),
-      //             child: Row(
-      //               children: [
-      //                 Icon(
-      //                   Icons.play_arrow_rounded,
-      //                   color: AppTheme.c!.primary!,
-      //                 ),
-      //                 AnimatedTextKit(
-      //                   animatedTexts: [
-      //                     TyperAnimatedText(
-      //                       ' Flutter Developer',
-      //                       speed: const Duration(milliseconds: 50),
-      //                       textStyle: AppText.b1,
-      //                     ),
-      //                     TyperAnimatedText(
-      //                       ' UI/UX Enthusiast',
-      //                       speed: const Duration(milliseconds: 50),
-      //                       textStyle: AppText.b1,
-      //                     ),
-      //                     TyperAnimatedText(
-      //                       ' A friend :)',
-      //                       speed: const Duration(milliseconds: 50),
-      //                       textStyle: AppText.b1,
-      //                     ),
-      //                   ],
-      //                   isRepeatingAnimation: true,
-      //                 ),
-      //               ],
-      //             ),
-      //           ),
-      //           Space.y2!,
-      //           const SocialLinks(),
-      //         ],
-      //       ),
-      //     ),
-      //     const Positioned(
-      //       bottom: 100,
-      //       right: 150,
-      //       child: Opacity(
-      //         opacity: 0.9,
-      //         child: EntranceFader(
-      //             offset: Offset(0, 0),
-      //             delay: Duration(seconds: 1),
-      //             duration: Duration(milliseconds: 800),
-      //             child: SizedBox(
-      //                 height: 500,
-      //                 width: 600,
-      //                 child: VideoPlayerWidget())
-      //
-      //           // Image.asset(
-      //           //   Assets.videosIntro,
-      //           //   height: size.width < 1200
-      //           //       ? size.height * 0.8
-      //           //       : size.height * 0.85,
-      //           // ),
-      //         ),
-      //       ),
-      //     ),
-      //   ],
-      // ),
+      decoration: const BoxDecoration(
+          gradient: LinearGradient(
+              colors: ColorManager.backgroundGradientBackground,
+              stops: [0.0, 2.0],
+              begin: FractionalOffset.topRight,
+              end: FractionalOffset.bottomLeft,
+              tileMode: TileMode.repeated)),
+      child: Container(
+        margin: EdgeInsets.fromLTRB(
+          AppDimensions.normalize(20),
+          AppDimensions.normalize(70),
+          AppDimensions.normalize(20),
+          AppDimensions.normalize(20),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                //! Text Gradient
+                SizedBox(
+                  height: 100,
+                  child: Image.asset(
+                    Assets.photosWebTextGrediant,
+                    width: 700,
+                  ),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+
+                //! About
+                SizedBox(
+                  height: 80,
+                  child: EntranceFader(
+                    offset: const Offset(-10, 0),
+                    delay: const Duration(seconds: 1),
+                    duration: const Duration(milliseconds: 800),
+                    child: AnimatedTextKit(
+                      animatedTexts: [
+                        TyperAnimatedText(
+                          curve: Curves.linear,
+                          'There are many variations of passages of Lorem Ipsum available, \nbut the majority have suffered alteration in some form.',
+                          speed: const Duration(
+                            milliseconds: 35,
+                          ),
+                          textStyle: AppText.b2!.copyWith(color: Colors.white.withOpacity(0.7)),
+                        ),
+                      ],
+                      isRepeatingAnimation: false,
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                //! Button
+                EntranceFader(
+                  offset: const Offset(0, -10),
+                  delay: const Duration(milliseconds: 100),
+                  duration: const Duration(milliseconds: 250),
+                  child: Container(
+                    margin:   Space.h!,
+
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        gradient:  LinearGradient(colors: ColorManager.gradientBackground)
+                    ),
+                    child: MaterialButton(
+
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(40)
+                      ),
+                      splashColor: ColorManager.primaryColor,
+                      highlightColor: ColorManager.primaryColor,
+                      hoverColor:  ColorManager.grey.withOpacity(0.3),
+                      onPressed: () {
+                        scrollProvider.scroll(4);
+                      },
+                      child: Padding(
+                        padding: Space.all(0.5, 0.45),
+                        child: Text(
+                          "Start Your Business",
+                          style: AppText.l1!.copyWith(
+                              color:  Colors.white,fontSize: 18
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+
+              ],
+            ),
+          Spacer(),
+            const EntranceFader(
+                offset: Offset(0, 0),
+                delay: Duration(seconds: 1),
+                duration: Duration(milliseconds: 800),
+                child: SizedBox(
+                    height: 600, width: 900, child: VideoPlayerWidget())
+
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

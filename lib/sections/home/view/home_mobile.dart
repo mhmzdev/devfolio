@@ -1,9 +1,13 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:folio/animations/entrance_fader.dart';
 import 'package:folio/configs/configs.dart';
+import 'package:folio/shared_widgets/custom_video_player.dart';
 
 import 'package:folio/utils/utils.dart';
 import 'package:folio/widget/social_links.dart';
+
+import '../../../generated/assets.dart';
 
 class HomeMobile extends StatelessWidget {
   const HomeMobile({Key? key}) : super(key: key);
@@ -16,17 +20,17 @@ class HomeMobile extends StatelessWidget {
       height: size.height * 1.02,
       child: Stack(
         children: [
-          Positioned(
-            bottom: 0.0,
-            right: -AppDimensions.normalize(25),
-            child: Opacity(
-              opacity: 0.9,
-              child: Image.asset(
-                StaticUtils.blackWhitePhoto,
-                height: AppDimensions.normalize(150),
-              ),
-            ),
-          ),
+          // Positioned(
+          //   bottom: 0.0,
+          //   right: -AppDimensions.normalize(25),
+          //   child: Opacity(
+          //     opacity: 0.9,
+          //     child: Image.asset(
+          //       StaticUtils.blackWhitePhoto,
+          //       height: AppDimensions.normalize(150),
+          //     ),
+          //   ),
+          // ),
           Container(
             margin: EdgeInsets.fromLTRB(
               AppDimensions.normalize(10),
@@ -35,70 +39,52 @@ class HomeMobile extends StatelessWidget {
               0,
             ),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(
-                      "HEY THERE! ",
-                      style: AppText.b2!.copyWith(
-                        fontFamily: 'Montserrat',
-                      ),
-                    ),
-                    Space.x!,
-                    Image.asset(
-                      StaticUtils.hi,
-                      height: AppDimensions.normalize(10),
-                    ),
-                  ],
+                Image.asset(
+                  Assets.photosWebText,
+                  width: 400,
                 ),
-                Space.y!,
-                Text(
-                  "Muhammad",
-                  style: AppText.h3!.copyWith(
-                    fontFamily: 'Montserrat',
-                    fontWeight: FontWeight.w100,
-                  ),
+                SizedBox(
+                  height: 30,
                 ),
-                Text(
-                  "Hamza",
-                  style: AppText.h3b!.copyWith(
-                    height: 1,
-                  ),
-                ),
-                Space.y!,
-                Row(
-                  children: [
-                    Icon(
-                      Icons.play_arrow_rounded,
-                      color: AppTheme.c!.primary!,
-                    ),
-                    AnimatedTextKit(
+                SizedBox(
+                  height: 150,
+                  child: EntranceFader(
+                    offset: const Offset(-10, 0),
+                    delay: const Duration(seconds: 1),
+                    duration: const Duration(milliseconds: 800),
+                    child: AnimatedTextKit(
                       animatedTexts: [
                         TyperAnimatedText(
-                          ' Flutter Developer',
-                          speed: const Duration(milliseconds: 50),
-                          textStyle: AppText.b1,
-                        ),
-                        TyperAnimatedText(
-                          ' UI/UX Enthusiast',
-                          speed: const Duration(milliseconds: 50),
-                          textStyle: AppText.b1,
-                        ),
-                        TyperAnimatedText(
-                          ' A friend :)',
-                          speed: const Duration(milliseconds: 50),
-                          textStyle: AppText.b1,
+                          textAlign: TextAlign.start,
+                          curve: Curves.linear,
+                          'There are many variations of passages of Lorem Ipsum available,but the majority have suffered alteration in some form, by injected humour, \nor randomised words which don\'t look even slightly',
+                          speed: const Duration(
+                            milliseconds: 35,
+                          ),
+                          textStyle: AppText.b2!.copyWith(color: Colors.white),
                         ),
                       ],
-                      repeatForever: true,
-                      isRepeatingAnimation: true,
+                      isRepeatingAnimation: false,
                     ),
-                  ],
+                  ),
                 ),
-                Space.y!,
-                const SocialLinks(),
+                const EntranceFader(
+                    offset: Offset(0, 0),
+                    delay: Duration(seconds: 1),
+                    duration: Duration(milliseconds: 800),
+                    child: SizedBox(
+                        height: 200, width: 500, child: VideoPlayerWidget())
+
+                  // Image.asset(
+                  //   Assets.videosIntro,
+                  //   height: size.width < 1200
+                  //       ? size.height * 0.8
+                  //       : size.height * 0.85,
+                  // ),
+                ),
+                // const SocialLinks(),
               ],
             ),
           ),
