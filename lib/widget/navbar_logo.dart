@@ -8,7 +8,7 @@ class NavBarLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image.asset(
-      width: 300,
+      width: 200,
       Assets.photosWebWhite,
     );
   }

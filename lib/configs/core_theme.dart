@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:folio/configs/app_colors.dart';
 
 const fontFamily = 'Poppins';
 
@@ -26,7 +27,7 @@ final themeDark = ThemeData(
   canvasColor: Colors.white,
   fontFamily: fontFamily,
   splashColor: Colors.transparent,
-  scaffoldBackgroundColor: const Color(0xff001B29),
+  scaffoldBackgroundColor: ColorManager.backgroundColor,
   colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red).copyWith(
     secondary: const Color(0xffC0392B),
     brightness: Brightness.dark,

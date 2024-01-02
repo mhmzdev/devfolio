@@ -1,7 +1,7 @@
 #ifndef RUNNER_FLUTTER_WINDOW_H_
 #define RUNNER_FLUTTER_WINDOW_H_
 
-#include <flutter/dart_project.h>
+#include <flutter/dart_package.h>
 #include <flutter/flutter_view_controller.h>
 
 #include <memory>
@@ -11,8 +11,8 @@
 // A window that does nothing but host a Flutter view.
 class FlutterWindow : public Win32Window {
  public:
-  // Creates a new FlutterWindow hosting a Flutter view running |project|.
-  explicit FlutterWindow(const flutter::DartProject& project);
+  // Creates a new FlutterWindow hosting a Flutter view running |package|.
+  explicit FlutterWindow(const flutter::DartProject& package);
   virtual ~FlutterWindow();
 
  protected:
@@ -23,8 +23,8 @@ class FlutterWindow : public Win32Window {
                          LPARAM const lparam) noexcept override;
 
  private:
-  // The project to run.
-  flutter::DartProject project_;
+  // The package to run.
+  flutter::DartProject package_;
 
   // The Flutter instance hosted by this window.
   std::unique_ptr<flutter::FlutterViewController> flutter_controller_;

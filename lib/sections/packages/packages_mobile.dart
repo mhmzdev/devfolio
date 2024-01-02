@@ -2,13 +2,12 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:folio/configs/configs.dart';
 import 'package:folio/constants.dart';
-import 'package:folio/utils/project_utils.dart';
+import 'package:folio/utils/package_utils.dart';
 import 'package:folio/utils/utils.dart';
 import 'package:folio/widget/custom_text_heading.dart';
-import 'package:folio/widget/project_card.dart';
 
-class PortfolioMobileTab extends StatelessWidget {
-  const PortfolioMobileTab({Key? key}) : super(key: key);
+class PackagesMobileTab extends StatelessWidget {
+  const PackagesMobileTab({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,15 +21,13 @@ class PortfolioMobileTab extends StatelessWidget {
           text: "Here are few samples of my previous work :)\n\n",
         ),
         CarouselSlider.builder(
-          itemCount: ProjectUtils.titles.length,
+          itemCount: PackageUtils.titles.length,
           itemBuilder: (BuildContext context, int itemIndex, int i) => Padding(
             padding: const EdgeInsets.symmetric(vertical: 15.0),
-            child: ProjectCard(
-              projectIcon: ProjectUtils.icons[i],
-              projectLink: ProjectUtils.links[i],
-              projectTitle: ProjectUtils.titles[i],
-              projectDescription: ProjectUtils.description[i],
-            ),
+            // child: PackageCard(
+            //   packageTitle: PackageUtils.titles[i],
+            //   packageDescription: PackageUtils.description[i],
+            // ),
           ),
           options: CarouselOptions(
             height: height * 0.4,

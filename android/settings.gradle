@@ -1,6 +1,6 @@
 include ':app'
 
-def localPropertiesFile = new File(rootProject.projectDir, "local.properties")
+def localPropertiesFile = new File(rootProject.packageDir, "local.properties")
 def properties = new Properties()
 
 assert localPropertiesFile.exists()

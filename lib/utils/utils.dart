@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:folio/sections/about/about.dart';
 import 'package:folio/sections/contact/contact.dart';
 import 'package:folio/sections/home/view/home.dart';
-import 'package:folio/sections/portfolio/portfolio.dart';
 import 'package:folio/sections/services/services.dart';
 import 'package:folio/widget/footer.dart';
+
+import '../sections/packages/packages.dart';
 
 class StaticUtils {
   static const String hi = 'assets/hi.gif';
@@ -24,6 +25,7 @@ class StaticUtils {
   static const String uiux = 'assets/services/ui.png';
   static const String blog = 'assets/services/blog.png';
   static const String appDev = 'assets/services/app.png';
+  static const String mobileDev = 'assets/services/mobile_dev.png';
   static const String rapid = 'assets/services/rapid.png';
   static const String openSource = 'assets/services/open.png';
   static const String openSourceBlack = 'assets/services/open_b.png';
@@ -57,7 +59,7 @@ class BodyUtils {
     HomePage(),
     About(),
     Services(),
-    Portfolio(),
+    Packages(),
     Contact(),
     Footer(),
   ];

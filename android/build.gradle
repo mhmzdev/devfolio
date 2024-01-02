@@ -11,7 +11,7 @@ buildscript {
     }
 }
 
-allprojects {
+allpackages {
     repositories {
         google()
         jcenter()
@@ -19,11 +19,11 @@ allprojects {
 }
 
 rootProject.buildDir = '../build'
-subprojects {
-    project.buildDir = "${rootProject.buildDir}/${project.name}"
+subpackages {
+    package.buildDir = "${rootProject.buildDir}/${package.name}"
 }
-subprojects {
-    project.evaluationDependsOn(':app')
+subpackages {
+    package.evaluationDependsOn(':app')
 }
 
 task clean(type: Delete) {

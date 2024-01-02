@@ -62,7 +62,7 @@ flutter:
     - assets/work/
     - assets/photos/
     - assets/services/
-    - assets/projects/
+    - assets/services/
     - assets/videos/
 
     - data.json
@@ -75,7 +75,11 @@ flutter:
     - family: Montserrat
       fonts:
         - asset: fonts/montserrat/montserrat.ttf
-    
+
+    - family: inter
+      fonts:
+        - asset: fonts/inter/Inter-ExtraBold.ttf
+
     - family: Poppins
       fonts:
         - asset: fonts/poppins/Poppins-Regular.ttf

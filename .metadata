@@ -1,4 +1,4 @@
-# This file tracks properties of this Flutter project.
+# This file tracks properties of this Flutter package.
 # Used by Flutter tool to assess capabilities and perform upgrades etc.
 #
 # This file should be version controlled.
@@ -7,7 +7,7 @@ version:
   revision: fb57da5f945d02ef4f98dfd9409a72b7cce74268
   channel: stable
 
-project_type: app
+package_type: app
 
 # Tracks metadata for the flutter migrate command
 migration:
@@ -27,4 +27,4 @@ migration:
   # Files that are not part of the templates will be ignored by default.
   unmanaged_files:
     - 'lib/main.dart'
-    - 'ios/Runner.xcodeproj/project.pbxproj'
+    - 'ios/Runner.xcodeproj/package.pbxproj'

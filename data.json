@@ -74,64 +74,64 @@
     "hireMe": {
         "whatsapp": "923460159889"
     },
-    "projects": [
+    "packages": [
         {
             "title": "Awesome SnackBar",
             "iconUrl": "https://drive.google.com/file/d/1EohcZdd5mg5dqHQIn24k_G0dpqQTFYwV/view?usp=sharing",
-            "bannerUrl": "assets/projects/medkitB.png",
+            "bannerUrl": "assets/packages/medkitB.png",
             "description": "A dart package including a wholesome experience of snackbar in your applications."
         },
         {
             "title": "MedKit",
             "iconUrl": "https://drive.google.com/file/d/1nr1FHUkACm5cg2MpXKNftUeKw888NcJt/view?usp=sharing",
-            "bannerUrl": "assets/projects/medkitB.png",
+            "bannerUrl": "assets/packages/medkitB.png",
             "description": "A Phramacy app developed using Flutter powered with Firebase as database with Doctor and Patient panels."
         },
         {
             "title": "The Holy Qur'an",
             "iconUrl": "https://drive.google.com/file/d/1jpkSQyGZP5EWPCIfRz-dU9TARXHN2P5o/view?usp=sharing",
-            "bannerUrl": "assets/projects/quranB.png",
+            "bannerUrl": "assets/packages/quranB.png",
             "description": "Application of Holy book of Muslims, Al-Qur'an. Developed using Flutter. Powered with live RestAPI given in README.md"
         },
         {
             "title": "Here I Am",
-            "iconUrl": "assets/projects/hereiam.png",
-            "bannerUrl": "assets/projects/hereiamB.png",
+            "iconUrl": "assets/packages/hereiam.png",
+            "bannerUrl": "assets/packages/hereiamB.png",
             "description": "Here I am is an Alert app that Sends alert SMS holding your location (Address and Google Maps) to your loved ones."
         },
         {
             "title": "COIVD 19 - Tracker",
-            "iconUrl": "assets/projects/covid.png",
-            "bannerUrl": "assets/projects/covidB.png",
+            "iconUrl": "assets/packages/covid.png",
+            "bannerUrl": "assets/packages/covidB.png",
             "description": "A live trakcer for COVID19 stats across the Globe and my Home country Pakistan. It uses APIs so the data is live."
         },
         {
             "title": "Messenger Chat Head UI",
-            "iconUrl": "assets/projects/messenger.png",
+            "iconUrl": "assets/packages/messenger.png",
             "bannerUrl": "",
             "description": "Tried to clone the famous Chat Heads by Facebook Messenger using Flutter. Its basically in-app not exactly like the original chat head."
         },
         {
             "title": "flutter.dev - Flutter Web",
-            "iconUrl": "assets/projects/flutter.png",
+            "iconUrl": "assets/packages/flutter.png",
             "bannerUrl": "",
             "description": "Flutter Official Site clone using Flutter Web. Try the live site here. For the time being its not responsive fully so there might be responsiveness issues."
         },
         {
             "title": "Earbender",
-            "iconUrl": "assets/projects/earbender.png",
+            "iconUrl": "assets/packages/earbender.png",
             "bannerUrl": "",
             "description": "A concept of Music App developed using Flutter. Having functionality of playing Audio."
         },
         {
             "title": "File Transfer Protocol",
-            "iconUrl": "assets/projects/java.png",
+            "iconUrl": "assets/packages/java.png",
             "bannerUrl": "",
             "description": "A simple GUI based Java application that sends file from Client to Server but not the other way around."
         },
         {
             "title": "My Order",
-            "iconUrl": "assets/projects/android.png",
+            "iconUrl": "assets/packages/android.png",
             "bannerUrl": "",
             "description": "A concept app for self-services at various restaurants now a days. More like a Restaurant Ordering System."
         },
@@ -139,7 +139,7 @@
             "title": "Hidev",
             "iconUrl": "assets/services/open.png",
             "bannerUrl": "",
-            "description": "Its my end semester project. The whole design I developed here is an inspiration from my favortie Flutter Developer Marcin Szałek and his blog Fidev."
+            "description": "Its my end semester package. The whole design I developed here is an inspiration from my favortie Flutter Developer Marcin Szałek and his blog Fidev."
         }
     ],
     "contact": [

@@ -35,7 +35,7 @@ Is a multi-platform portfolio for developers available for mobile, windows and w
 
 
 ## 🔑 License
-- This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details
+- This package is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details
 
 ## 🧑 Author
 
@@ -43,7 +43,7 @@ Is a multi-platform portfolio for developers available for mobile, windows and w
 [![LinkedIn Link](https://img.shields.io/badge/Connect-Hamza-blue.svg?logo=linkedin&longCache=true&style=social&label=Connect
 )](https://www.linkedin.com/in/mhmzdev)
 
-You can also follow my GitHub Profile to stay updated about my latest projects:
+You can also follow my GitHub Profile to stay updated about my latest packages:
 
 [![GitHub Follow](https://img.shields.io/badge/Connect-Hamza-blue.svg?logo=Github&longCache=true&style=social&label=Follow)](https://github.com/m-hamzashakeel)
 
