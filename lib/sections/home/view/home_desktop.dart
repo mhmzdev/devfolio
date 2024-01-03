@@ -1,6 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:folio/configs/app_colors.dart';
+import 'package:folio/resources/theme/app_colors.dart';
 import 'package:folio/configs/configs.dart';
 import 'package:folio/generated/assets.dart';
 import 'package:provider/provider.dart';

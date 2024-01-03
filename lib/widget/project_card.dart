@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:folio/configs/app_colors.dart';
+import 'package:folio/extensions/context_extensions.dart';
+import 'package:folio/resources/theme/app_colors.dart';
 import 'package:folio/configs/configs.dart';
+import 'package:folio/shared_widgets/buttons/button.dart';
 
 class PackageCard extends StatelessWidget {
   final String? banner;
   final int index;
   final String packageTitle;
+  final String freeTrial;
   final String packagePrice;
   final String packageDescription;
   final Color color;
@@ -17,7 +20,8 @@ class PackageCard extends StatelessWidget {
     this.color = Colors.transparent,
     this.borderColor = Colors.transparent,
     required this.index,
-    this.packagePrice = '0',
+    this.packagePrice = '',
+    this.freeTrial = '',
     required this.packageTitle,
     required this.packageDescription,
   }) : super(key: key);
@@ -26,45 +30,57 @@ class PackageCard extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
+    final index3 = index == 3;
 
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 20),
       width: AppDimensions.normalize(150),
-      height: AppDimensions.normalize(80),
+      height: AppDimensions.normalize(90),
       padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
       decoration: BoxDecoration(
           color: ColorManager.darkPrimaryColor,
           borderRadius: BorderRadius.circular(15),
           border: Border.all(color: borderColor.withOpacity(0.8), width: 0.2)),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
+      child: Column(
+        children: [
+          Text(
+            packageTitle,
+            textAlign: TextAlign.center,
+            style: AppText.b2!.copyWith(color: borderColor),
+          ),
+          context.mediumGap,
+          Text(
+            packagePrice.toString(),
+            textAlign: TextAlign.center,
+            style: index3
+                ? AppText.h3!.copyWith(color: borderColor)
+                : AppText.h2!.copyWith(color: borderColor),
+          ),
+          context.mediumGap,
+          Text(
+            packageDescription,
+            textAlign: TextAlign.center,
+            style: AppText.b2!.copyWith(color: borderColor),
+          ),
+          if (!index3) ...[
+            context.largeGap,
             Text(
-              packageTitle,
+              freeTrial,
               textAlign: TextAlign.center,
-              style: AppText.b2!.copyWith(color: borderColor),
+              style: AppText.b2!.copyWith(
+                color: ColorManager.greyText.withOpacity(0.5),
+
+              ),
             ),
-            const SizedBox(
-              height: 15,
-            ),
-            Text(
-              packagePrice.toString(),
-              textAlign: TextAlign.center,
-              style: index == 3
-                  ? AppText.b1!.copyWith(color: borderColor)
-                  : AppText.h2!.copyWith(color: borderColor),
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            Text(
-              packageDescription,
-              textAlign: TextAlign.center,
-              style: AppText.b2!.copyWith(color: borderColor),
-            ),
-          ],
-        ),
+          ] else
+            ...[
+              // const SizedBox(
+              //   height: 20,
+              // ),
+              // Button(label: 'Send Your Email', onPressed: () {  },
+              // )
+            ]
+        ],
       ),
     );
     //   InkWell(

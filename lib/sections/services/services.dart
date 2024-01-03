@@ -12,7 +12,7 @@ import 'package:folio/widget/custom_text_heading.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
-import '../../configs/app_colors.dart';
+import '../../resources/theme/app_colors.dart';
 
 part 'services_desktop.dart';
 part 'services_mobile.dart';

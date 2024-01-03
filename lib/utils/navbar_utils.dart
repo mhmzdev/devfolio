@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../configs/app_colors.dart';
+import '../resources/theme/app_colors.dart';
 
 class NavBarUtils {
   static const List<String> names = [

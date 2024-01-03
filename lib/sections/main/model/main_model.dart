@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:folio/configs/app_colors.dart';
+import 'package:folio/resources/theme/app_colors.dart';
 
 class MainModel {
   final String title;

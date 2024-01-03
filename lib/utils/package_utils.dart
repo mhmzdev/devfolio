@@ -13,6 +13,13 @@ class PackageUtils {
     "6 Months",
     "Buy The App",
   ];
+    static const List<String> freeTrial = [
+    "3 Days Free Trial",
+    "5 Days Free Trial",
+    "10 Days Free Trial",
+    "",
+  ];
+
   static const List<String> prices = [
     "\$${400}",
     "\$${800}",

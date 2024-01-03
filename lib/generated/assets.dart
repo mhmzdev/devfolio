@@ -12,6 +12,7 @@ class Assets {
   static const String photosBlur = 'assets/photos/blur.jpg';
   static const String photosColored = 'assets/photos/colored.png';
   static const String photosIdeaToApp = 'assets/photos/idea_to_app.png';
+  static const String photosGetStarted = 'assets/photos/get_started.jpeg';
   static const String photosLogoWeb = 'assets/photos/logo_web.png';
   static const String photosMobile = 'assets/photos/mobile.png';
   static const String photosMobileApps = 'assets/photos/mobile_apps.png';

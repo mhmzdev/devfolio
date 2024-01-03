@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:folio/configs/app_colors.dart';
+import 'package:folio/resources/theme/app_colors.dart';
 import 'package:folio/sections/main/model/main_model.dart';
 import 'package:provider/provider.dart';
 

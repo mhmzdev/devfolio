@@ -5,24 +5,24 @@ import 'package:folio/widget/project_card.dart';
 
 import '../../utils/package_utils.dart';
 
-class PackagesDesktop extends StatefulWidget {
+class PackagesDesktop extends StatelessWidget {
   const PackagesDesktop({Key? key}) : super(key: key);
 
-  @override
-  State<PackagesDesktop> createState() => _PackagesDesktopState();
-}
 
-class _PackagesDesktopState extends State<PackagesDesktop> {
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: Space.h!,
+      padding: const EdgeInsets.symmetric(vertical: 50),
       child: Column(
         children: [
           const CustomSectionHeading(
             text: "\nPackages",
           ),
-          Space.y1!,
+          const CustomSectionSubHeading(
+            text: '\n\n',
+          ),
+          Space.y!,
           Wrap(
             alignment: WrapAlignment.center,
             crossAxisAlignment: WrapCrossAlignment.center,
@@ -34,6 +34,7 @@ class _PackagesDesktopState extends State<PackagesDesktop> {
                   (e) => PackageCard(
                     index: e.key,
                     color: PackageUtils.colors[e.key],
+                    freeTrial : PackageUtils.freeTrial[e.key],
                     borderColor: PackageUtils.borderColors[e.key],
                     packagePrice: PackageUtils.prices[e.key],
                     banner: e.value,

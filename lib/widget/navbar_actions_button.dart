@@ -4,7 +4,7 @@ import 'package:folio/configs/configs.dart';
 import 'package:folio/provider/scroll_provider.dart';
 import 'package:provider/provider.dart';
 
-import '../configs/app_colors.dart';
+import '../resources/theme/app_colors.dart';
 
 class NavBarActionButton extends StatelessWidget {
   final String label;

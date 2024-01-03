@@ -33,6 +33,8 @@ dependencies:
   carousel_slider: ^4.0.0
   animated_text_kit: ^4.2.1
   font_awesome_flutter: ^10.1.0
+  #? Sized Box (Height & Width)
+  gap: ^3.0.1
 
   appinio_video_player: any
 

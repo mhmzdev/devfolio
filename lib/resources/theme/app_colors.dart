@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class ColorManager {
   static const backgroundColor = Color(0xff00141f);
   static const darkBackgroundColor = Color(0xFF2F2F2F);
-  static const primaryColor = Color(0xFF00A4FF);
+  static Color primaryColor = Color(0xFF00A4FF);
   static const darkPrimaryColor = Color(0xFF00151E);
   static const lightPrimaryColor = Color(0xFF43BCFF);
   static const accentColor = Color(0xff8c98a8);
@@ -13,7 +13,7 @@ class ColorManager {
     gradientColor,
     lightPrimaryColor,
   ];
-  static const iconsGradientBackground = [
+  static List<Color> iconsGradientBackground = [
     gradientColor,
     primaryColor,
   ];
@@ -21,9 +21,14 @@ class ColorManager {
     gradientColor2,
     Colors.transparent,
   ];
+  static const bodyGradientBackground = [
+    gradientColor3,
+    Colors.transparent,
+  ];
 
   static const highlightColor = Color(0xFFFFFFFF);
   static const shimmerBaseColor = grey;
+  static Color fieldColor = primaryColor.withOpacity(0.5);
   static const white = Color(0xFFFFFFFF);
   static const Color black = Color(0xff000000);
   static const grey = Color(0xFFEDEDED);
@@ -35,6 +40,7 @@ class ColorManager {
   static const iconColor = Color(0xFF727272);
   static const gradientColor = Color(0xFF0083CE);
   static const gradientColor2 = Color(0xFF014D73);
+  static const gradientColor3= Color(0xFF003F5E);
   static const errorColor = Color(0xFFFF0000);
   static const blue = Color(0xff5CE1E6);
   static const pink = Color(0xffFF8BD2);
