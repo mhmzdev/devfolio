@@ -12,7 +12,7 @@ class ThemeManager {
   //? None Input Border -------------------------------------
   InputDecorationTheme get noneInputBorder => const InputDecorationTheme(
       enabledBorder:
-          OutlineInputBorder(borderSide: BorderSide(color: ColorManager.black)),
+          OutlineInputBorder(borderSide: BorderSide(color: ColorManager.white)),
       focusedBorder: InputBorder.none,
       errorBorder: InputBorder.none);
 
@@ -29,7 +29,6 @@ class ThemeManager {
         fillColor: ColorManager.fieldColor.withOpacity(0.3),
         filled: true,
       );
-
 
   // * =====================================================================
   //? ============================= Light Theme ===========================
@@ -49,7 +48,6 @@ class ThemeManager {
   //         brightness: Brightness.light,
   //       ),
   //     );
-
 
   // * =====================================================================
   //! ============================= Dark Theme ===========================

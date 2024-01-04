@@ -35,12 +35,13 @@ class ColorManager {
   static Color greyText = Colors.white.withOpacity(0.7);
   static const blur = Color(0xFFF3F3F3);
   static const red = Color(0xFFFF0000);
-  static const cardColor = Color(0xFFEDEDED);
+  static const cardColor = Color(0xff0FF0c1427);
   static const darkGrey = Color(0xFF363636);
+  static const greenCard = Color(0xFF151a1a);
   static const iconColor = Color(0xFF727272);
   static const gradientColor = Color(0xFF0083CE);
   static const gradientColor2 = Color(0xFF014D73);
-  static const gradientColor3= Color(0xFF003F5E);
+  static const gradientColor3 = Color(0xFF003F5E);
   static const errorColor = Color(0xFFFF0000);
   static const blue = Color(0xff5CE1E6);
   static const pink = Color(0xffFF8BD2);

@@ -8,8 +8,6 @@ import '../../utils/package_utils.dart';
 class PackagesDesktop extends StatelessWidget {
   const PackagesDesktop({Key? key}) : super(key: key);
 
-
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -34,7 +32,8 @@ class PackagesDesktop extends StatelessWidget {
                   (e) => PackageCard(
                     index: e.key,
                     color: PackageUtils.colors[e.key],
-                    freeTrial : PackageUtils.freeTrial[e.key],
+                    packageTime: PackageUtils.times[e.key],
+                    freeTrial: PackageUtils.freeTrial[e.key],
                     borderColor: PackageUtils.borderColors[e.key],
                     packagePrice: PackageUtils.prices[e.key],
                     banner: e.value,

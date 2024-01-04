@@ -1,4 +1,5 @@
 import 'package:flutter/animation.dart';
+import 'package:folio/resources/theme/app_colors.dart';
 
 class PackageUtils {
   static const List<String> banners = [
@@ -8,12 +9,12 @@ class PackageUtils {
   ];
 
   static const List<String> titles = [
-    "1 Month",
-    "3 Months",
-    "6 Months",
-    "Buy The App",
+    "Standard",
+    "Extended",
+    "Signature",
+    "Premium",
   ];
-    static const List<String> freeTrial = [
+  static const List<String> freeTrial = [
     "3 Days Free Trial",
     "5 Days Free Trial",
     "10 Days Free Trial",
@@ -24,19 +25,26 @@ class PackageUtils {
     "\$${400}",
     "\$${800}",
     "\$${1200}",
-    "Contact Us For Details",
+    "Custom Pricing",
   ];
+  static const List<String> times = [
+    "/ Per Month",
+    "/ Per 3 Months",
+    "/ Per 6 Months",
+    "/ Custom Pricing",
+  ];
+
   static const List<Color> colors = [
-    Color(0xFF14161b),
-    Color(0xFF00151E),
-    Color(0xFF261919),
-    Color(0xFF312D21),
+    ColorManager.greenCard,
+    Color(0xFF192D31),
+    Color(0xFF2D2424),
+    Color(0xFF23221C),
   ];
   static const List<Color> borderColors = [
-    Color(0xFF00FFA6),
-    Color(0xFF00A4FF),
-    Color(0xFFFF6C6C),
-    Color(0xFFFFB700),
+    Color(0xFF72c09c),
+    Color(0xFF609CBE),
+    Color(0xFFC97171),
+    Color(0xFFFFAA49),
   ];
 
   static const List<String> description = [
