@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:folio/configs/configs.dart';
 import 'package:folio/widget/custom_text_heading.dart';
-import 'package:folio/widget/project_card.dart';
+import 'package:folio/widget/package_card.dart';
 
 import '../../utils/package_utils.dart';
 
@@ -30,7 +30,7 @@ class PackagesDesktop extends StatelessWidget {
                 .entries
                 .map(
                   (e) => PackageCard(
-                    index: e.key,
+                    packageIndex: e.key,
                     color: PackageUtils.colors[e.key],
                     packageTime: PackageUtils.times[e.key],
                     freeTrial: PackageUtils.freeTrial[e.key],

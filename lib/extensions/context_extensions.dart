@@ -77,7 +77,7 @@ extension ThemeExtensions on BuildContext {
 
   TextStyle get smallHint => hintStyle(
         this,
-      ).copyWith(fontSize: 10);
+      ).copyWith(fontSize: 12);
 }
 
 // extension Localization on BuildContext {

@@ -7,6 +7,10 @@ class Assets {
   static const String photosAbousUs = 'assets/photos/abousUs.png';
   static const String photosArtboard = 'assets/photos/Artboard.png';
   static const String photosBLACK = 'assets/photos/BLACK.png';
+  static const String photosFacebook = 'assets/photos/facebook.png';
+  static const String photosInstagram = 'assets/photos/instagram.png';
+  static const String photosTiktok = 'assets/photos/tiktok.png';
+  static const String photosWhatsApp= 'assets/photos/whatsapp.png';
   static const String photosBg = 'assets/photos/bg.png';
   static const String photosBlackWhite = 'assets/photos/black-white.png';
   static const String photosBlur = 'assets/photos/blur.jpg';

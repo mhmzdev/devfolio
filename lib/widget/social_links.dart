@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:folio/configs/configs.dart';
 import 'package:folio/constants.dart';
 import 'package:folio/provider/app_provider.dart';
+import 'package:folio/resources/theme/app_colors.dart';
 import 'package:folio/responsive/responsive.dart';
 import 'package:folio/utils/utils.dart';
 import 'package:provider/provider.dart';
@@ -12,7 +13,6 @@ class SocialLinks extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final appProvider = Provider.of<AppProvider>(context);
     return Wrap(
       runSpacing: AppDimensions.normalize(10),
       alignment: WrapAlignment.center,
@@ -20,27 +20,18 @@ class SocialLinks extends StatelessWidget {
           .asMap()
           .entries
           .map(
-            (e) => Padding(
-              padding:
-                  Responsive.isMobile(context) ? Space.all(0.2, 0) : Space.h!,
-              child: IconButton(
-                highlightColor: Colors.white54,
-                splashRadius: AppDimensions.normalize(12),
-                icon: Image.network(
-                  e.value,
-                  color: appProvider.isDark ? Colors.white : Colors.black,
-                  height: Responsive.isMobile(context)
-                      ? AppDimensions.normalize(10)
-                      : null,
-                ),
-                iconSize: Responsive.isMobile(context)
-                    ? AppDimensions.normalize(10)
-                    : AppDimensions.normalize(15),
-                onPressed: () => openURL(
-                  StaticUtils.socialLinks[e.key],
-                ),
-                hoverColor: AppTheme.c!.primary!,
+            (e) => IconButton(
+              highlightColor: Colors.white54,
+              icon: Image.asset(
+                e.value,
+                color:ColorManager.greyText,
+                height: 30,
               ),
+              iconSize: 30,
+              onPressed: () => openURL(
+                StaticUtils.socialLinks[e.key],
+              ),
+              hoverColor:  ColorManager.grey.withOpacity(0.3),
             ),
           )
           .toList(),
