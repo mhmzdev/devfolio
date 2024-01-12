@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:folio/extensions/context_extensions.dart';
 import 'package:folio/resources/theme/app_colors.dart';
 import 'package:folio/sections/main/model/main_model.dart';
 import 'package:provider/provider.dart';
@@ -15,6 +16,7 @@ import '../../../../utils/navbar_utils.dart';
 import '../../../../utils/utils.dart';
 import '../../../../widget/navbar_actions_button.dart';
 import '../../../../widget/navbar_logo.dart';
+import '../../../animations/entrance_fader.dart';
 import '../../../configs/app.dart';
 import '../../../responsive/responsive.dart';
 import '../../../widget/arrow_on_top.dart';

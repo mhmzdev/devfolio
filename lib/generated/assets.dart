@@ -3,32 +3,28 @@ class Assets {
   Assets._();
 
   static const String assetsHi = 'assets/hi.gif';
+  static const String assetsPhotosWebLogoWhite =
+      'assets/photos/web_logo_white.png';
   static const String ideaToAppWebsiteData = 'data.json';
-  static const String photosAbousUs = 'assets/photos/abousUs.png';
-  static const String photosArtboard = 'assets/photos/Artboard.png';
-  static const String photosBLACK = 'assets/photos/BLACK.png';
-  static const String photosFacebook = 'assets/photos/facebook.png';
-  static const String photosInstagram = 'assets/photos/instagram.png';
-  static const String photosTiktok = 'assets/photos/tiktok.png';
-  static const String photosWhatsApp= 'assets/photos/whatsapp.png';
-  static const String photosBg = 'assets/photos/bg.png';
-  static const String photosBlackWhite = 'assets/photos/black-white.png';
   static const String photosBlur = 'assets/photos/blur.jpg';
-  static const String photosColored = 'assets/photos/colored.png';
+  static const String photosFacebook = 'assets/photos/facebook.png';
   static const String photosGetStarted = 'assets/photos/get_started.jpeg';
   static const String photosIdeaToApp = 'assets/photos/idea_to_app.png';
+  static const String photosInstagram = 'assets/photos/instagram.png';
   static const String photosLogoWeb = 'assets/photos/logo_web.png';
   static const String photosMobile = 'assets/photos/mobile.png';
   static const String photosMobileApps = 'assets/photos/mobile_apps.png';
-  static const String photosTechBackground =
-      'assets/photos/tech_background.jpg';
+  static const String photosNewLogoWhiteWithoutText =
+      'assets/photos/new_logo_white_without_text.png';
   static const String photosTextLogo = 'assets/photos/text_logo.png';
-  static const String photosWebLogoWhite = 'assets/photos/web_logo_white.png';
+  static const String photosTiktok = 'assets/photos/tiktok.png';
+  static const String photosWebLogoWhite = 'assets/photos/webLogoWhite.png';
   static const String photosWebSiteLogo = 'assets/photos/web_site_logo.png';
   static const String photosWebText = 'assets/photos/web_text.png';
   static const String photosWebTextGredinat =
       'assets/photos/web_text_gredinat.png';
   static const String photosWebWhite = 'assets/photos/web_white.png';
+  static const String photosWhatsapp = 'assets/photos/whatsapp.png';
   static const String photosWhiteLog = 'assets/photos/white_log.png';
   static const String projectsAndroid = 'assets/projects/android.png';
   static const String projectsCovid = 'assets/projects/covid.png';

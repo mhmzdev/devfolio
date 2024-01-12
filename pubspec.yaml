@@ -36,6 +36,9 @@ dependencies:
   #? Sized Box (Height & Width)
   gap: ^3.0.1
 
+  #? Responsive
+  responsive_framework: ^1.1.1
+
   appinio_video_player: any
 
   # state management
@@ -73,7 +76,7 @@ flutter:
     - family: Agustina
       fonts:
         - asset: fonts/agustina/agustina.otf
-    
+
     - family: Montserrat
       fonts:
         - asset: fonts/montserrat/montserrat.ttf

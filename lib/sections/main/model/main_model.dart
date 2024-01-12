@@ -13,6 +13,5 @@ class MainModel {
     MainModel(title: 'ABOUT', color: ColorManager.pink),
     MainModel(title: 'SERVICES', color: ColorManager.orange),
     MainModel(title: 'PACKAGES', color: ColorManager.yellow),
-    MainModel(title: 'GET STARTED', color: ColorManager.pink),
   ];
 }

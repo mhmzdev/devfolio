@@ -1,94 +1,58 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:folio/animations/entrance_fader.dart';
 import 'package:folio/configs/configs.dart';
-import 'package:folio/shared_widgets/custom_video_player.dart';
+import 'package:folio/extensions/context_extensions.dart';
+import 'package:folio/resources/theme/app_colors.dart';
+import 'package:folio/sections/home/view/widgets/get_started_button.dart';
+import 'package:folio/sections/home/view/widgets/home_description.dart';
 
-import 'package:folio/utils/utils.dart';
-import 'package:folio/widget/social_links.dart';
-
-import '../../../generated/assets.dart';
+import 'widgets/gradient_text.dart';
 
 class HomeMobile extends StatelessWidget {
   const HomeMobile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-
-    return SizedBox(
-      height: size.height * 1.02,
-      child: Stack(
-        children: [
-          // Positioned(
-          //   bottom: 0.0,
-          //   right: -AppDimensions.normalize(25),
-          //   child: Opacity(
-          //     opacity: 0.9,
-          //     child: Image.asset(
-          //       StaticUtils.blackWhitePhoto,
-          //       height: AppDimensions.normalize(150),
-          //     ),
-          //   ),
-          // ),
-          Container(
+    return EntranceFader(
+      child: Container(
+        decoration: const BoxDecoration(
+            gradient: LinearGradient(
+                colors: ColorManager.backgroundGradientBackground,
+                stops: [0.0, 2.0],
+                begin: FractionalOffset.topRight,
+                end: FractionalOffset.bottomLeft,
+                tileMode: TileMode.repeated)),
+        child: Container(
             margin: EdgeInsets.fromLTRB(
-              AppDimensions.normalize(10),
-              AppDimensions.normalize(40),
-              0,
-              0,
+              AppDimensions.normalize(20),
+              AppDimensions.normalize(30),
+              AppDimensions.normalize(20),
+              AppDimensions.normalize(20),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(
-                  Assets.photosWebText,
+                //! Text Gradient
+                const GradientText(
+                  height: 100,
                   width: 400,
                 ),
-                SizedBox(
-                  height: 30,
-                ),
-                SizedBox(
-                  height: 150,
-                  child: EntranceFader(
-                    offset: const Offset(-10, 0),
-                    delay: const Duration(seconds: 1),
-                    duration: const Duration(milliseconds: 800),
-                    child: AnimatedTextKit(
-                      animatedTexts: [
-                        TyperAnimatedText(
-                          textAlign: TextAlign.start,
-                          curve: Curves.linear,
-                          'There are many variations of passages of Lorem Ipsum available,but the majority have suffered alteration in some form, by injected humour, \nor randomised words which don\'t look even slightly',
-                          speed: const Duration(
-                            milliseconds: 35,
-                          ),
-                          textStyle: AppText.b2!.copyWith(color: Colors.white),
-                        ),
-                      ],
-                      isRepeatingAnimation: false,
-                    ),
-                  ),
-                ),
-                const EntranceFader(
-                    offset: Offset(0, 0),
-                    delay: Duration(seconds: 1),
-                    duration: Duration(milliseconds: 800),
-                    child: SizedBox(
-                        height: 200, width: 500, child: VideoPlayerWidget())
+                context.mediumGap,
 
-                  // Image.asset(
-                  //   Assets.videosIntro,
-                  //   height: size.width < 1200
-                  //       ? size.height * 0.8
-                  //       : size.height * 0.85,
-                  // ),
+                //! About
+                HomeDescription(
+                    isMobile: true, height: 80, textStyle: context.labelSmall),
+                context.mediumGap,
+                //! Button
+                GetStartedButton(
+                  textStyle: context.hint.copyWith(fontSize: 10),
                 ),
-                // const SocialLinks(),
+                SizedBox(
+                  height: 300,
+                )
               ],
-            ),
-          ),
-        ],
+            )),
       ),
     );
   }

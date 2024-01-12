@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 class ColorManager {
   static const backgroundColor = Color(0xff00141f);
   static const darkBackgroundColor = Color(0xFF2F2F2F);
-  static Color primaryColor = Color(0xFF00A4FF);
+  static Color primaryColor = const Color(0xFF126cfe);
   static const darkPrimaryColor = Color(0xFF00151E);
-  static const lightPrimaryColor = Color(0xFF43BCFF);
+  static const lightPrimaryColor = Color(0xff2e7dff);
   static const accentColor = Color(0xff8c98a8);
   static const secondaryColor = Color(0XFF25534B);
 
@@ -39,7 +39,7 @@ class ColorManager {
   static const darkGrey = Color(0xFF363636);
   static const greenCard = Color(0xFF151a1a);
   static const iconColor = Color(0xFF727272);
-  static const gradientColor = Color(0xFF0083CE);
+  static const gradientColor = Color(0xff468fff);
   static const gradientColor2 = Color(0xFF014D73);
   static const gradientColor3 = Color(0xFF003F5E);
   static const errorColor = Color(0xFFFF0000);

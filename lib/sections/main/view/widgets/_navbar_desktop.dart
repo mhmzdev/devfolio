@@ -31,7 +31,7 @@ class _NavbarDesktopState extends State<_NavbarDesktop> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Spacer(),
+          context.largeGap,
           const NavBarLogo(),
           const Spacer(),
           ...MainModel.titles.asMap().entries.map(
@@ -42,6 +42,38 @@ class _NavbarDesktopState extends State<_NavbarDesktop> {
                 ),
               ),
           const Spacer(),
+          EntranceFader(
+            offset: const Offset(0, -10),
+            delay: const Duration(milliseconds: 100),
+            duration: const Duration(milliseconds: 250),
+            child: Container(
+              margin: Space.h!,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(40),
+                  gradient: const LinearGradient(
+                      colors: ColorManager.gradientBackground)),
+              child: MaterialButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(40)),
+                splashColor: ColorManager.primaryColor,
+                highlightColor: ColorManager.primaryColor,
+                hoverColor: ColorManager.grey.withOpacity(0.3),
+                onPressed: () {
+                  scrollProvider.scroll(4);
+                },
+                child: Padding(
+                  padding: Space.all(0.5, 0.45),
+                  child: Text(
+                    'Get Started',
+                    style: AppText.l1!.copyWith(
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          context.largeGap,
         ],
       ),
     );
