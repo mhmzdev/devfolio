@@ -24,6 +24,7 @@ class PackagesMobileTab extends StatelessWidget {
           Space.y!,
           SizedBox(
             height: 570,
+            width: 300,
             child: ListView(
               padding: const EdgeInsets.symmetric(vertical: 20),
               scrollDirection: Axis.horizontal,

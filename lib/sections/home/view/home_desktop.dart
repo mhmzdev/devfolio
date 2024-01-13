@@ -15,18 +15,20 @@ class HomeDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final scrollProvider = Provider.of<ScrollProvider>(context);
     return EntranceFader(
       child: Stack(
         children: [
           Opacity(
-              opacity: 0.3,
-              child: SizedBox(
-                  height: 600,
-                  width: double.infinity,
-                  child: Image.asset(fit: BoxFit.cover, Assets.photosBlur))),
+            opacity: 0.4,
+            child: SizedBox(
+              height: 600,
+              width: double.infinity,
+              child: Image.asset(fit: BoxFit.cover, Assets.photosBlur),
+            ),
+          ),
           Container(
             decoration: const BoxDecoration(
+
                 // gradient: LinearGradient(
                 //     colors: ColorManager.backgroundGradientBackground,
                 //     stops: [0.0, 2.0],
