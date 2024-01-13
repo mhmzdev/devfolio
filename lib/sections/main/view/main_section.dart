@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:folio/extensions/context_extensions.dart';
+import 'package:folio/generated/assets.dart';
 import 'package:folio/resources/theme/app_colors.dart';
 import 'package:folio/sections/main/model/main_model.dart';
 import 'package:provider/provider.dart';
@@ -43,14 +44,20 @@ class _MainPageState extends State<MainPage> {
       extendBodyBehindAppBar: true,
       drawer: !Responsive.isDesktop(context) ? const _MobileDrawer() : null,
       body: SafeArea(
-        child: Stack(
-          children: [
-            const _Body(),
-            const ArrowOnTop(),
-            Responsive.isTablet(context) || Responsive.isMobile(context)
-                ? const _NavBarTablet()
-                : const _NavbarDesktop(),
-          ],
+        child: Container(
+          width: double.infinity,
+          decoration: const BoxDecoration(
+              image: DecorationImage(image: AssetImage(Assets.photosBlur), fit: BoxFit.cover,opacity: 0.2)
+          ),
+          child: Stack(
+            children: [
+              const _Body(),
+              const ArrowOnTop(),
+              Responsive.isTablet(context) || Responsive.isMobile(context)
+                  ? const _NavBarTablet()
+                  : const _NavbarDesktop(),
+            ],
+          ),
         ),
       ),
     );

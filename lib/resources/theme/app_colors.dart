@@ -22,8 +22,9 @@ class ColorManager {
     Colors.transparent,
   ];
   static const bodyGradientBackground = [
-    gradientColor3,
     Colors.transparent,
+
+    Color(0xff001d4b),
   ];
 
   static const highlightColor = Color(0xFFFFFFFF);

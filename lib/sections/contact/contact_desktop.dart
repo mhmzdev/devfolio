@@ -14,24 +14,29 @@ class ContactDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const CustomSectionHeading(
-          text: '\nGet Started\n',
-        ),
-        Stack(
-          alignment: Alignment.center,
-          children: [
-            Opacity(
-              opacity: 0.8,
-              child: Image.asset(
-                Assets.photosGetStarted,
-                fit: BoxFit.cover,
-                height: 550,
-                width: double.infinity,
-              ),
+    return Padding(
+      padding: EdgeInsets.fromLTRB(
+        0,
+        AppDimensions.normalize(70),
+        0,
+        0,
+      ),
+      child: Stack(
+        alignment: Alignment.topCenter,
+        children: [
+          Opacity(
+            opacity: 1,
+            child: Image.asset(
+              alignment: Alignment.bottomCenter,
+              Assets.photosContact,
+              fit: BoxFit.cover,
+              height: 800 ,
+               width: double.infinity,
             ),
-            SizedBox(
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 50,right: 30),
+             child: SizedBox(
               width: MediaQuery.sizeOf(context).width * 0.2,
               child: Column(
                 children: [
@@ -87,9 +92,9 @@ class ContactDesktop extends StatelessWidget {
                 ],
               ),
             ),
-          ],
-        ),
-      ],
+          ),
+        ],
+      ),
     );
   }
 }

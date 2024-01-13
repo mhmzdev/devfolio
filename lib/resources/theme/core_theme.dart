@@ -26,7 +26,7 @@ class ThemeManager {
         focusedBorder: _outLineBorder,
         errorBorder: _outLineBorder.copyWith(
             borderSide: const BorderSide(color: ColorManager.errorColor)),
-        fillColor: ColorManager.fieldColor.withOpacity(0.3),
+        fillColor: ColorManager.greyText.withOpacity(0.1),
         filled: true,
       );
 

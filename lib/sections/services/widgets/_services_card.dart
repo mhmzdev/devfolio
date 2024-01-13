@@ -19,10 +19,10 @@ class _ServiceCard extends StatelessWidget {
       height: AppDimensions.normalize(90),
       padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
       decoration: BoxDecoration(
-          color: ColorManager.darkPrimaryColor,
+          color: ColorManager.darkPrimaryColor.withOpacity(0.5),
           borderRadius: BorderRadius.circular(15),
           border: Border.all(
-              color: ColorManager.primaryColor.withOpacity(0.5), width: 0.2)),
+              color: ColorManager.primaryColor.withOpacity(0.7), width: 0.2)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

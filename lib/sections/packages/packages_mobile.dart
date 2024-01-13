@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:folio/configs/configs.dart';
+import 'package:folio/extensions/context_extensions.dart';
 import 'package:folio/utils/package_utils.dart';
 import 'package:folio/widget/custom_text_heading.dart';
 
@@ -22,30 +23,28 @@ class PackagesMobileTab extends StatelessWidget {
             text: '\n\n',
           ),
           Space.y!,
-          SizedBox(
-            height: 570,
-            width: 300,
-            child: ListView(
-              padding: const EdgeInsets.symmetric(vertical: 20),
-              scrollDirection: Axis.horizontal,
-              children: PackageUtils.titles
-                  .asMap()
-                  .entries
-                  .map(
-                    (e) => PackageCard(
-                      packageIndex: e.key,
-                      color: PackageUtils.colors[e.key],
-                      packageTime: PackageUtils.times[e.key],
-                      freeTrial: PackageUtils.freeTrial[e.key],
-                      borderColor: PackageUtils.borderColors[e.key],
-                      packagePrice: PackageUtils.prices[e.key],
-                      banner: e.value,
-                      packageTitle: PackageUtils.titles[e.key],
-                      packageDescription: PackageUtils.description[e.key],
-                    ),
-                  )
-                  .toList(),
-            ),
+          Wrap(
+            spacing: context.width * 0.05,
+            runSpacing: height * 0.05,
+            alignment: WrapAlignment.center,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            children: PackageUtils.titles
+                .asMap()
+                .entries
+                .map(
+                  (e) => PackageCard(
+                packageIndex: e.key,
+                color: PackageUtils.colors[e.key],
+                packageTime: PackageUtils.times[e.key],
+                freeTrial: PackageUtils.freeTrial[e.key],
+                borderColor: PackageUtils.borderColors[e.key],
+                packagePrice: PackageUtils.prices[e.key],
+                banner: e.value,
+                packageTitle: PackageUtils.titles[e.key],
+                packageDescription: PackageUtils.description[e.key],
+              ),
+            )
+                .toList(),
           ),
         ],
       ),

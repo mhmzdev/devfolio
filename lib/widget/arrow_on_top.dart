@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:folio/configs/app_theme.dart';
 import 'package:folio/provider/app_provider.dart';
 import 'package:folio/provider/scroll_provider.dart';
+import 'package:folio/resources/theme/app_colors.dart';
 import 'package:provider/provider.dart';
 
 class ArrowOnTop extends StatefulWidget {
@@ -47,7 +48,7 @@ class ArrowOnTopState extends State<ArrowOnTop> {
                 },
                 child: Container(
                   decoration: BoxDecoration(
-                    color: appProvider.isDark ? Colors.white : Colors.black,
+                    color: ColorManager.backgroundColor,
                     borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(8.0),
                       bottomLeft: Radius.circular(8.0),
@@ -63,7 +64,7 @@ class ArrowOnTopState extends State<ArrowOnTop> {
                   ),
                   child: Icon(
                     Icons.arrow_drop_up_outlined,
-                    color: AppTheme.c!.primary!,
+                    color: ColorManager.primaryColor,
                     size: MediaQuery.of(context).size.height * 0.05,
                   ),
                 ),

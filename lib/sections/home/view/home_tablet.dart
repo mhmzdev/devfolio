@@ -14,69 +14,59 @@ class HomeTablet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return EntranceFader(
-      child: Stack(
-        children: [
-          Opacity(
-              opacity: 0.3,
-              child: SizedBox(
-                  height: 600,
-                  width: double.infinity,
-                  child: Image.asset(fit: BoxFit.cover, Assets.photosBlur))),
-          Container(
-            decoration: const BoxDecoration(
-                // gradient: LinearGradient(
-                //     colors: ColorManager.backgroundGradientBackground,
-                //     stops: [0.0, 2.0],
-                //     begin: FractionalOffset.topRight,
-                //     end: FractionalOffset.bottomLeft,
-                //     tileMode: TileMode.repeated),
-                ),
-            child: Container(
-              margin: EdgeInsets.fromLTRB(
-                AppDimensions.normalize(20),
-                AppDimensions.normalize(70),
-                AppDimensions.normalize(20),
-                AppDimensions.normalize(20),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+      child: Container(
+        decoration: const BoxDecoration(
+            // gradient: LinearGradient(
+            //     colors: ColorManager.backgroundGradientBackground,
+            //     stops: [0.0, 2.0],
+            //     begin: FractionalOffset.topRight,
+            //     end: FractionalOffset.bottomLeft,
+            //     tileMode: TileMode.repeated),
+            ),
+        child: Container(
+          margin: EdgeInsets.fromLTRB(
+            AppDimensions.normalize(20),
+            AppDimensions.normalize(70),
+            AppDimensions.normalize(20),
+            AppDimensions.normalize(20),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      //! Text Gradient
-                      const GradientText(
-                        height: 100,
-                        width: 400,
-                      ),
-                      context.mediumGap,
-
-                      //! About
-                      SizedBox(
-                        width: 400,
-                        child: HomeDescription(
-                            height: 80, textStyle: context.labelSmall),
-                      ),
-                      context.mediumGap,
-                      //! Button
-                      GetStartedButton(
-                        textStyle: context.hint,
-                      ),
-                    ],
+                  //! Text Gradient
+                  const GradientText(
+                    height: 100,
+                    width: 400,
                   ),
-                  const Spacer(),
-                  // const EntranceFader(
-                  //     offset: Offset(0, 0),
-                  //     delay: Duration(seconds: 1),
-                  //     duration: Duration(milliseconds: 800),
-                  //     child: SizedBox(
-                  //         height: 600, width: 1000, child: VideoPlayerWidget())),
+                  context.mediumGap,
+
+                  //! About
+                  SizedBox(
+                    width: 400,
+                    child: HomeDescription(
+                        height: 80, textStyle: context.labelSmall),
+                  ),
+                  context.mediumGap,
+                  //! Button
+                  GetStartedButton(
+                    textStyle: context.hint,
+                  ),
                 ],
               ),
-            ),
+              const Spacer(),
+              // const EntranceFader(
+              //     offset: Offset(0, 0),
+              //     delay: Duration(seconds: 1),
+              //     duration: Duration(milliseconds: 800),
+              //     child: SizedBox(
+              //         height: 600, width: 1000, child: VideoPlayerWidget())),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }

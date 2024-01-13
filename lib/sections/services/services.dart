@@ -12,6 +12,8 @@ import 'package:folio/widget/custom_text_heading.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
+import '../../animations/entrance_fader.dart';
+import '../../generated/assets.dart';
 import '../../resources/theme/app_colors.dart';
 
 part 'services_desktop.dart';

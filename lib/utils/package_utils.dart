@@ -36,13 +36,13 @@ class PackageUtils {
 
   static const List<Color> colors = [
     ColorManager.greenCard,
-    Color(0xFF111818),
+    Color(0xFF121A1A),
     Color(0xFF1E1818),
     Color(0xFF1A1915),
   ];
   static const List<Color> borderColors =  [
     Color(0xFF72c09c),
-    Color(0xFF609CBE),
+    Color(0xFF607BBE),
     Color(0xFFC97171),
     Color(0xFFFFAA49),
   ];

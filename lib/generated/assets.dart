@@ -7,6 +7,7 @@ class Assets {
       'assets/photos/web_logo_white.png';
   static const String ideaToAppWebsiteData = 'data.json';
   static const String photosBlur = 'assets/photos/blur.jpg';
+  static const String photosContact = 'assets/photos/conatct_bg.jpeg';
   static const String photosFacebook = 'assets/photos/facebook.png';
   static const String photosGetStarted = 'assets/photos/get_started.jpeg';
   static const String photosIdeaToApp = 'assets/photos/idea_to_app.png';
