@@ -1,29 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:folio/configs/app_typography.dart';
+
+import '../generated/assets.dart';
 
 class NavBarLogo extends StatelessWidget {
-  const NavBarLogo({Key? key}) : super(key: key);
+  final double width;
+  const NavBarLogo({Key? key, this.width = 200}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Text(
-          "< ",
-          style: AppText.b1,
-        ),
-        Text(
-          "Hamza",
-          style: AppText.b1b!.copyWith(
-            fontFamily: 'Agustina',
-          ),
-        ),
-        Text(
-          MediaQuery.of(context).size.width >= 1000 ? " />\t\t" : " />",
-          style: AppText.b1,
-        )
-      ],
+    return Image.asset(
+      width: width,
+      Assets.photosWebLogoWhite,
+      height: 60,
     );
   }
 }

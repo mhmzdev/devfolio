@@ -33,6 +33,13 @@ dependencies:
   carousel_slider: ^4.0.0
   animated_text_kit: ^4.2.1
   font_awesome_flutter: ^10.1.0
+  #? Sized Box (Height & Width)
+  gap: ^3.0.1
+
+  #? Responsive
+  responsive_framework: ^1.1.1
+
+  appinio_video_player: any
 
   # state management
   provider: ^6.0.1
@@ -60,7 +67,8 @@ flutter:
     - assets/work/
     - assets/photos/
     - assets/services/
-    - assets/projects/
+    - assets/services/
+    - assets/videos/
 
     - data.json
 
@@ -68,11 +76,15 @@ flutter:
     - family: Agustina
       fonts:
         - asset: fonts/agustina/agustina.otf
-    
+
     - family: Montserrat
       fonts:
         - asset: fonts/montserrat/montserrat.ttf
-    
+
+    - family: inter
+      fonts:
+        - asset: fonts/inter/Inter-ExtraBold.ttf
+
     - family: Poppins
       fonts:
         - asset: fonts/poppins/Poppins-Regular.ttf

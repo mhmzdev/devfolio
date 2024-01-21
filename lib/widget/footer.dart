@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:folio/constants.dart';
+import 'package:folio/extensions/context_extensions.dart';
+import 'package:folio/generated/assets.dart';
+import 'package:folio/resources/app_spaces.dart';
+import 'package:folio/resources/theme/app_colors.dart';
 
 class Footer extends StatelessWidget {
   const Footer({Key? key}) : super(key: key);
@@ -9,22 +12,97 @@ class Footer extends StatelessWidget {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Container(
-      margin: EdgeInsets.fromLTRB(0, height * 0.05, 0, 0),
-      height: height * 0.07,
+      padding: const EdgeInsets.only(
+          left: AppSpaces.xlLargePadding, top: AppSpaces.xlLargePadding),
+      color: ColorManager.black,
+      height: height * .48,
       width: width,
-      child: Center(
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: AppSpaces.mediumPadding),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              "Developed in 💙 with ",
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Image.asset(Assets.photosTextLogo, height: 50, width: 150),
+                    context.largeGap,
+                    Text(
+                      "A pioneering tech company driven by innovation, excellence,\nand a passion for creating cutting-edge solutions",
+                      style: context.greyLabelMedium,
+                    ),
+                    context.mediumGap,
+                    Text(
+                      "dev.idea2app@gmail.com",
+                      style: context.greyLabelMedium
+                          .copyWith(color: ColorManager.greyText),
+                    ),
+                    context.largeGap,
+                    Text(
+                      "+0201118414599",
+                      style: context.greyLabelMedium
+                          .copyWith(color: ColorManager.greyText),
+                    ),
+                    context.smallGap,
+                    Text(
+                      "+0201061230275",
+                      style: context.greyLabelMedium
+                          .copyWith(color: ColorManager.greyText),
+                    ),
+                  ],
+                ),
+                context.xxLargeGap,
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      "Product",
+                      style: context.whiteTitle,
+                    ),
+                    context.mediumGap,
+                    Text(
+                      "About",
+                      style: context.greyLabelMedium
+                          .copyWith(color: ColorManager.greyText),
+                    ),
+                    context.mediumGap,
+                    Text(
+                      "Services",
+                      style: context.greyLabelMedium
+                          .copyWith(color: ColorManager.greyText),
+                    ),
+                    context.smallGap,
+                    Text(
+                      "Packages",
+                      style: context.greyLabelMedium
+                          .copyWith(color: ColorManager.greyText),
+                    ),
+                  ],
+                ),
+                context.xxLargeGap,
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Follow Us',
+                      style: context.whiteTitle,
+                    ),
+                    context.mediumGap,
+                    // const SocialLinks(),
+                  ],
+                )
+              ],
             ),
-            InkWell(
-              onTap: () => openURL("https://github.com/mhmzdev/DevFolio"),
-              child: const Text(
-                "Flutter",
-                style: TextStyle(color: Colors.blue),
-              ),
+            const Spacer(),
+            Text(
+              'Copyright © 2024 IDEA 2 APP Corp.\nAll rights reserved.',
+              style: context.smallHint
+                  .copyWith(color: ColorManager.greyText.withOpacity(0.6)),
             )
           ],
         ),
