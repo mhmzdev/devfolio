@@ -6,11 +6,10 @@ class _ServiceCard extends StatefulWidget {
   final String serviceDescription;
 
   const _ServiceCard({
-    Key? key,
     required this.serviceIcon,
     required this.serviceTitle,
     required this.serviceDescription,
-  }) : super(key: key);
+  });
 
   @override
   _ServiceCardState createState() => _ServiceCardState();

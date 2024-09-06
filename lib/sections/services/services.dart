@@ -19,7 +19,7 @@ part 'widgets/_services_card.dart';
 part 'widgets/_services_card_back.dart';
 
 class Services extends StatelessWidget {
-  const Services({Key? key}) : super(key: key);
+  const Services({super.key});
 
   @override
   Widget build(BuildContext context) {

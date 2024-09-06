@@ -7,7 +7,7 @@ import 'package:folio/utils/utils.dart';
 import 'package:folio/widget/social_links.dart';
 
 class HomeDesktop extends StatelessWidget {
-  const HomeDesktop({Key? key}) : super(key: key);
+  const HomeDesktop({super.key});
 
   @override
   Widget build(BuildContext context) {

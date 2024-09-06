@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:ui' as ui;
 import 'ui.dart';
 
 class AppDimensions {
@@ -47,18 +46,6 @@ class AppDimensions {
     if (!UI.xxs! && ratio > 1.4) {
       ratio = 1.4;
     }
-  }
-
-  static String inString() {
-    final x = UI.width! / UI.height!;
-    final ps = ui.window.physicalSize;
-    return """
-      Width: ${UI.width} | ${ps.width}
-      Height: ${UI.height} | ${ps.height}
-      app_ratio: $ratio
-      ratio: $x
-      pixels: ${UI.mediaQuery().devicePixelRatio}
-    """;
   }
 
   static double space([double multiplier = 1.0]) {

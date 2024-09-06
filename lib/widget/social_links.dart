@@ -8,8 +8,8 @@ import 'package:provider/provider.dart';
 
 class SocialLinks extends StatelessWidget {
   const SocialLinks({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
   @override
   Widget build(BuildContext context) {
     final appProvider = Provider.of<AppProvider>(context);

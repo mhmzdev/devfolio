@@ -1,7 +1,7 @@
 part of 'services.dart';
 
 class ServiceDesktop extends StatefulWidget {
-  const ServiceDesktop({Key? key}) : super(key: key);
+  const ServiceDesktop({super.key});
 
   @override
   ServiceDesktopState createState() => ServiceDesktopState();

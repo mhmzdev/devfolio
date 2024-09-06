@@ -6,7 +6,7 @@ import 'package:folio/utils/utils.dart';
 import 'package:folio/widget/social_links.dart';
 
 class HomeMobile extends StatelessWidget {
-  const HomeMobile({Key? key}) : super(key: key);
+  const HomeMobile({super.key});
 
   @override
   Widget build(BuildContext context) {

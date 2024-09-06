@@ -7,7 +7,7 @@ import 'package:folio/widget/custom_text_heading.dart';
 import 'package:folio/widget/project_card.dart';
 
 class PortfolioDesktop extends StatefulWidget {
-  const PortfolioDesktop({Key? key}) : super(key: key);
+  const PortfolioDesktop({super.key});
 
   @override
   State<PortfolioDesktop> createState() => _PortfolioDesktopState();

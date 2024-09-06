@@ -7,7 +7,7 @@ import 'package:folio/utils/utils.dart';
 import 'package:folio/widget/social_links.dart';
 
 class HomeTab extends StatelessWidget {
-  const HomeTab({Key? key}) : super(key: key);
+  const HomeTab({super.key});
 
   @override
   Widget build(BuildContext context) {
