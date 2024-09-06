@@ -1,0 +1,45 @@
+# name: build_and_test
+
+# on:
+#   pull_request:
+#     branches: [main]
+#   workflow_dispatch:
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v3
+
+#       - name: Set up Flutter
+#         uses: subosito/flutter-action@v2
+#         with:
+#           flutter-version: "3.24.2"
+#           channel: stable
+#           cache: true
+#           cache-key: "flutter-:os:-:channel:-:version:-:arch:-:hash:"
+
+#       - name: Create blank ..env file
+#         run: touch .env
+
+#       - name: Get Dependencies
+#         run: flutter pub get
+
+#       - name: Analyze
+#         run: dart analyze --no-fatal-warnings
+
+#       - name: Check Formatting
+#         run: dart format lib test --set-exit-if-changed
+
+#       - name: Run Tests
+#       # TODO: create github action to generate goldens on Linux, and 
+#       # remove --update-goldens here so the test fails on changes
+#         run: flutter test --coverage --update-goldens
+
+#       - name: Check Test Coverage
+#         uses: VeryGoodOpenSource/very_good_coverage@v2
+#         with:
+#           path: 'coverage/lcov.info'
+#           # This number will fluctuate until the tests touch all code files in the app
+#           min_coverage: 18.3
