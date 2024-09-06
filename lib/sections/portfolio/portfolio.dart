@@ -4,7 +4,7 @@ import 'package:folio/sections/portfolio/portfolio_desktop.dart';
 import 'package:folio/sections/portfolio/portfolio_mobile.dart';
 
 class Portfolio extends StatelessWidget {
-  const Portfolio({Key? key}) : super(key: key);
+  const Portfolio({super.key});
 
   @override
   Widget build(BuildContext context) {

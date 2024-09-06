@@ -9,11 +9,11 @@ class AboutMeData extends StatelessWidget {
   final Alignment? alignment;
 
   const AboutMeData({
-    Key? key,
+    super.key,
     required this.data,
     required this.information,
     this.alignment,
-  }) : super(key: key);
+  });
   @override
   Widget build(BuildContext context) {
     final appProvider = Provider.of<AppProvider>(context);

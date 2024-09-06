@@ -5,7 +5,7 @@ import 'package:folio/sections/about/about_mobile.dart';
 import 'package:folio/sections/about/about_tablet.dart';
 
 class About extends StatelessWidget {
-  const About({Key? key}) : super(key: key);
+  const About({super.key});
 
   @override
   Widget build(BuildContext context) {

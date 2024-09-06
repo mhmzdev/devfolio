@@ -1,7 +1,7 @@
 part of 'services.dart';
 
 class ServiceMobile extends StatelessWidget {
-  const ServiceMobile({Key? key}) : super(key: key);
+  const ServiceMobile({super.key});
 
   @override
   Widget build(BuildContext context) {
