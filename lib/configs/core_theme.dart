@@ -11,13 +11,17 @@ final themeLight = ThemeData(
   fontFamily: fontFamily,
   splashColor: Colors.transparent,
   scaffoldBackgroundColor: Colors.white,
-  colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red)
+  colorScheme: ColorScheme.fromSwatch(
+    primarySwatch: Colors.red,
+  )
       .copyWith(
         secondary: Colors.black,
         brightness: Brightness.light,
         surface: Colors.white,
       )
-      .copyWith(surface: Colors.white),
+      .copyWith(
+        surface: Colors.white,
+      ),
 );
 
 final themeDark = ThemeData(
@@ -29,10 +33,10 @@ final themeDark = ThemeData(
   fontFamily: fontFamily,
   splashColor: Colors.transparent,
   scaffoldBackgroundColor: Colors.black,
-  colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red)
-      .copyWith(
-        secondary: const Color(0xffC0392B),
-        brightness: Brightness.dark,
-      )
-      .copyWith(surface: Colors.grey[800]),
+  colorScheme: ColorScheme.fromSwatch(
+    primarySwatch: Colors.red,
+    brightness: Brightness.dark,
+  ).copyWith(
+    surface: Colors.grey[800],
+  ),
 );
