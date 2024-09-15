@@ -1,75 +1,42 @@
-import 'package:flutter/material.dart';
-import 'package:folio/provider/app_provider.dart';
-import 'package:folio/provider/drawer_provider.dart';
-import 'package:folio/provider/scroll_provider.dart';
-import 'package:folio/sections/main/main_section.dart';
-import 'package:provider/provider.dart';
-import 'package:url_strategy/url_strategy.dart';
-import 'package:folio/configs/core_theme.dart' as theme;
+// The entrypoint for the **server** environment.
+//
+// The [main] method will only be executed on the server during pre-rendering.
+// To run code on the client, use the @client annotation.
+
+// Server-specific jaspr import.
+import 'package:jaspr/server.dart';
+
+// Imports the [App] component.
+import 'app.dart';
+
+// This file is generated automatically by Jaspr, do not remove or edit.
+import 'jaspr_options.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  setPathUrlStrategy();
-  runApp(const MyApp());
-}
+  // Initializes the server environment with the generated default options.
+  Jaspr.initializeApp(
+    options: defaultJasprOptions,
+  );
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
-
-  @override
-  MyAppState createState() => MyAppState();
-}
-
-class MyAppState extends State<MyApp> {
-  @override
-  Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => AppProvider()),
-        ChangeNotifierProvider(create: (_) => DrawerProvider()),
-        ChangeNotifierProvider(create: (_) => ScrollProvider()),
-      ],
-      child: Consumer<AppProvider>(
-        builder: (context, value, _) => MaterialChild(
-          provider: value,
-        ),
-      ),
-    );
-  }
-}
-
-class MaterialChild extends StatefulWidget {
-  final AppProvider provider;
-  const MaterialChild({super.key, required this.provider});
-
-  @override
-  State<MaterialChild> createState() => _MaterialChildState();
-}
-
-class _MaterialChildState extends State<MaterialChild> {
-  void initAppTheme() {
-    final appProviders = AppProvider.state(context);
-    appProviders.init();
-  }
-
-  @override
-  void initState() {
-    initAppTheme();
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Hamza',
-      theme: theme.themeLight,
-      darkTheme: theme.themeDark,
-      themeMode: widget.provider.themeMode,
-      initialRoute: "/",
-      routes: {
-        "/": (context) => const MainPage(),
-      },
-    );
-  }
+  // Starts the app.
+  //
+  // [Document] renders the root document structure (<html>, <head> and <body>)
+  // with the provided parameters and components.
+  runApp(Document(
+    title: 'Hamza',
+    styles: [
+      // Special import rule to include to another css file.
+      css.import('https://fonts.googleapis.com/css?family=Poppins'),
+      // Each style rule takes a valid css selector and a set of styles.
+      // Styles are defined using type-safe css bindings and can be freely chained and nested.
+      css('html, body')
+          .text(
+              fontFamily: const FontFamily.list(
+                  [FontFamily('Poppins'), FontFamilies.sansSerif]))
+          .box(width: 100.percent, minHeight: 100.vh)
+          .box(margin: EdgeInsets.zero, padding: EdgeInsets.zero),
+      css('h1').text(fontSize: 4.rem).box(margin: EdgeInsets.unset),
+    ],
+    body: App(),
+  ));
 }
