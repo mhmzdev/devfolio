@@ -12,7 +12,7 @@ class BasicInfoSectionState extends State<BasicInfoSection> {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield section(classes: 'info-section', [
-      div([
+      div(classes: 'info', [
         div(classes: 'welcome', [
           span(classes: 'welcome-text', [
             text('WELCOME TO MY PORTFOLIO'),
@@ -26,17 +26,14 @@ class BasicInfoSectionState extends State<BasicInfoSection> {
         h1(classes: 'first-name', [text('Muhammad')]),
         h1(classes: 'last-name', [text('Hamza')]),
         span(classes: 'subtitle', [
-          img(src: StaticAssets.playIcon, height: 20),
+          img(classes: 'play-icon', src: StaticAssets.playIcon, height: 20),
           span(classes: 'dynamic-subtitles', [
             text('Flutter Enthusiast'),
           ])
         ]),
         div(classes: 'socials', []),
       ]),
-      div(
-        classes: 'main-image',
-        [img(src: StaticAssets.bwImage)],
-      ),
+      div(classes: 'main-image', []),
     ]);
   }
 
@@ -76,6 +73,10 @@ class BasicInfoSectionState extends State<BasicInfoSection> {
       fontFamily: FontFamily('PoppinsBold'),
       fontWeight: FontWeight.bolder,
     ),
+    css('.main-image').box(height: 85.vh, width: 75.vh).background(
+          image: ImageStyle.url(StaticAssets.bwImage),
+          size: BackgroundSize.cover,
+        ),
     css('.subtitle')
         .flexbox(direction: FlexDirection.row, alignItems: AlignItems.center),
     css('.dynamic-subtitles')
@@ -90,5 +91,26 @@ class BasicInfoSectionState extends State<BasicInfoSection> {
           alignItems: AlignItems.center,
           justifyContent: JustifyContent.spaceBetween,
         ),
+
+    /// MEDIA QUERY 1100px
+    css.media(MediaQuery.screen(maxWidth: 1100.px), [
+      css('.welcome-text').text(fontSize: 15.px),
+      css('.first-name').text(fontSize: 50.px),
+      css('.last-name').text(fontSize: 50.px),
+      css('.dynamic-subtitles').text(fontSize: 14.px),
+      css('.main-image').box(height: 65.vh, width: 55.vh),
+      css('.play-icon').box(height: 15.px),
+    ]),
+
+    /// MEDIA QUERY 786px
+    css.media(MediaQuery.screen(maxWidth: 786.px), [
+      css('.info-section').flexbox(direction: FlexDirection.column),
+      css('.main-image').box(height: 55.vh, width: 45.vh).flexItem(
+            alignSelf: AlignSelf.end,
+          ),
+      css('.info').flexItem(
+        alignSelf: AlignSelf.start,
+      ),
+    ]),
   ];
 }
