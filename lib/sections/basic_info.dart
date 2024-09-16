@@ -1,14 +1,9 @@
 import 'package:devfolio/utils/assets.dart';
 import 'package:jaspr/jaspr.dart';
 
-class BasicInfoSection extends StatefulComponent {
+class BasicInfoSection extends StatelessComponent {
   const BasicInfoSection({super.key});
 
-  @override
-  State createState() => BasicInfoSectionState();
-}
-
-class BasicInfoSectionState extends State<BasicInfoSection> {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield section(classes: 'info-section', [

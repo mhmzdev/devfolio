@@ -38,6 +38,7 @@ class AppButton extends StatelessComponent {
           radius: BorderRadius.circular(6.px),
           border: Border.all(BorderSide(
             color: primaryColor,
+            width: 1.px,
           )),
         )
         .background(

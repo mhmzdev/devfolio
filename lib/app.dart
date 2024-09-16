@@ -56,6 +56,7 @@ class AppState extends State<App> {
       css('p').text(color: Colors.white),
       css('a').text(color: Colors.white),
       css('h1').text(color: Colors.white),
+      css('h2').text(color: Colors.white),
       css('span').text(color: Colors.white),
     ]),
   ];

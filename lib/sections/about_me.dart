@@ -1,0 +1,153 @@
+import 'package:devfolio/constants/theme.dart';
+import 'package:devfolio/utils/assets.dart';
+import 'package:jaspr/jaspr.dart';
+
+@client
+class AboutMeSection extends StatelessComponent {
+  const AboutMeSection({super.key});
+
+  @override
+  Iterable<Component> build(BuildContext context) sync* {
+    final tech = [
+      'Flutter',
+      'Dart',
+      'Firebase',
+      'Python',
+      'dart_frog',
+      'jaspr',
+      'nodejs',
+      'express',
+    ];
+
+    yield section(classes: 'about-me-section', [
+      span(classes: 'title', [
+        text('About Me'),
+      ]),
+      span(classes: 'subtitle', [
+        text('Get to know me :)'),
+      ]),
+      div(classes: 'section-body', [
+        div(classes: 'profile-picture', []),
+        div(classes: 'about-details', [
+          span(
+              classes: 'intro-label',
+              styles: Styles.text(color: primaryColor),
+              [
+                text('Who am I?'),
+              ]),
+          span(classes: 'intro-heading', [
+            text(
+                "I'm Muhammad Hamza, a Flutter Developer, Technical blog writer and UI/UX Designer."),
+          ]),
+          span(
+              classes: 'intro-details',
+              styles: Styles.text(
+                color: Colors.lightGrey,
+              ),
+              [
+                text(
+                    "I'm a fresh graduate with Computer Science as Majors from COMSATS University Islamabad. I have been working with Flutter for the past 2 years and have developed multiple applications for both Android and iOS platforms. I have a keen interest in UI/UX designing and have been working on it for the past 3 years. I have also been writing technical blogs for the past 2 years and have been a part of multiple technical writing communities."),
+              ]),
+          div(classes: 'divider', []),
+          span(
+              classes: 'tech-label',
+              styles: Styles.text(color: primaryColor),
+              [
+                text('Technologies I have worked with:'),
+              ]),
+          div(classes: 'tech-stack', [
+            for (final t in tech)
+              span([
+                img(src: StaticAssets.playIcon, height: 10),
+                span(classes: 'tech-item', [
+                  text(t),
+                ]),
+              ]),
+          ]),
+          div(classes: 'divider', []),
+        ]),
+      ])
+    ]);
+  }
+
+  @css
+  static final List<StyleRule> styles = [
+    css('.about-me-section')
+        .flexbox(
+          direction: FlexDirection.column,
+          alignItems: AlignItems.center,
+          justifyContent: JustifyContent.start,
+        )
+        .box(
+          padding: EdgeInsets.only(top: 5.vh),
+          height: 100.vh,
+        ),
+    css('.title').text(
+      fontFamily: FontFamily('Montserrat'),
+      fontWeight: FontWeight.w100,
+      fontSize: 40.px,
+    ),
+    css('.section-body')
+        .flexbox(
+          direction: FlexDirection.row,
+          alignItems: AlignItems.center,
+          justifyContent: JustifyContent.center,
+        )
+        .box(
+          margin: EdgeInsets.only(top: 50.px),
+          width: 100.percent,
+        ),
+    css('.profile-picture')
+        .background(
+          image: ImageStyle.url(
+            StaticAssets.coloredImage,
+          ),
+          size: BackgroundSize.cover,
+        )
+        .box(
+          height: 700.px,
+          width: 450.px,
+          margin: EdgeInsets.only(right: 100.px),
+        ),
+    css('.about-details')
+        .flexbox(
+          direction: FlexDirection.column,
+          alignItems: AlignItems.start,
+          justifyContent: JustifyContent.center,
+        )
+        .box(
+          width: 750.px,
+        ),
+    css('.intro-label').text(fontSize: 18.px),
+    css('.intro-heading')
+        .box(
+          margin: EdgeInsets.symmetric(vertical: 15.px),
+        )
+        .text(fontSize: 20.px),
+    css('.intro-details').text(
+      lineHeight: 3.vh,
+      wordSpacing: 1.5.px,
+      color: Colors.lightGrey,
+    ),
+    css('.divider')
+        .box(
+          height: 1.px,
+          width: 100.percent,
+          margin: EdgeInsets.symmetric(vertical: 2.vh),
+        )
+        .background(color: Colors.lightGrey),
+    css('.tech-label').text(fontSize: 12.px),
+    css('.tech-stack')
+        .flexbox(
+          direction: FlexDirection.row,
+          alignItems: AlignItems.center,
+          justifyContent: JustifyContent.start,
+        )
+        .box(
+          margin: EdgeInsets.only(top: 15.px),
+        ),
+    css('.tech-item')
+        .box(margin: EdgeInsets.only(right: 12.px, left: 5.px))
+        .text(fontSize: 14.px),
+  ];
+}

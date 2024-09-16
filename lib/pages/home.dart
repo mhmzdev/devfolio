@@ -1,4 +1,5 @@
 import 'package:devfolio/components/nav_bar.dart';
+import 'package:devfolio/sections/about_me.dart';
 import 'package:devfolio/sections/basic_info.dart';
 import 'package:jaspr/jaspr.dart';
 
@@ -10,6 +11,7 @@ class Home extends StatelessComponent {
     yield div(classes: 'home-body', [
       NavBar(),
       BasicInfoSection(),
+      AboutMeSection(),
     ]);
   }
 
@@ -17,7 +19,6 @@ class Home extends StatelessComponent {
   static final List<StyleRule> styles = [
     css('.home-body')
         .box(
-          height: 100.vh,
           width: 100.vw,
         )
         .background(
