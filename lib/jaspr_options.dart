@@ -5,7 +5,8 @@ import 'package:jaspr/jaspr.dart';
 import 'package:devfolio/components/app_button.dart' as prefix0;
 import 'package:devfolio/components/nav_bar.dart' as prefix1;
 import 'package:devfolio/pages/home.dart' as prefix2;
-import 'package:devfolio/app.dart' as prefix3;
+import 'package:devfolio/sections/basic_info.dart' as prefix3;
+import 'package:devfolio/app.dart' as prefix4;
 
 /// Default [JasprOptions] for use with your jaspr project.
 ///
@@ -25,14 +26,15 @@ import 'package:devfolio/app.dart' as prefix3;
 /// ```
 final defaultJasprOptions = JasprOptions(
   clients: {
-    prefix3.App: ClientTarget<prefix3.App>('app'),
+    prefix4.App: ClientTarget<prefix4.App>('app'),
     prefix0.AppButton: ClientTarget<prefix0.AppButton>('components/app_button', params: _prefix0AppButton),
   },
   styles: () => [
     ...prefix0.AppButton.styles,
     ...prefix1.NavBar.styles,
     ...prefix2.Home.styles,
-    ...prefix3.AppState.styles,
+    ...prefix3.BasicInfoSectionState.styles,
+    ...prefix4.AppState.styles,
   ],
 );
 

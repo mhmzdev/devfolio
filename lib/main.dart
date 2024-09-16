@@ -36,6 +36,14 @@ void main() {
           .box(width: 100.percent, minHeight: 100.vh)
           .box(margin: EdgeInsets.zero, padding: EdgeInsets.zero),
       css('h1').text(fontSize: 4.rem).box(margin: EdgeInsets.unset),
+      css.fontFace(
+        family: 'Agustina',
+        url: '/fonts/agustina/agustina.otf',
+      ),
+      css.fontFace(
+        family: 'Montserrat',
+        url: '/fonts/montserrat/montserrat.ttf',
+      ),
     ],
     body: App(),
   ));

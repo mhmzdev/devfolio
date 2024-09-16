@@ -9,9 +9,9 @@ class NavBar extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield section(classes: 'navbar', [
       div([
-        span([text('<')]),
+        span([text('< ')]),
         span(classes: 'brand', [text('Hamza')]),
-        span([text('/>')]),
+        span([text(' />')]),
       ]),
       div(classes: 'labels', [
         a(
@@ -89,11 +89,9 @@ class NavBar extends StatelessComponent {
       direction: FlexDirection.row,
       justifyContent: JustifyContent.end,
     ),
-    css.import(
-      'fonts/agustina/agustina.otf',
-    ),
     css('.brand').text(
-      fontFamily: FontFamily('fonts/agustina/agustina.otf'),
+      fontFamily: FontFamily('Agustina'),
+      fontSize: 24.px,
     ),
   ];
 }
