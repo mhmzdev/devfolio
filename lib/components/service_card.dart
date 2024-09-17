@@ -1,6 +1,7 @@
 import 'package:devfolio/constants/theme.dart';
 import 'package:jaspr/jaspr.dart';
 
+@client
 class ServiceCard extends StatelessComponent {
   final String icon;
   final String label;

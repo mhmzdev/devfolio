@@ -1,6 +1,7 @@
 import 'package:devfolio/components/nav_bar.dart';
 import 'package:devfolio/sections/about_me.dart';
 import 'package:devfolio/sections/basic_info.dart';
+import 'package:devfolio/sections/projects.dart';
 import 'package:devfolio/sections/services.dart';
 import 'package:jaspr/jaspr.dart';
 
@@ -14,6 +15,7 @@ class Home extends StatelessComponent {
       BasicInfoSection(),
       AboutMeSection(),
       ServicesSection(),
+      ProjectsSections(),
     ]);
   }
 

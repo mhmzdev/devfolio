@@ -1,9 +1,6 @@
 abstract class StaticAssets {
   static const String waveGif = '/images/hi.gif';
 
-  /// Icons (SVG)
-  static const String playIcon = '/icons/play-solid.svg';
-
   /// Profile Images
   /// Three variants are required
   /// 1. Black and white
@@ -28,4 +25,17 @@ abstract class StaticAssets {
   static const String dsc = '/images/work/dsc.png';
   static const String flutterisl = '/images/work/flutterIsl.png';
   static const String st = '/images/work/st.png';
+
+  /// Projects Images
+  static const String covid = '/images/projects/covid.png';
+  static const String covidB = '/images/projects/covidB.png';
+  static const String devfolio = '/images/projects/devfolio.png';
+  static const String snackbar = '/images/projects/snackbar.png';
+  static const String quran = '/images/projects/quran.png';
+  static const String quranB = '/images/projects/quranB.png';
+  static const String medkit = '/images/projects/medkit.png';
+  static const String medkitB = '/images/projects/medkitB.png';
+  static const String hereiam = '/images/projects/hereiam.png';
+  static const String hereiamB = '/images/projects/hereiamB.png';
+  static const String flutter = '/images/projects/flutter.png';
 }
