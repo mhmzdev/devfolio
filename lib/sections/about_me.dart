@@ -1,3 +1,4 @@
+import 'package:devfolio/components/app_button.dart';
 import 'package:devfolio/constants/theme.dart';
 import 'package:devfolio/utils/assets.dart';
 import 'package:jaspr/jaspr.dart';
@@ -17,6 +18,29 @@ class AboutMeSection extends StatelessComponent {
       'jaspr',
       'nodejs',
       'express',
+    ];
+
+    final works = [
+      {
+        'image': StaticAssets.cui,
+        'url': 'https://www.comsats.edu.pk/',
+        'height': 50,
+      },
+      {
+        'image': StaticAssets.dsc,
+        'url': 'https://developers.google.com/community/dsc',
+        'height': 30,
+      },
+      {
+        'image': StaticAssets.flutterisl,
+        'url': 'https://meetup.com/flutter-islamabad',
+        'height': 60,
+      },
+      {
+        'image': StaticAssets.st,
+        'url': 'https://www.sastaticket.pk/',
+        'height': 60,
+      },
     ];
 
     yield section(classes: 'about-me-section', [
@@ -65,6 +89,61 @@ class AboutMeSection extends StatelessComponent {
               ]),
           ]),
           div(classes: 'divider', []),
+          div(classes: 'personal-row', [
+            div([
+              span(classes: 'personal-label', [
+                text('Name: '),
+              ]),
+              span(classes: 'personal-value', [
+                text(' Muhammad Hamza'),
+              ]),
+            ]),
+            div([
+              span(classes: 'personal-label', [
+                text('Email: '),
+              ]),
+              span(classes: 'personal-value', [
+                text(' hamza.6.shakeel@gmail.com'),
+              ]),
+            ])
+          ]),
+          div(styles: Styles.box(height: 15.px), []),
+          div(classes: 'personal-row', [
+            div([
+              span(classes: 'personal-label', [
+                text('Age: '),
+              ]),
+              span(classes: 'personal-value', [
+                text(' 25'),
+              ]),
+            ]),
+            div([
+              span(classes: 'personal-label', [
+                text('From: '),
+              ]),
+              span(classes: 'personal-value', [
+                text(' Islamabad, PK'),
+              ]),
+            ])
+          ]),
+          div(styles: Styles.box(height: 25.px), []),
+          div(classes: 'work-row', [
+            AppButton(
+              label: 'RESUME',
+              onPressed: () {},
+            ),
+            div(classes: 'divider', styles: Styles.box(width: 80.px), []),
+            for (final work in works)
+              a(
+                  classes: 'work-item',
+                  href: (work['url'] as String),
+                  target: Target.blank,
+                  [
+                    img(
+                        src: (work['image'] as String),
+                        height: (work['height'] as int)),
+                  ]),
+          ])
         ]),
       ])
     ]);
@@ -79,7 +158,7 @@ class AboutMeSection extends StatelessComponent {
           justifyContent: JustifyContent.start,
         )
         .box(
-          padding: EdgeInsets.only(top: 5.vh),
+          padding: EdgeInsets.only(top: 5.vh, right: 5.vw),
           height: 100.vh,
         ),
     css('.title').text(
@@ -149,5 +228,21 @@ class AboutMeSection extends StatelessComponent {
     css('.tech-item')
         .box(margin: EdgeInsets.only(right: 12.px, left: 5.px))
         .text(fontSize: 14.px),
+    css('.personal-label').text(
+      fontWeight: FontWeight.bold,
+      fontSize: 12.px,
+    ),
+    css('.personal-value').text(
+      fontSize: 12.px,
+    ),
+    css('.personal-row').box(width: 100.percent).flexbox(
+          direction: FlexDirection.row,
+          justifyContent: JustifyContent.spaceBetween,
+        ),
+    css('.work-row').box(width: 100.percent).flexbox(
+          direction: FlexDirection.row,
+          alignItems: AlignItems.center,
+          justifyContent: JustifyContent.spaceBetween,
+        ),
   ];
 }
