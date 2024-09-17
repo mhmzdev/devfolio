@@ -54,14 +54,14 @@ class ProjectCard extends StatelessComponent {
           margin: EdgeInsets.only(top: 25.px, left: 15.px, right: 15.px),
         )
         .background(
-          color: themeGray,
+          color: themeDarkGreyColor,
         )
         .text(
           decoration: TextDecoration.none,
         ),
     css('.banner-card:hover').box(
       shadow: BoxShadow(
-        color: primaryColor,
+        color: themePrimaryColor,
         offsetX: 0.px,
         offsetY: 0.px,
         blur: 8.px,

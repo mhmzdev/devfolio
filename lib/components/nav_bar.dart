@@ -85,7 +85,7 @@ class NavBar extends StatelessComponent {
         ),
     css('.navbar-label:hover')
         .text(
-          color: primaryColor,
+          color: themePrimaryColor,
         )
         .box(
           transition: Transition('color', duration: 500),

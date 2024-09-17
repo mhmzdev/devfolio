@@ -37,7 +37,7 @@ class AppButton extends StatelessComponent {
           padding: EdgeInsets.all(10.px),
           radius: BorderRadius.circular(6.px),
           border: Border.all(BorderSide(
-            color: primaryColor,
+            color: themePrimaryColor,
             width: 1.px,
           )),
         )
@@ -46,7 +46,7 @@ class AppButton extends StatelessComponent {
         ),
     css('.app-button:hover')
         .background(
-          color: primaryColor,
+          color: themePrimaryColor,
         )
         .box(
           transition: Transition('background-color', duration: 500),

@@ -108,7 +108,7 @@ class BasicInfoSection extends StatelessComponent {
           image: ImageStyle.url(StaticAssets.bwImage),
           size: BackgroundSize.cover,
         ),
-    css('.play-icon').text(color: primaryColor),
+    css('.play-icon').text(color: themePrimaryColor),
     css('.subtitle')
         .flexbox(direction: FlexDirection.row, alignItems: AlignItems.center),
     css('.dynamic-subtitles')
@@ -132,7 +132,7 @@ class BasicInfoSection extends StatelessComponent {
         ),
     css('.social-icon:hover')
         .text(
-          color: primaryColor,
+          color: themePrimaryColor,
         )
         .box(
           transition: Transition('color', duration: 300),

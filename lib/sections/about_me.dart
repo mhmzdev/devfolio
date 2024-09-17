@@ -55,7 +55,7 @@ class AboutMeSection extends StatelessComponent {
         div(classes: 'about-details', [
           span(
               classes: 'intro-label',
-              styles: Styles.text(color: primaryColor),
+              styles: Styles.text(color: themePrimaryColor),
               [
                 text('Who am I?'),
               ]),
@@ -75,7 +75,7 @@ class AboutMeSection extends StatelessComponent {
           div(classes: 'divider', []),
           span(
               classes: 'tech-label',
-              styles: Styles.text(color: primaryColor),
+              styles: Styles.text(color: themePrimaryColor),
               [
                 text('Technologies I have worked with:'),
               ]),
@@ -161,7 +161,7 @@ class AboutMeSection extends StatelessComponent {
           padding: EdgeInsets.only(top: 5.vh),
           width: 100.percent,
         ),
-    css('.play-icon').text(color: primaryColor),
+    css('.play-icon').text(color: themePrimaryColor),
     css('.title').text(
       fontFamily: FontFamily('Montserrat'),
       fontWeight: FontWeight.w100,

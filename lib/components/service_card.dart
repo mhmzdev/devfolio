@@ -37,7 +37,7 @@ class ServiceCard extends StatelessComponent {
           margin: EdgeInsets.only(top: 15.px),
         )
         .background(
-          color: themeGray,
+          color: themeDarkGreyColor,
         ),
     css('.service-title')
         .text(
@@ -46,7 +46,7 @@ class ServiceCard extends StatelessComponent {
         .box(margin: EdgeInsets.only(top: 10.px)),
     css('.service-card:hover').box(
       shadow: BoxShadow(
-        color: primaryColor,
+        color: themePrimaryColor,
         offsetX: 0.px,
         offsetY: 0.px,
         blur: 8.px,
