@@ -221,6 +221,7 @@ class AboutMeSection extends StatelessComponent {
           direction: FlexDirection.row,
           alignItems: AlignItems.center,
           justifyContent: JustifyContent.start,
+          wrap: FlexWrap.wrap,
         )
         .box(
           margin: EdgeInsets.only(top: 15.px),
@@ -244,5 +245,48 @@ class AboutMeSection extends StatelessComponent {
           alignItems: AlignItems.center,
           justifyContent: JustifyContent.spaceBetween,
         ),
+
+    /// MEDIA QUERIES
+    /// For smaller screens
+    css.media(MediaQuery.screen(maxWidth: 1350.px), [
+      css('.profile-picture').box(
+        maxHeight: 100.percent,
+        margin: EdgeInsets.symmetric(horizontal: 50.px),
+      ),
+      css('.about-details').box(width: 45.vw),
+    ]),
+
+    css.media(MediaQuery.screen(maxWidth: 1100.px), [
+      css('.profile-picture').box(
+        maxHeight: 80.percent,
+        width: 400.px,
+        margin: EdgeInsets.symmetric(horizontal: 30.px),
+      ),
+      css('.about-details').box(width: 45.vw),
+    ]),
+
+    css.media(MediaQuery.screen(maxWidth: 900.px), [
+      css('.about-me-section').box(
+        padding: EdgeInsets.only(top: 3.vh, right: 0.vw),
+      ),
+      css('.section-body').flexbox(
+        direction: FlexDirection.column,
+        alignItems: AlignItems.center,
+        justifyContent: JustifyContent.start,
+      ),
+      css('.profile-picture')
+          .background(
+            image: ImageStyle.url(
+              StaticAssets.mobileImage,
+            ),
+            size: BackgroundSize.cover,
+          )
+          .box(
+            width: 250.px,
+            height: 250.px,
+          ),
+      css('.about-details')
+          .box(width: 80.percent, margin: EdgeInsets.only(top: 40.px)),
+    ]),
   ];
 }
