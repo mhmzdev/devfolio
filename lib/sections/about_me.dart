@@ -159,7 +159,6 @@ class AboutMeSection extends StatelessComponent {
         )
         .box(
           padding: EdgeInsets.only(top: 5.vh, right: 5.vw),
-          height: 100.vh,
         ),
     css('.title').text(
       fontFamily: FontFamily('Montserrat'),

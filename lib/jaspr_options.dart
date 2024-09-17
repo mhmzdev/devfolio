@@ -4,10 +4,12 @@
 import 'package:jaspr/jaspr.dart';
 import 'package:devfolio/components/app_button.dart' as prefix0;
 import 'package:devfolio/components/nav_bar.dart' as prefix1;
-import 'package:devfolio/pages/home.dart' as prefix2;
-import 'package:devfolio/sections/about_me.dart' as prefix3;
-import 'package:devfolio/sections/basic_info.dart' as prefix4;
-import 'package:devfolio/app.dart' as prefix5;
+import 'package:devfolio/components/service_card.dart' as prefix2;
+import 'package:devfolio/pages/home.dart' as prefix3;
+import 'package:devfolio/sections/about_me.dart' as prefix4;
+import 'package:devfolio/sections/basic_info.dart' as prefix5;
+import 'package:devfolio/sections/services.dart' as prefix6;
+import 'package:devfolio/app.dart' as prefix7;
 
 /// Default [JasprOptions] for use with your jaspr project.
 ///
@@ -27,17 +29,20 @@ import 'package:devfolio/app.dart' as prefix5;
 /// ```
 final defaultJasprOptions = JasprOptions(
   clients: {
-    prefix5.App: ClientTarget<prefix5.App>('app'),
+    prefix7.App: ClientTarget<prefix7.App>('app'),
     prefix0.AppButton: ClientTarget<prefix0.AppButton>('components/app_button', params: _prefix0AppButton),
-    prefix3.AboutMeSection: ClientTarget<prefix3.AboutMeSection>('sections/about_me'),
+    prefix1.NavBar: ClientTarget<prefix1.NavBar>('components/nav_bar'),
+    prefix4.AboutMeSection: ClientTarget<prefix4.AboutMeSection>('sections/about_me'),
   },
   styles: () => [
     ...prefix0.AppButton.styles,
     ...prefix1.NavBar.styles,
-    ...prefix2.Home.styles,
-    ...prefix3.AboutMeSection.styles,
-    ...prefix4.BasicInfoSection.styles,
-    ...prefix5.AppState.styles,
+    ...prefix2.ServiceCard.styles,
+    ...prefix3.Home.styles,
+    ...prefix4.AboutMeSection.styles,
+    ...prefix5.BasicInfoSection.styles,
+    ...prefix6.ServicesSection.styles,
+    ...prefix7.AppState.styles,
   ],
 );
 
