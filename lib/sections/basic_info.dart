@@ -1,3 +1,4 @@
+import 'package:devfolio/constants/theme.dart';
 import 'package:devfolio/utils/assets.dart';
 import 'package:jaspr/jaspr.dart';
 
@@ -21,7 +22,7 @@ class BasicInfoSection extends StatelessComponent {
         h1(classes: 'first-name', [text('Muhammad')]),
         h1(classes: 'last-name', [text('Hamza')]),
         span(classes: 'subtitle', [
-          img(classes: 'play-icon', src: StaticAssets.playIcon, height: 20),
+          i(classes: 'fa-solid fa-play play-icon', []),
           span(classes: 'dynamic-subtitles', [
             text('Flutter Enthusiast'),
           ])
@@ -72,6 +73,7 @@ class BasicInfoSection extends StatelessComponent {
           image: ImageStyle.url(StaticAssets.bwImage),
           size: BackgroundSize.cover,
         ),
+    css('.play-icon').text(color: primaryColor),
     css('.subtitle')
         .flexbox(direction: FlexDirection.row, alignItems: AlignItems.center),
     css('.dynamic-subtitles')

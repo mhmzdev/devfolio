@@ -24,6 +24,13 @@ void main() {
   // with the provided parameters and components.
   runApp(Document(
     title: 'Hamza',
+    head: <Component>[
+      link(
+        href:
+            'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css',
+        rel: 'stylesheet',
+      ),
+    ],
     styles: [
       // Special import rule to include to another css file.
       css.import('https://fonts.googleapis.com/css?family=Montserrat'),

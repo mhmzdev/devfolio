@@ -82,7 +82,7 @@ class AboutMeSection extends StatelessComponent {
           div(classes: 'tech-stack', [
             for (final t in tech)
               span([
-                img(src: StaticAssets.playIcon, height: 10),
+                i(classes: 'fa-solid fa-play play-icon', []),
                 span(classes: 'tech-item', [
                   text(t),
                 ]),
@@ -158,8 +158,9 @@ class AboutMeSection extends StatelessComponent {
           justifyContent: JustifyContent.start,
         )
         .box(
-          padding: EdgeInsets.only(top: 5.vh, right: 5.vw),
+          padding: EdgeInsets.only(top: 5.vh),
         ),
+    css('.play-icon').text(color: primaryColor),
     css('.title').text(
       fontFamily: FontFamily('Montserrat'),
       fontWeight: FontWeight.w100,

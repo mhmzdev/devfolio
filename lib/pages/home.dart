@@ -22,6 +22,7 @@ class Home extends StatelessComponent {
     css('.home-body')
         .box(
           width: 100.vw,
+          padding: EdgeInsets.symmetric(horizontal: 50.px),
         )
         .background(
           color: Colors.black,

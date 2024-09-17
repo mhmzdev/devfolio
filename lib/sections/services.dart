@@ -56,7 +56,7 @@ class ServicesSection extends StatelessComponent {
           justifyContent: JustifyContent.start,
         )
         .box(
-          padding: EdgeInsets.only(top: 5.vh, right: 5.vw),
+          padding: EdgeInsets.symmetric(vertical: 5.vh),
         ),
     css('.title').text(
       fontFamily: FontFamily('Montserrat'),
@@ -72,7 +72,6 @@ class ServicesSection extends StatelessComponent {
         )
         .box(
           margin: EdgeInsets.only(top: 50.px),
-          width: 100.percent,
         ),
   ];
 }
