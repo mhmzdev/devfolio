@@ -58,11 +58,6 @@ class ServicesSection extends StatelessComponent {
         .box(
           padding: EdgeInsets.symmetric(vertical: 5.vh),
         ),
-    css('.title').text(
-      fontFamily: FontFamily('Montserrat'),
-      fontWeight: FontWeight.w100,
-      fontSize: 40.px,
-    ),
     css('.section-body')
         .flexbox(
           direction: FlexDirection.row,

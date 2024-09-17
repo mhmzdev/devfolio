@@ -37,14 +37,14 @@ class NavBar extends StatelessComponent {
           ],
         ),
         a(
-          href: '#',
+          href: '#projects',
           classes: 'navbar-label',
           [
             text('PROJECTS'),
           ],
         ),
         a(
-          href: '#',
+          href: '#contact',
           classes: 'navbar-label',
           [
             text('CONTACT'),

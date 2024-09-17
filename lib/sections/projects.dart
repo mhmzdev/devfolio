@@ -87,11 +87,6 @@ class ProjectsSections extends StatelessComponent {
         .box(
           padding: EdgeInsets.symmetric(vertical: 5.vh, horizontal: 10.vw),
         ),
-    css('.title').text(
-      fontFamily: FontFamily('Montserrat'),
-      fontWeight: FontWeight.w100,
-      fontSize: 40.px,
-    ),
     css('.section-body-projects')
         .flexbox(
           direction: FlexDirection.row,
