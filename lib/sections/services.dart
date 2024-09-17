@@ -72,6 +72,7 @@ class ServicesSection extends StatelessComponent {
         )
         .box(
           margin: EdgeInsets.only(top: 50.px),
+          width: 100.percent,
         ),
   ];
 }

@@ -159,6 +159,7 @@ class AboutMeSection extends StatelessComponent {
         )
         .box(
           padding: EdgeInsets.only(top: 5.vh),
+          width: 100.percent,
         ),
     css('.play-icon').text(color: primaryColor),
     css('.title').text(
@@ -169,12 +170,12 @@ class AboutMeSection extends StatelessComponent {
     css('.section-body')
         .flexbox(
           direction: FlexDirection.row,
-          alignItems: AlignItems.center,
-          justifyContent: JustifyContent.center,
+          // alignItems: AlignItems.center,
+          // justifyContent: JustifyContent.center,
         )
         .box(
           margin: EdgeInsets.only(top: 50.px),
-          width: 100.percent,
+          // width: 100.percent,
         ),
     css('.profile-picture')
         .background(

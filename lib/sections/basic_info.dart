@@ -7,6 +7,33 @@ class BasicInfoSection extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
+    final List<Map<String, dynamic>> socials = [
+      {
+        'icon': 'fa-brands fa-square-facebook',
+        'url': 'https://www.facebook.com/mhmzdev',
+      },
+      {
+        'icon': 'fa-brands fa-linkedin',
+        'url': 'https://www.linkedin.com/in/mhmzdev/',
+      },
+      {
+        'icon': 'fa-brands fa-github',
+        'url': 'https://github.com/mhmzdev',
+      },
+      {
+        'icon': 'fa-brands fa-x-twitter',
+        'url': 'https://twitter.com/mhmzdev',
+      },
+      {
+        'icon': 'fa-brands fa-instagram',
+        'url': 'https://www.instagram.com/mhmzdev/',
+      },
+      {
+        'icon': 'fa-brands fa-medium',
+        'url': 'https://mhmzdev.medium.com',
+      },
+    ];
+
     yield section(classes: 'info-section', [
       div(classes: 'info', [
         div(classes: 'welcome', [
@@ -27,7 +54,15 @@ class BasicInfoSection extends StatelessComponent {
             text('Flutter Enthusiast'),
           ])
         ]),
-        div(classes: 'socials', []),
+        div(classes: 'socials', [
+          for (final social in socials)
+            a(
+              classes: 'social-icon',
+              href: social['url'],
+              target: Target.blank,
+              [i(classes: social['icon'], [])],
+            ),
+        ]),
       ]),
       div(classes: 'main-image', []),
     ]);
@@ -86,8 +121,18 @@ class BasicInfoSection extends StatelessComponent {
         .flexbox(
           direction: FlexDirection.row,
           alignItems: AlignItems.center,
-          justifyContent: JustifyContent.spaceBetween,
         ),
+    css('.social-icon')
+        .text(
+          fontSize: 25.px,
+          color: Colors.white,
+        )
+        .box(
+          padding: EdgeInsets.only(right: 25.px),
+        ),
+    css('.social-icon:hover').text(
+      color: primaryColor,
+    ),
 
     /// MEDIA QUERY 1100px
     css.media(MediaQuery.screen(maxWidth: 1100.px), [
