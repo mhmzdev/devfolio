@@ -51,6 +51,7 @@ class ServiceCard extends StatelessComponent {
         blur: 8.px,
         spread: 2.px,
       ),
+      transition: Transition('box-shadow', duration: 500),
     ),
   ];
 }

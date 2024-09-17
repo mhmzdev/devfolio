@@ -44,9 +44,14 @@ class AppButton extends StatelessComponent {
         .background(
           color: Colors.transparent,
         ),
-    css('.app-button:hover').background(
-      color: primaryColor,
-    ),
+    css('.app-button:hover')
+        .background(
+          color: primaryColor,
+        )
+        .box(
+          transition: Transition('background-color', duration: 500),
+          cursor: Cursor.pointer,
+        ),
     css('.label').text(fontSize: 12.px),
   ];
 }

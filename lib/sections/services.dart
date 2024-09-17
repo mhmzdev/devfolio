@@ -37,7 +37,7 @@ class ServicesSection extends StatelessComponent {
       span(classes: 'subtitle', [
         text("I may not be perfect but surely I'm of some use :)"),
       ]),
-      div(classes: 'section-body', [
+      div(classes: 'section-body', id: 'services', [
         for (final service in services)
           ServiceCard(
             icon: service['icon'],

@@ -30,7 +30,7 @@ class NavBar extends StatelessComponent {
           ],
         ),
         a(
-          href: '#',
+          href: '#services',
           classes: 'navbar-label',
           [
             text('SERVICES'),
@@ -83,9 +83,13 @@ class NavBar extends StatelessComponent {
           justifyContent: JustifyContent.spaceBetween,
           alignItems: AlignItems.center,
         ),
-    css('.navbar-label:hover').text(
-      color: primaryColor,
-    ),
+    css('.navbar-label:hover')
+        .text(
+          color: primaryColor,
+        )
+        .box(
+          transition: Transition('color', duration: 500),
+        ),
     css('.labels').flexbox(
       direction: FlexDirection.row,
       justifyContent: JustifyContent.end,

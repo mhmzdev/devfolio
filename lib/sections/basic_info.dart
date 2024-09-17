@@ -130,9 +130,13 @@ class BasicInfoSection extends StatelessComponent {
         .box(
           padding: EdgeInsets.only(right: 25.px),
         ),
-    css('.social-icon:hover').text(
-      color: primaryColor,
-    ),
+    css('.social-icon:hover')
+        .text(
+          color: primaryColor,
+        )
+        .box(
+          transition: Transition('color', duration: 300),
+        ),
 
     /// MEDIA QUERY 1100px
     css.media(MediaQuery.screen(maxWidth: 1100.px), [
