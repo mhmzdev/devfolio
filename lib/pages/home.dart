@@ -1,3 +1,4 @@
+import 'package:devfolio/components/footer.dart';
 import 'package:devfolio/components/nav_bar.dart';
 import 'package:devfolio/sections/about_me.dart';
 import 'package:devfolio/sections/basic_info.dart';
@@ -18,6 +19,7 @@ class Home extends StatelessComponent {
       ServicesSection(),
       ProjectsSections(),
       ContactSection(),
+      Footer(),
     ]);
   }
 
