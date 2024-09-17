@@ -71,7 +71,7 @@ class ProjectsSections extends StatelessComponent {
       div(styles: Styles.box(height: 45.px), []),
       AppButton(
         label: 'See more',
-        onPressed: () {},
+        href: 'https://github.com/mhmzdev',
       ),
     ]);
   }

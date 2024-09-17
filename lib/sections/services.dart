@@ -62,7 +62,7 @@ class ServicesSection extends StatelessComponent {
         .flexbox(
           direction: FlexDirection.row,
           alignItems: AlignItems.center,
-          justifyContent: JustifyContent.spaceEvenly,
+          justifyContent: JustifyContent.center,
           wrap: FlexWrap.wrap,
         )
         .box(

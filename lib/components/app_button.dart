@@ -4,7 +4,7 @@ import 'package:jaspr/jaspr.dart';
 @client
 class AppButton extends StatelessComponent {
   final String label;
-  final void Function() onPressed;
+  final String href;
 
   final Unit? width;
   final Unit? height;
@@ -12,17 +12,18 @@ class AppButton extends StatelessComponent {
   const AppButton({
     super.key,
     required this.label,
-    required this.onPressed,
+    required this.href,
     this.width,
     this.height,
   });
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield button(
+    yield a(
       classes: 'app-button',
+      target: Target.blank,
       styles: Styles.box(width: width, height: height),
-      onClick: onPressed,
+      href: href,
       [
         span(classes: 'label', [text(label)])
       ],
@@ -33,13 +34,21 @@ class AppButton extends StatelessComponent {
   static final List<StyleRule> styles = [
     css('.app-button')
         .box(
-          width: 130.px,
+          width: 100.px,
           padding: EdgeInsets.all(10.px),
           radius: BorderRadius.circular(6.px),
           border: Border.all(BorderSide(
             color: themePrimaryColor,
             width: 1.px,
           )),
+        )
+        .flexbox(
+          direction: FlexDirection.row,
+          alignItems: AlignItems.center,
+          justifyContent: JustifyContent.center,
+        )
+        .text(
+          decoration: TextDecoration.none,
         )
         .background(
           color: Colors.transparent,

@@ -61,7 +61,7 @@ final defaultJasprOptions = JasprOptions(
 );
 
 Map<String, dynamic> _prefix0AppButton(prefix0.AppButton c) =>
-    {'label': c.label, 'onPressed': c.onPressed, 'width': c.width, 'height': c.height};
+    {'label': c.label, 'href': c.href, 'width': c.width, 'height': c.height};
 Map<String, dynamic> _prefix1ContactCard(prefix1.ContactCard c) =>
     {'icon': c.icon, 'title': c.title, 'description': c.description, 'action': c.action};
 Map<String, dynamic> _prefix4ProjectCard(prefix4.ProjectCard c) =>

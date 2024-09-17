@@ -130,7 +130,8 @@ class AboutMeSection extends StatelessComponent {
           div(classes: 'work-row', [
             AppButton(
               label: 'RESUME',
-              onPressed: () {},
+              href:
+                  "https://drive.google.com/drive/u/0/folders/1E6NxJlmnW2lTYTszcbODdpXiPFYe_kBM",
             ),
             div(classes: 'divider', styles: Styles.box(width: 80.px), []),
             for (final work in works)
