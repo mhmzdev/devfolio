@@ -22,7 +22,7 @@ class NavBar extends StatelessComponent {
           ],
         ),
         a(
-          href: '#',
+          href: '#about',
           classes: 'navbar-label',
           [
             text('ABOUT'),

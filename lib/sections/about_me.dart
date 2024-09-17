@@ -44,7 +44,7 @@ class AboutMeSection extends StatelessComponent {
     ];
 
     yield section(classes: 'about-me-section', [
-      span(classes: 'title', [
+      span(classes: 'title', id: 'about', [
         text('About Me'),
       ]),
       span(classes: 'subtitle', [
