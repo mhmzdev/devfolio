@@ -4,6 +4,7 @@
 // To run code on the client, use the @client annotation.
 
 // Server-specific jaspr import.
+import 'package:devfolio/constants/theme.dart';
 import 'package:jaspr/server.dart';
 
 // Imports the [App] component.
@@ -24,6 +25,7 @@ void main() {
   // with the provided parameters and components.
   runApp(Document(
     title: 'Hamza',
+    base: '/devfolio-jaspr/',
     head: <Component>[
       link(
         href:
@@ -47,6 +49,13 @@ void main() {
         family: 'Agustina',
         url: '/fonts/agustina/agustina.otf',
       ),
+      css('::-webkit-scrollbar').box(width: 8.px, height: 0.px),
+      css('::-webkit-scrollbar-track').box(
+        radius: BorderRadius.circular(8.px),
+      ),
+      css('::-webkit-scrollbar-thumb')
+          .box(radius: BorderRadius.circular(8.px))
+          .background(color: themePrimaryColor),
     ],
     body: App(),
   ));

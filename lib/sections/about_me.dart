@@ -50,7 +50,7 @@ class AboutMeSection extends StatelessComponent {
       span(classes: 'subtitle', [
         text('Get to know me :)'),
       ]),
-      div(classes: 'section-body', [
+      div(classes: 'about-section-body', [
         div(classes: 'profile-picture', []),
         div(classes: 'about-details', [
           span(
@@ -159,7 +159,7 @@ class AboutMeSection extends StatelessComponent {
           justifyContent: JustifyContent.start,
         )
         .box(
-          padding: EdgeInsets.only(top: 5.vh),
+          // padding: EdgeInsets.only(top: 5.vh),
           width: 100.percent,
         ),
     css('.play-icon').text(color: themePrimaryColor),
@@ -168,15 +168,15 @@ class AboutMeSection extends StatelessComponent {
       fontWeight: FontWeight.w100,
       fontSize: 40.px,
     ),
-    css('.section-body')
+    css('.about-section-body')
         .flexbox(
           direction: FlexDirection.row,
-          // alignItems: AlignItems.center,
-          // justifyContent: JustifyContent.center,
+          alignItems: AlignItems.center,
+          justifyContent: JustifyContent.center,
         )
         .box(
           margin: EdgeInsets.only(top: 50.px),
-          // width: 100.percent,
+          width: 100.percent,
         ),
     css('.profile-picture')
         .background(
@@ -271,7 +271,7 @@ class AboutMeSection extends StatelessComponent {
       css('.about-me-section').box(
         padding: EdgeInsets.only(top: 3.vh, right: 0.vw),
       ),
-      css('.section-body').flexbox(
+      css('.about-section-body').flexbox(
         direction: FlexDirection.column,
         alignItems: AlignItems.center,
         justifyContent: JustifyContent.start,
