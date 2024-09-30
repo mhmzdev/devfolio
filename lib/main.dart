@@ -25,7 +25,9 @@ void main() {
   // with the provided parameters and components.
   runApp(Document(
     title: 'Hamza',
-    base: '/devfolio-jaspr/',
+    /// Uncomment this line to deploy on github pages just in case your websit is like https://mhmzdev.github.io/devfolio-jaspr/
+    /// If its on the base repo, then you don't need to do this
+    // base: 'devfolio-jaspr/',
     head: <Component>[
       link(
         href:
@@ -47,7 +49,7 @@ void main() {
       css('h1').text(fontSize: 4.rem).box(margin: EdgeInsets.unset),
       css.fontFace(
         family: 'Agustina',
-        url: '/fonts/agustina/agustina.otf',
+        url: 'fonts/agustina/agustina.otf',
       ),
       css('::-webkit-scrollbar').box(width: 8.px, height: 0.px),
       css('::-webkit-scrollbar-track').box(
