@@ -18,7 +18,7 @@ Get started now by cloning :)
 </div>
 
 ## 🧑‍💻 Devfolio
-Is a multi-platform portfolio for developers available for mobile, windows and web. Includes the following sections:
+Its a portfolio website for developers developed using `Jaspr`. Includes the following sections:
 - Home
 - About
 - Services
@@ -27,11 +27,13 @@ Is a multi-platform portfolio for developers available for mobile, windows and w
 
 ## 🔗 Useful links
 
-🌐 Web App: https://mhmzdev.github.io/devfolio
+🌐 Web App: https://mhmzdev.github.io/devfolio-jaspr
 
-📱 Android App: https://play.google.com/store/apps/details?id=com.hmz.folio
+💻 Old Flutter App: https://github.com/m-hamzashakeel/devfolio
 
-📙 Article: https://mhamzadev.medium.com/folio-responsive-portfolio-using-flutter-2-0-86ae3e6cce4f
+[DEPRECATED]📱 Android App: https://play.google.com/store/apps/details?id=com.hmz.folio
+
+[DEPRECATED]📙 Article: https://mhamzadev.medium.com/folio-responsive-portfolio-using-flutter-2-0-86ae3e6cce4f
 
 
 ## 🔑 License
@@ -45,8 +47,8 @@ Is a multi-platform portfolio for developers available for mobile, windows and w
 
 You can also follow my GitHub Profile to stay updated about my latest projects:
 
-[![GitHub Follow](https://img.shields.io/badge/Connect-Hamza-blue.svg?logo=Github&longCache=true&style=social&label=Follow)](https://github.com/m-hamzashakeel)
+[![GitHub Follow](https://img.shields.io/badge/Connect-Hamza-blue.svg?logo=Github&longCache=true&style=social&label=Follow)](https://github.com/mhmzdev)
 
 If you liked the repo then kindly support it by giving it a star ⭐!
 
-Copyright (c) 2020 MUHAMMAD HAMZA
+Copyright (c) 2024 MUHAMMAD HAMZA
