@@ -1,4 +1,4 @@
-## Let's recreate your Portfolio
+## Portfolio Website - Devfolio
 
 Get started now by cloning :)
 
@@ -18,7 +18,7 @@ Get started now by cloning :)
 </div>
 
 ## 🧑‍💻 Devfolio
-Its a portfolio website for developers developed using `Jaspr`. Includes the following sections:
+Its a portfolio website for developers developed using [Jaspr](https://docs.page/schultek/jaspr). Includes the following sections:
 - Home
 - About
 - Services
