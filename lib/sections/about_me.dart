@@ -1,48 +1,22 @@
 import 'package:devfolio/components/app_button.dart';
 import 'package:devfolio/constants/theme.dart';
+import 'package:devfolio/models/about.dart';
+import 'package:devfolio/models/basic.dart';
 import 'package:devfolio/utils/assets.dart';
 import 'package:jaspr/jaspr.dart';
 
 @client
 class AboutMeSection extends StatelessComponent {
-  const AboutMeSection({super.key});
+  final About about;
+  final Basic basic;
+  const AboutMeSection({
+    super.key,
+    required this.about,
+    required this.basic,
+  });
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    final tech = [
-      'Flutter',
-      'Dart',
-      'Firebase',
-      'Python',
-      'dart_frog',
-      'jaspr',
-      'nodejs',
-      'express',
-    ];
-
-    final works = [
-      {
-        'image': StaticAssets.cui,
-        'url': 'https://www.comsats.edu.pk/',
-        'height': 50,
-      },
-      {
-        'image': StaticAssets.dsc,
-        'url': 'https://developers.google.com/community/dsc',
-        'height': 30,
-      },
-      {
-        'image': StaticAssets.flutterisl,
-        'url': 'https://meetup.com/flutter-islamabad',
-        'height': 60,
-      },
-      {
-        'image': StaticAssets.st,
-        'url': 'https://www.sastaticket.pk/',
-        'height': 60,
-      },
-    ];
-
     yield section(classes: 'about-me-section', [
       span(classes: 'title', id: 'about', [
         text('About Me'),
@@ -60,8 +34,7 @@ class AboutMeSection extends StatelessComponent {
                 text('Who am I?'),
               ]),
           span(classes: 'intro-heading', [
-            text(
-                "I'm Muhammad Hamza, a Flutter Developer, Technical blog writer and UI/UX Designer."),
+            text(about.heading),
           ]),
           span(
               classes: 'intro-details',
@@ -69,8 +42,7 @@ class AboutMeSection extends StatelessComponent {
                 color: Colors.lightGrey,
               ),
               [
-                text(
-                    "I'm a fresh graduate with Computer Science as Majors from COMSATS University Islamabad. I have been working with Flutter for the past 2 years and have developed multiple applications for both Android and iOS platforms. I have a keen interest in UI/UX designing and have been working on it for the past 3 years. I have also been writing technical blogs for the past 2 years and have been a part of multiple technical writing communities."),
+                text(about.description),
               ]),
           div(classes: 'divider', []),
           span(
@@ -80,7 +52,7 @@ class AboutMeSection extends StatelessComponent {
                 text('Technologies I have worked with:'),
               ]),
           div(classes: 'tech-stack', [
-            for (final t in tech)
+            for (final t in about.tech)
               span([
                 i(classes: 'fa-solid fa-play play-icon', []),
                 span(classes: 'tech-item', [
@@ -95,7 +67,7 @@ class AboutMeSection extends StatelessComponent {
                 text('Name: '),
               ]),
               span(classes: 'personal-value', [
-                text(' Muhammad Hamza'),
+                text('${basic.firstName} ${basic.lastName}'),
               ]),
             ]),
             div([
@@ -103,7 +75,7 @@ class AboutMeSection extends StatelessComponent {
                 text('Email: '),
               ]),
               span(classes: 'personal-value', [
-                text(' hamza.6.shakeel@gmail.com'),
+                text(basic.email),
               ]),
             ])
           ]),
@@ -114,7 +86,7 @@ class AboutMeSection extends StatelessComponent {
                 text('Age: '),
               ]),
               span(classes: 'personal-value', [
-                text(' 25'),
+                text(basic.age.toString()),
               ]),
             ]),
             div([
@@ -122,7 +94,7 @@ class AboutMeSection extends StatelessComponent {
                 text('From: '),
               ]),
               span(classes: 'personal-value', [
-                text(' Islamabad, PK'),
+                text(basic.address),
               ]),
             ])
           ]),
@@ -130,20 +102,16 @@ class AboutMeSection extends StatelessComponent {
           div(classes: 'work-row', [
             AppButton(
               label: 'RESUME',
-              href:
-                  "https://drive.google.com/drive/u/0/folders/1E6NxJlmnW2lTYTszcbODdpXiPFYe_kBM",
+              href: basic.resume,
             ),
             div(classes: 'divider', styles: Styles.box(width: 80.px), []),
-            for (final work in works)
-              a(
-                  classes: 'work-item',
-                  href: (work['url'] as String),
-                  target: Target.blank,
-                  [
-                    img(
-                        src: (work['image'] as String),
-                        height: (work['height'] as int)),
-                  ]),
+            for (final work in about.works)
+              a(classes: 'work-item', href: work.url, target: Target.blank, [
+                img(
+                  src: work.image,
+                  height: work.height,
+                ),
+              ]),
           ])
         ]),
       ])

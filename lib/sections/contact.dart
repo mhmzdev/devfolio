@@ -1,32 +1,16 @@
 import 'package:devfolio/components/contact.dart';
+import 'package:devfolio/models/contact.dart';
 import 'package:jaspr/jaspr.dart';
 
 class ContactSection extends StatelessComponent {
-  const ContactSection({super.key});
+  final List<Contact> contacts;
+  const ContactSection({
+    super.key,
+    required this.contacts,
+  });
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    final List<Map<String, dynamic>> contactInfo = [
-      {
-        'icon': 'fa-duotone fa-solid fa-house',
-        'title': 'Location',
-        'description': 'Islamabad, PK',
-        'action': 'https://maps.app.goo.gl/ek2SSNh26K1i4HNF6',
-      },
-      {
-        'icon': 'fa-duotone fa-solid fa-phone',
-        'title': 'Phone',
-        'description': '+92 346 0159889',
-        'action': 'https://wa.me/923460159889',
-      },
-      {
-        'icon': 'fa-duotone fa-solid fa-envelope',
-        'title': 'Email',
-        'description': 'hamza.6.shakeel@gmail.com',
-        'action': 'mailto:hamza.6.shakeel@gmail.com',
-      },
-    ];
-
     yield section(classes: 'contact-section', [
       span(classes: 'title', [
         text('Get in Touch'),
@@ -35,12 +19,12 @@ class ContactSection extends StatelessComponent {
         text("Let's build something together :)"),
       ]),
       div(classes: 'contact-body', id: 'contact', [
-        for (final contact in contactInfo)
+        for (final contact in contacts)
           ContactCard(
-            icon: contact['icon'],
-            title: contact['title'],
-            description: contact['description'],
-            action: contact['action'],
+            icon: contact.icon,
+            title: contact.title,
+            description: contact.description,
+            action: contact.action,
           ),
       ])
     ]);

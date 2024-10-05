@@ -10,6 +10,7 @@ class About with _$About {
     required String description,
     required List<String> tech,
     required List<Work> works,
+    required String heading,
   }) = _About;
 
   factory About.fromJson(Map<String, Object?> json) => _$AboutFromJson(json);

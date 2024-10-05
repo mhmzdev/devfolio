@@ -1,35 +1,16 @@
 import 'package:devfolio/components/service_card.dart';
-import 'package:devfolio/utils/assets.dart';
+import 'package:devfolio/models/service_data.dart';
 import 'package:jaspr/jaspr.dart';
 
 class ServicesSection extends StatelessComponent {
-  const ServicesSection({super.key});
+  final List<ServiceData> services;
+  const ServicesSection({
+    super.key,
+    required this.services,
+  });
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    final List<Map<String, dynamic>> services = [
-      {
-        'icon': StaticAssets.app,
-        'title': 'Mobile Development',
-      },
-      {
-        'icon': StaticAssets.ui,
-        'title': 'UI/UX Design',
-      },
-      {
-        'icon': StaticAssets.rapid,
-        'title': 'Rapid Prototyping',
-      },
-      {
-        'icon': StaticAssets.blog,
-        'title': 'Technical Writing',
-      },
-      {
-        'icon': StaticAssets.open,
-        'title': 'Open Source - GitHub',
-      },
-    ];
-
     yield section(classes: 'services-section', [
       span(classes: 'title', [
         text('What I can do?'),
@@ -40,8 +21,8 @@ class ServicesSection extends StatelessComponent {
       div(classes: 'section-body', id: 'services', [
         for (final service in services)
           ServiceCard(
-            icon: service['icon'],
-            label: service['title'],
+            icon: service.icon,
+            label: service.title,
           ),
       ])
     ]);

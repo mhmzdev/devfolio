@@ -42,7 +42,7 @@ class AppState extends State<App> {
 
     // Renders a <div class="main"> html element with children.
     yield div(classes: 'main', [
-      const Home(),
+      Home(),
     ]);
   }
 

@@ -12,6 +12,7 @@ _$AboutImpl _$$AboutImplFromJson(Map<String, dynamic> json) => _$AboutImpl(
       works: (json['works'] as List<dynamic>)
           .map((e) => Work.fromJson(e as Map<String, dynamic>))
           .toList(),
+      heading: json['heading'] as String,
     );
 
 Map<String, dynamic> _$$AboutImplToJson(_$AboutImpl instance) =>
@@ -19,4 +20,5 @@ Map<String, dynamic> _$$AboutImplToJson(_$AboutImpl instance) =>
       'description': instance.description,
       'tech': instance.tech,
       'works': instance.works.map((e) => e.toJson()).toList(),
+      'heading': instance.heading,
     };

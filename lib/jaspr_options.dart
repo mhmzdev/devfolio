@@ -41,7 +41,7 @@ final defaultJasprOptions = JasprOptions(
     prefix3.NavBar: ClientTarget<prefix3.NavBar>('components/nav_bar'),
     prefix4.ProjectCard: ClientTarget<prefix4.ProjectCard>('components/project_card', params: _prefix4ProjectCard),
     prefix5.ServiceCard: ClientTarget<prefix5.ServiceCard>('components/service_card', params: _prefix5ServiceCard),
-    prefix7.AboutMeSection: ClientTarget<prefix7.AboutMeSection>('sections/about_me'),
+    prefix7.AboutMeSection: ClientTarget<prefix7.AboutMeSection>('sections/about_me', params: _prefix7AboutMeSection),
   },
   styles: () => [
     ...prefix0.AppButton.styles,
@@ -67,3 +67,4 @@ Map<String, dynamic> _prefix1ContactCard(prefix1.ContactCard c) =>
 Map<String, dynamic> _prefix4ProjectCard(prefix4.ProjectCard c) =>
     {'title': c.title, 'description': c.description, 'icon': c.icon, 'banner': c.banner, 'url': c.url};
 Map<String, dynamic> _prefix5ServiceCard(prefix5.ServiceCard c) => {'icon': c.icon, 'label': c.label};
+Map<String, dynamic> _prefix7AboutMeSection(prefix7.AboutMeSection c) => {'about': c.about, 'basic': c.basic};

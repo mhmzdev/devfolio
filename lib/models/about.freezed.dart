@@ -23,6 +23,7 @@ mixin _$About {
   String get description => throw _privateConstructorUsedError;
   List<String> get tech => throw _privateConstructorUsedError;
   List<Work> get works => throw _privateConstructorUsedError;
+  String get heading => throw _privateConstructorUsedError;
 
   /// Serializes this About to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -38,7 +39,11 @@ abstract class $AboutCopyWith<$Res> {
   factory $AboutCopyWith(About value, $Res Function(About) then) =
       _$AboutCopyWithImpl<$Res, About>;
   @useResult
-  $Res call({String description, List<String> tech, List<Work> works});
+  $Res call(
+      {String description,
+      List<String> tech,
+      List<Work> works,
+      String heading});
 }
 
 /// @nodoc
@@ -59,6 +64,7 @@ class _$AboutCopyWithImpl<$Res, $Val extends About>
     Object? description = null,
     Object? tech = null,
     Object? works = null,
+    Object? heading = null,
   }) {
     return _then(_value.copyWith(
       description: null == description
@@ -73,6 +79,10 @@ class _$AboutCopyWithImpl<$Res, $Val extends About>
           ? _value.works
           : works // ignore: cast_nullable_to_non_nullable
               as List<Work>,
+      heading: null == heading
+          ? _value.heading
+          : heading // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -84,7 +94,11 @@ abstract class _$$AboutImplCopyWith<$Res> implements $AboutCopyWith<$Res> {
       __$$AboutImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String description, List<String> tech, List<Work> works});
+  $Res call(
+      {String description,
+      List<String> tech,
+      List<Work> works,
+      String heading});
 }
 
 /// @nodoc
@@ -103,6 +117,7 @@ class __$$AboutImplCopyWithImpl<$Res>
     Object? description = null,
     Object? tech = null,
     Object? works = null,
+    Object? heading = null,
   }) {
     return _then(_$AboutImpl(
       description: null == description
@@ -117,6 +132,10 @@ class __$$AboutImplCopyWithImpl<$Res>
           ? _value._works
           : works // ignore: cast_nullable_to_non_nullable
               as List<Work>,
+      heading: null == heading
+          ? _value.heading
+          : heading // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -127,7 +146,8 @@ class _$AboutImpl implements _About {
   const _$AboutImpl(
       {required this.description,
       required final List<String> tech,
-      required final List<Work> works})
+      required final List<Work> works,
+      required this.heading})
       : _tech = tech,
         _works = works;
 
@@ -153,8 +173,11 @@ class _$AboutImpl implements _About {
   }
 
   @override
+  final String heading;
+
+  @override
   String toString() {
-    return 'About(description: $description, tech: $tech, works: $works)';
+    return 'About(description: $description, tech: $tech, works: $works, heading: $heading)';
   }
 
   @override
@@ -165,7 +188,8 @@ class _$AboutImpl implements _About {
             (identical(other.description, description) ||
                 other.description == description) &&
             const DeepCollectionEquality().equals(other._tech, _tech) &&
-            const DeepCollectionEquality().equals(other._works, _works));
+            const DeepCollectionEquality().equals(other._works, _works) &&
+            (identical(other.heading, heading) || other.heading == heading));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -174,7 +198,8 @@ class _$AboutImpl implements _About {
       runtimeType,
       description,
       const DeepCollectionEquality().hash(_tech),
-      const DeepCollectionEquality().hash(_works));
+      const DeepCollectionEquality().hash(_works),
+      heading);
 
   /// Create a copy of About
   /// with the given fields replaced by the non-null parameter values.
@@ -196,7 +221,8 @@ abstract class _About implements About {
   const factory _About(
       {required final String description,
       required final List<String> tech,
-      required final List<Work> works}) = _$AboutImpl;
+      required final List<Work> works,
+      required final String heading}) = _$AboutImpl;
 
   factory _About.fromJson(Map<String, dynamic> json) = _$AboutImpl.fromJson;
 
@@ -206,6 +232,8 @@ abstract class _About implements About {
   List<String> get tech;
   @override
   List<Work> get works;
+  @override
+  String get heading;
 
   /// Create a copy of About
   /// with the given fields replaced by the non-null parameter values.

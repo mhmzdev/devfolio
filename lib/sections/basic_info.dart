@@ -1,39 +1,20 @@
 import 'package:devfolio/constants/theme.dart';
+import 'package:devfolio/models/basic.dart';
+import 'package:devfolio/models/social.dart';
 import 'package:devfolio/utils/assets.dart';
 import 'package:jaspr/jaspr.dart';
 
 class BasicInfoSection extends StatelessComponent {
-  const BasicInfoSection({super.key});
+  final Basic basic;
+  final List<Social> socials;
+  const BasicInfoSection({
+    super.key,
+    required this.basic,
+    required this.socials,
+  });
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    final List<Map<String, dynamic>> socials = [
-      {
-        'icon': 'fa-brands fa-square-facebook',
-        'url': 'https://www.facebook.com/mhmzdev',
-      },
-      {
-        'icon': 'fa-brands fa-linkedin',
-        'url': 'https://www.linkedin.com/in/mhmzdev/',
-      },
-      {
-        'icon': 'fa-brands fa-github',
-        'url': 'https://github.com/mhmzdev',
-      },
-      {
-        'icon': 'fa-brands fa-x-twitter',
-        'url': 'https://twitter.com/mhmzdev',
-      },
-      {
-        'icon': 'fa-brands fa-instagram',
-        'url': 'https://www.instagram.com/mhmzdev/',
-      },
-      {
-        'icon': 'fa-brands fa-medium',
-        'url': 'https://mhmzdev.medium.com',
-      },
-    ];
-
     yield section(classes: 'info-section', [
       div(classes: 'info', [
         div(classes: 'welcome', [
@@ -46,8 +27,8 @@ class BasicInfoSection extends StatelessComponent {
             height: 35,
           )
         ]),
-        h1(classes: 'first-name', [text('Muhammad')]),
-        h1(classes: 'last-name', [text('Hamza')]),
+        h1(classes: 'first-name', [text(basic.firstName)]),
+        h1(classes: 'last-name', [text(basic.lastName)]),
         span(classes: 'subtitle', [
           i(classes: 'fa-solid fa-play play-icon', []),
           span(classes: 'dynamic-subtitles', [
@@ -58,9 +39,9 @@ class BasicInfoSection extends StatelessComponent {
           for (final social in socials)
             a(
               classes: 'social-icon',
-              href: social['url'],
+              href: social.url,
               target: Target.blank,
-              [i(classes: social['icon'], [])],
+              [i(classes: social.icon, [])],
             ),
         ]),
       ]),
