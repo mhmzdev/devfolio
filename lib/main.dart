@@ -35,6 +35,13 @@ void main() {
         rel: 'stylesheet',
       ),
     ],
+    charset: 'utf-8',
+    viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+    meta: {
+      "og:title": "Hamza - Random Dude!",
+      "og:url": "https://www.mhmz.dev",
+    },
+    lang: 'en',
     styles: [
       // Special import rule to include to another css file.
       css.import('https://fonts.googleapis.com/css?family=Montserrat'),

@@ -12,10 +12,10 @@ import 'package:jaspr/server.dart';
 
 class Home extends AsyncStatelessComponent {
   Future<Data> fetchData() async {
-    final String responseProjects =
-        File('web/data/data.json').readAsStringSync();
+    final String fileResponse =
+        File('${Directory.current.path}/web/data/data.json').readAsStringSync();
     final Map<String, dynamic> raw =
-        jsonDecode(responseProjects) as Map<String, dynamic>;
+        jsonDecode(fileResponse) as Map<String, dynamic>;
 
     final data = Data.fromJson(raw);
     return data;
