@@ -1,10 +1,10 @@
-## Portfolio Website - Devfolio
+# Devfolio - Portfolio Website
 
-Get started now by cloning :)
+A very minimalist porfolio template for anyone to get started quickly. Even if you are not a flutter or jaspr developer you can make changes to it very easily as per your need and move on!
 
-<img src="https://user-images.githubusercontent.com/43790152/171403666-468b63d9-52be-4ec6-9cdb-c08c0e9d18f3.png">
+<img src="https://github.com/user-attachments/assets/f0b9d501-5412-4eea-afd6-1315c5f01ac0">
 
-<img src="https://user-images.githubusercontent.com/43790152/171403671-4e50f0a8-f73c-40f6-8628-547754afc2ef.png">
+<img src="https://github.com/user-attachments/assets/23ed7299-2ef1-43ef-b014-ecf94aac7e0f">
 
 <br>
 
@@ -27,9 +27,9 @@ Its a portfolio website for developers developed using [Jaspr](https://docs.page
 
 ## 🔗 Useful links
 
-🌐 Web App: https://mhmzdev.github.io/devfolio-jaspr
+🌐 Website: https://mhmzdev.github.io/devfolio-jaspr
 
-💻 Old Flutter App: https://github.com/m-hamzashakeel/devfolio
+💻 Old Flutter App: https://mhmzdev.github.io/devfolio
 
 [DEPRECATED]📱 Android App: https://play.google.com/store/apps/details?id=com.hmz.folio
 
